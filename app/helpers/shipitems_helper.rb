@@ -1,0 +1,2 @@
+module ShipitemsHelper
+end

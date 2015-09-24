@@ -1,0 +1,169 @@
+<div class="container">
+	<%= form_for :shipitem, html: {class: "form-horizontal"}, url: shipitems_path do |f| %>
+		<% if @ShipItem.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@shipitem.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<ul>
+					<% @ShipItem.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>  	
+		<p>
+	    <%= f.label :part %><br>
+	    <%= f.text_field :part, class: "form-control" %>
+	  </p>
+	 
+	  <p>
+	    <%= f.label :serial %><br>
+	    <%= f.text_field :serial, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :date %><br>
+	    <%= f.text_field :date, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :quantity %><br>
+	    <%= f.text_field :quantity, class: "form-control" %>
+	  </p>
+
+	  <h3>Preparation for Shipping</h3>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    1. Receive authorized request for shipping
+		  </label>
+		</div>
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    2. For international shipments, verify that all items may be exported; obtain authorized license number and export category codes.
+		  </label>
+		</div>
+
+
+		<h3>3. Select items to be shipped; record information.</h3>
+		<ul>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    3a. Interim (Overhead): Record in Overhead property list.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    3b. Interim (MCTF): Record in MCTF property list.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			  	3c. Interim (UAEAF): Record in UAEAF Property Data, and update coding in UAE Receipts tracker.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    3d. Planned: Record movement transaction in Inventory database.
+			  </label>
+			</div>
+		</ul>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    4. Planned: Record movement transaction in Inventory database.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    5. Include shipping manifest with shipment.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    6. Arrange for package(s) to be picked up by shipper or forwarder.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    7. Obtain tracking number(s) and record per Step 3.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    8. Notify recipient of shipment data, manifest and tracking number(s).
+		  </label>
+		</div>
+
+		<h3>Tracking during Shipping</h3>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  21. (For critical or high-value shipments) track shipment progress as requested by management.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  22. Alert managemtn of any problems or undue delays.
+		  </label>
+		</div>
+
+		<h3>Update Inventory Records After Transfer is Complete</h3>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  41. Receive written notification of receipt of items.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  42. Alert management and Procurement of any damage in shipment. 
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  43. Record receipt per Step 3.
+		  </label>
+		</div><br>
+
+		<h4>
+			<%= label_tag(:completed, "Shipping Checklist Completed?") %>		
+			<%= check_box_tag(:completed) %>
+		</h4>
+
+	  <p>
+	    <%= f.submit class: "btn-lg btn-primary" %>
+	  </p>
+	  <br>
+	<% end %>
+</div> <!-- /container -->

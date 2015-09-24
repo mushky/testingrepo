@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  part: MyString
+  serial: MyString
+  data: MyString
+  description: MyText
+  quantity: 1
+  completed: false
+
+two:
+  part: MyString
+  serial: MyString
+  data: MyString
+  description: MyText
+  quantity: 1
+  completed: false
