@@ -12,7 +12,7 @@
 			<% end %>  	
 		<p>
 	    <%= f.label :part %><br>
-	    <%= f.text_field :part, class: "form-control" %>
+	    <%= f.text_field :part, class: "form-control  input-medium" %>
 	  </p>
 	 
 	  <p>
@@ -160,9 +160,9 @@
 			<%= label_tag(:completed, "Shipping Checklist Complete?") %>		
 			<%= check_box_tag(:completed) %>
 		</h4>
-
+		<form class="form-signin">
 	  <p>
-	    <%= f.submit class: "btn-lg btn-primary" %>
+	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
 	  </p>
 	  <br>
 	<% end %>
