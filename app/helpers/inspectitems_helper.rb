@@ -1,0 +1,2 @@
+module InspectitemsHelper
+end

@@ -1,0 +1,17 @@
+<div class="container">
+<h1>Receive Items <%= link_to "Add New Receive Item", new_receiveitem_path, class: "btn btn-primary" %>
+</h1>
+  <% @ReceiveItems.each do |receiveitem| %>
+  <table class="table table-hover">
+    <td>
+      <h4><%= receiveitem.part%></h4>
+      <%= receiveitem.serial %><br>
+      <%= receiveitem.description %><br>
+      <%= receiveitem.date %><br>
+      Quantity: <%= receiveitem.quantity %><br>
+      |<%= link_to 'View', receiveitem_path(receiveitem), class: "btn-sm btn-primary" %>|
+      |<%= link_to 'Edit', edit_receiveitem_path(receiveitem), class: "btn-sm btn-warning"%>|
+      |<%= link_to 'Delete', receiveitem_path(receiveitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    </td>
+  <% end %>
+  </table>

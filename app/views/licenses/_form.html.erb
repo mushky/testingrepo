@@ -1,0 +1,39 @@
+<div class="container">
+	<%= form_for :license, html: {class: "form-horizontal"}, url: licenses_path do |f| %>
+		<% if @license.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@license.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<ul>
+					<% @license.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>  
+
+		<p>
+	    <%= f.label :name %><br>
+	    <%= f.text_field :name, class: "form-control  input-medium" %>
+	  </p>
+	 
+	  <p>
+	    <%= f.label :user %><br>
+	    <%= f.text_field :user, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :expiration %><br>
+	    <%= f.text_field :expiration, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description, class: "form-control" %>
+	  </p>
+	  
+	  <p>
+	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+	  </p>
+
+	<% end %>
+</div>

@@ -1,0 +1,174 @@
+<div class="container">
+	<%= form_for :inspectitem, html: {class: "form-horizontal"}, url: inspectitems_path do |f| %>
+		<% if @InspectItem.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@InspectItem.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<ul>
+					<% @InspectItem.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>  	
+		<p>
+	    <%= f.label :part %><br>
+	    <%= f.text_field :part, class: "form-control  input-medium" %>
+	  </p>
+	 
+	  <p>
+	    <%= f.label :serial %><br>
+	    <%= f.text_field :serial, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :date %><br>
+	    <%= f.text_field :date, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :quantity %><br>
+	    <%= f.text_field :quantity, class: "form-control" %>
+	  </p>
+
+	  <h3>Perform Receiving and Inspection</h3>
+	  <em>Maintain Inventory IAW iAT-00-0392 Property Management Process, Para. 5.6</em>
+
+	  <h4>Maintenance of Inventory Records</h4>
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    1. Update inventory records in conjunction with performing Receiving, Inspection, Transfer or Disposition activities.
+		  </label>
+		</div>
+		<ul>
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    1a. - Interim MCTF: update MCTF Inventory spreadsheet.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    1b. - Interim UAEAF: update UAE property data, then update UAE Receipts Tracker under the correct Shipset columns.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    1c. - Planned: (Inventory database to be updated as part of Receiving Inspection)
+		  </label>
+		</div>
+		</ul>
+
+		<h4>Inventory Review</h4>
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    11. Review will be conducted at least annually, either in preparation for audits or otherwise as determined by the Operations Manager.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    12. Reviews may be seperate for Overhead inventory, and for each Program's inventory.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    13. Review includes updating records to reflect current location, quantity and serial numbers of each tracked item.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    14. Review includes updating records to reflect current condition of items as required.
+		  </label>
+		</div>
+
+		<p>
+			<strong>Note that current inventory value is determined by the Accounting department, not by the Inventory process.</strong>
+		</p>
+
+		<h4>Inventory Audit</h4>
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    21. Inventory audits will be conducted at least annually.
+		  </label>
+		</div>
+
+		<ul>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    21a. Inventory audits will be conducted at least annually.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    21b. Audit of Program inventory will be conducted as required by the contract.
+			  </label>
+			</div>
+		</ul>
+
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    22. The auditor reviews the property management process, checklists and records keeping procedures.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    23. The auditor reviews relevant inventory records, and optionally spot-checks items to test the integrity of the records.
+		  </label>
+		</div>
+		
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    24. The auditor publishes the audit findings.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    25. The Operations Manager initiates any required corrective actions per <em>iAT-00-0205 Preventive and Corrective Actions</em>
+		  </label>
+		</div>
+
+
+
+
+
+
+
+
+		<h4>
+			<%= label_tag(:completed, "Shipping Checklist Complete?") %>		
+			<%= check_box_tag(:completed) %>
+		</h4>
+		<form class="form-signin">
+	  <p>
+	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+	  </p>
+	  <br>
+	<% end %>
+</div> <!-- /container -->

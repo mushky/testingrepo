@@ -27,12 +27,12 @@
 
   <div class="container">
     <form class="form-signin">
-      <h1>Select Action</h1>
-      <%= link_to "Shipping Item ", new_shipitem_path, class: "btn btn-lg btn-primary btn-block" %><br>
-      <%= link_to "Receiving Item", new_receiveitem_path, class: "btn btn-lg btn-primary btn-block" %><br>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Licensing</button><br>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Scan</button><br>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Inspect</button>
+      <%= link_to "Shipping", shipitems_path, class: "btn btn-lg btn-primary btn-block" %><br>
+      <%= link_to "Receiving", receiveitems_path, class: "btn btn-lg btn-primary btn-block" %><br>
+      <%= link_to "Inspecting", inspectitems_path, class: "btn btn-lg btn-primary btn-block" %><br>
+      <%= link_to "Licenses", licenses_path, class: "btn btn-lg btn-warning btn-block" %>
+      <br>
+      <%= link_to "Documents", documents_path, class: "btn btn-lg btn-danger btn-block" %>
     </div>
   </div> <!-- /container -->
 

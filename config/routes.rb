@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :shipitems, :receiveitems
+  resources :shipitems, :receiveitems, :inspectitems, :licenses, :documents
+
   root 'welcome#index'
 
   get 'welcome/options'

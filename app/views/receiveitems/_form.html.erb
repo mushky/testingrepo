@@ -1,0 +1,156 @@
+<div class="container">
+	<%= form_for :receiveitem, html: {class: "form-horizontal"}, url: receiveitems_path do |f| %>
+		<% if @ReceiveItem.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@ReceiveItem.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<ul>
+					<% @receiveitem.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>  	
+		<p>
+	    <%= f.label :part %><br>
+	    <%= f.text_field :part, class: "form-control  input-medium" %>
+	  </p>
+	 
+	  <p>
+	    <%= f.label :serial %><br>
+	    <%= f.text_field :serial, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :date %><br>
+	    <%= f.text_field :date, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :quantity %><br>
+	    <%= f.text_field :quantity, class: "form-control" %>
+	  </p>
+
+	  <h3>Perform Receiving and Inspection</h3>
+	  <em>IAW iAT-00-0392 Property Management Process, Para. 5.1.1 and 5.1.2</em>
+
+	  <h4>1. Verify the following:</h4>
+	  <ul>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Packing Slip matches contents of container.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Verify PO Number / Packaging Slip Match.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Verify PR Part Numbers and Quantities match between PO and packing slip.
+			  </label>
+			</div>
+		</ul>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    2. Sign and date packing slip to note receipt.
+		  </label>
+		</div>
+
+		<div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    3. Notify Purchasing for receipt of property and status (complete, back order, or missing material, etc)
+		  </label>
+		</div>
+
+	  <h4>4. Verify the following:</h4>
+	  <ul>
+		  <div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    No visible damage to the shipping vessel
+			  </label>
+			</div>
+
+		  <div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    No FOD (broken parts, loose parts, etc) is visual in the shipping vessel
+			  </label>
+			</div>
+
+		  <div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    No visible fluid penetration to the shipping vessel
+			  </label>
+			</div>
+		</ul>
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    5. Verify Certificate of Conformance (CoC) is provided. (applicable parts only)
+		  </label>
+		</div>
+
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    6. Verify items against their engineering drawing receipt instructions. If non-conforming, alert QA to initiate NCM action
+		  </label>
+		</div>
+
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		    7. Create and affix an asset tag<br>
+		    <em> Note: Aircraft kit and/or transitory parts (returned to vendor, returned from customer) shall not be tagged.</em>
+		  </label>
+		</div>
+
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  Add/Update Inventory Records
+		  </label>
+		</div>
+
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  Attach Receipt records (DD-250, COC, DD Form 1149, ATP Results, etc.) to inventory system
+		  </label>
+		</div>
+
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="">
+		  Notify End State User for receipt of property and status
+		  </label>
+		</div>
+
+
+		<h4>
+			<%= label_tag(:completed, "Shipping Checklist Complete?") %>		
+			<%= check_box_tag(:completed) %>
+		</h4>
+		<form class="form-signin">
+	  <p>
+	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+	  </p>
+	  <br>
+	<% end %>
+</div> <!-- /container -->

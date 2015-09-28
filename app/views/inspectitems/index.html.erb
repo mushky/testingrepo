@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Inspect Items <%= link_to "Add New Inspect Item", new_inspectitem_path, class: "btn btn-primary" %>
+</h1>
+  <% @InspectItems.each do |inspectitem| %>
+  <table class="table table-hover">
+    <td>
+      
+      <h4>
+        <%= inspectitem.part%>
+      </h4>
+
+      <%= inspectitem.serial %><br>
+      <%= inspectitem.description %><br>
+      <%= inspectitem.date %><br>
+      Quantity: <%= inspectitem.quantity %><br>
+
+      |<%= link_to 'View', inspectitem_path(inspectitem), class: "btn-sm btn-primary" %>|
+      |<%= link_to 'Edit', edit_inspectitem_path(inspectitem), class: "btn-sm btn-warning"%>|
+      |<%= link_to 'Delete', inspectitem_path(inspectitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    </td>
+  <% end %>
+  </table>

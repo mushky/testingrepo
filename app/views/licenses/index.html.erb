@@ -1,0 +1,21 @@
+<div class="container">
+<h1>License Items <%= link_to "Add New License", new_license_path, class: "btn btn-primary" %>
+</h1>
+  <% @licenses.each do |license| %>
+  <table class="table table-hover">
+    <td>
+      
+      <h4>
+        <%= license.name%>
+      </h4>
+
+      <%= license.user %><br>
+      <%= license.description %><br>
+      <%= license.expiration %><br>
+
+      |<%= link_to 'View', license_path(license), class: "btn-sm btn-primary" %>|
+      |<%= link_to 'Edit', edit_license_path(license), class: "btn-sm btn-warning"%>|
+      |<%= link_to 'Delete', license_path(license), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    </td>
+  <% end %>
+  </table>

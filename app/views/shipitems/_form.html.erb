@@ -2,7 +2,7 @@
 	<%= form_for :shipitem, html: {class: "form-horizontal"}, url: shipitems_path do |f| %>
 		<% if @ShipItem.errors.any? %>
 				<div id="error_explanation">
-					<h2><%= pluralize(@shipitem.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<h2><%= pluralize(@ShipItem.errors.count, "error") %> Prohibited this post from being saved:</h2>
 					<ul>
 					<% @ShipItem.errors.full_messages.each do |msg| %>
 						<li><%= msg %></li>

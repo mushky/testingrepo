@@ -11,7 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924222643) do
+ActiveRecord::Schema.define(version: 20150928003132) do
+
+  create_table "documents", force: :cascade do |t|
+    t.string   "filename"
+    t.string   "content_type"
+    t.binary   "file_contents"
+    t.date     "string"
+    t.text     "description"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "inspect_items", force: :cascade do |t|
+    t.string   "part"
+    t.string   "serial"
+    t.text     "description"
+    t.string   "date"
+    t.integer  "quantity"
+    t.boolean  "completed"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "licenses", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "user"
+    t.integer  "expiration"
+    t.string   "key"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "receive_items", force: :cascade do |t|
+    t.string   "part"
+    t.string   "serial"
+    t.string   "date"
+    t.text     "description"
+    t.integer  "quantity"
+    t.boolean  "completed"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "ship_items", force: :cascade do |t|
     t.string   "part"

@@ -1,0 +1,21 @@
+<div class="container">
+<h1>Documents <%= link_to "Add New Document", new_document_path, class: "btn btn-primary" %>
+</h1>
+  <% @Documents.each do |document| %>
+  <table class="table table-hover">
+    <td>
+      
+      <h4>
+        <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+        <%= document.filename%>
+      </h4>
+
+      <%= document.content_type %><br>
+      <%= document.description %><br>
+
+      |<%= link_to 'Download', document_path(document), class: "btn-sm btn-primary" %>|
+      |<%= link_to 'Edit', edit_document_path(document), class: "btn-sm btn-warning"%>|
+      |<%= link_to 'Delete', document_path(document), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    </td>
+  <% end %>
+  </table>

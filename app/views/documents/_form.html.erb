@@ -1,0 +1,24 @@
+<div class="container">
+	<%= form_for :document, html: {class: "form-horizontal"}, url: documents_path do |f| %>
+		<% if @Document.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@Document.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<ul>
+					<% @Document.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>
+		  <div class="field">
+    		<%= f.file_field :file %>
+  		</div>
+
+		<form class="form-signin">
+	  <h3>
+  		<span class="glyphicon glyphicon-floppy-open" aria-hidden="true"></span>
+	    <%= f.submit "Upload Document", class: "btn-sm btn-primary" %>
+	  </h3>
+	  <br>
+	<% end %>
+</div> <!-- /container -->
