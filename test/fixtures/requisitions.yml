@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  requestor: MyString
+  pr_number: MyString
+  pr_date: 1
+  company: MyString
+  address: MyString
+  phone: 1
+  contact: MyString
+  comments: MyText
+  for_export: false
+  to_where: MyString
+  description_of_use: MyText
+  quantity: 1
+  uom: MyString
+  part_number: MyString
+  description: MyText
+  unit_cost: 1.5
+  total: 1.5
+  req_date: 1
+  acct_number: MyString
+  usage: MyString
+  approval: MyString
+  approval_date: 1
+
+two:
+  requestor: MyString
+  pr_number: MyString
+  pr_date: 1
+  company: MyString
+  address: MyString
+  phone: 1
+  contact: MyString
+  comments: MyText
+  for_export: false
+  to_where: MyString
+  description_of_use: MyText
+  quantity: 1
+  uom: MyString
+  part_number: MyString
+  description: MyText
+  unit_cost: 1.5
+  total: 1.5
+  req_date: 1
+  acct_number: MyString
+  usage: MyString
+  approval: MyString
+  approval_date: 1

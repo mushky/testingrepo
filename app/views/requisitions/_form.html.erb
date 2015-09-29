@@ -1,6 +1,6 @@
 <div class="container">
 	<%= form_for :requisition, html: {class: "form-horizontal"}, url: requisitions_path do |f| %>
-		<% if @requisition.errors.any? %>
+		<% if @requesition.errors.any? %>
 				<div id="error_explanation">
 					<h2><%= pluralize(@requisition.errors.count, "error") %> Prohibited this post from being saved:</h2>
 					<ul>
@@ -10,21 +10,22 @@
 					</ul>
 				</div>
 			<% end %>  	
-		<p>
-	    <%= f.label :requestor %><br>
-	    <%= f.text_field :requestor, class: "form-control  input-medium" %>
-	  </p>
-	 
-	  <p>
-	    <%= f.label :pr_number %><br>
-	    <%= f.text_field :pr_number, class: "form-control" %>
-	  </p>
+		<table>
+			<p>
+		    <%= f.label :requestor %><br>
+		    <%= f.text_field :requestor, class: "form-control" %>
+		  </p>
+		 
+		  <p>
+		    <%= f.label :pr_number %><br>
+		    <%= f.text_field :pr_number, class: "form-control" %>
+		  </p>
 
-	  <p>
-	    <%= f.label :pr_date %><br>
-	    <%= f.text_field :pr_date, class: "form-control" %>
-	  </p>
-
+		  <p>
+		    <%= f.label :pr_date %><br>
+		    <%= f.text_field :pr_date, class: "form-control" %>
+		  </p>
+		</table>
 	  <h5>Suggested Suppliers</h5>
 	  <p>
 	    <%= f.label :company %><br>
@@ -122,6 +123,7 @@
 	    <%= f.label :usage %><br>
 	    <%= f.text_field :usage, class: "form-control" %>
 	  </p>
+	</table>
 
 
 		<form class="form-signin">
