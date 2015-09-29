@@ -2,134 +2,149 @@
 	<%= form_for :requisition, html: {class: "form-horizontal"}, url: requisitions_path do |f| %>
 		<% if @requesition.errors.any? %>
 				<div id="error_explanation">
-					<h2><%= pluralize(@requisition.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<h2>
+						<%= pluralize(@requisition.errors.count, "error") %> Prohibited this post from being saved:
+					</h2>
 					<ul>
-					<% @requisition.errors.full_messages.each do |msg| %>
-						<li><%= msg %></li>
-					<% end %>
+						<% @requisition.errors.full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						<% end %>
 					</ul>
 				</div>
-			<% end %>  	
-		<table>
-			<p>
-		    <%= f.label :requestor %><br>
-		    <%= f.text_field :requestor, class: "form-control" %>
-		  </p>
-		 
-		  <p>
-		    <%= f.label :pr_number %><br>
-		    <%= f.text_field :pr_number, class: "form-control" %>
-		  </p>
+			<% end %>
+		<div class="row">
+			<div class="col-md-6">
+				<p>
+				  <%= f.label :requestor %>
+				  <%= f.text_field :requestor, class: "form-control" %>
+				</p>
+				 
+				<p>
+				  <%= f.label :pr_number %>
+				  <%= f.text_field :pr_number, class: "form-control" %>
+				</p>
 
-		  <p>
-		    <%= f.label :pr_date %><br>
-		    <%= f.text_field :pr_date, class: "form-control" %>
-		  </p>
-		</table>
-	  <h5>Suggested Suppliers</h5>
-	  <p>
-	    <%= f.label :company %><br>
-	    <%= f.text_field :company, class: "form-control" %>
-	  </p>
+				<p>
+				  <%= f.label :pr_date %>
+				  <%= f.text_field :pr_date, class: "form-control" %>
+				</p>
 
-	  <p>
-	    <%= f.label :address %><br>
-	    <%= f.text_field :address, class: "form-control" %>
-	  </p>
+			<h3>Program</h3>
+			  <p>
+			    <%= f.text_field :program, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :phone %><br>
-	    <%= f.text_field :phone, class: "form-control" %>
-	  </p>
+			  <p>
+					<%= label_tag(:export, "Is this for Export?") %>		
+					<%= check_box_tag(:export) %>
+			  </p>
 
-	  <p>
-	    <%= f.label :contact %><br>
-	    <%= f.text_field :contact, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :where_export  %><br>
+			    <%= f.text_field :where_export, class: "form-control" %>
+			  </p>
+			</div>
 
-	  <p>
-	    <%= f.label :comments %><br>
-	    <%= f.text_field :comments, class: "form-control" %>
-	  </p>
+	  	<div class="col-md-6">
+			  <p>
+			    <%= f.label :company %><br>
+			    <%= f.text_field :company, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :program %><br>
-	    <%= f.text_field :program, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :address %><br>
+			    <%= f.text_area :address, class: "form-control" %>
+			  </p>
 
-	  <p>
-			<%= label_tag(:export, "Is this for export? To Where?") %>		
-			<%= check_box_tag(:export) %>
-	  </p>
+			  <p>
+			    <%= f.label :phone %><br>
+			    <%= f.text_field :phone, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :where_export %><br>
-	    <%= f.text_field :where_export, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :contact %><br>
+			    <%= f.text_field :contact, class: "form-control" %>
+			  </p>
 
-	  <h5>Item Details</h5>
+			  <p>
+			    <%= f.label :comments %><br>
+			    <%= f.text_area :comments, class: "form-control" %>
+			  </p>
+		
 
-	  <p>
-	    <%= f.label :item %><br>
-	    <%= f.text_field :item, class: "form-control" %>
-	  </p>
+			</div>
+		</div>
 
-	  <p>
-	    <%= f.label :quantity %><br>
-	    <%= f.text_field :quantity, class: "form-control" %>
-	  </p>
+		<hr>
 
-	  <p>
-	    <%= f.label :uom %><br>
-	    <%= f.text_field :uom, class: "form-control" %>
-	  </p>
+	  <h3>Item Details</h3>
+	  <div class="row">
+	  	<div class="col-md-6">
+			  <p>
+			    <%= f.label :item %><br>
+			    <%= f.text_field :item, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :part_number %><br>
-	    <%= f.text_field :part_number, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :quantity %><br>
+			    <%= f.text_field :quantity, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :description %><br>
-	    <%= f.text_field :description, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :uom %><br>
+			    <%= f.text_field :uom, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :unit_cost %><br>
-	    <%= f.text_field :unit_cost, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :part_number %><br>
+			    <%= f.text_field :part_number, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :total %><br>
-	    <%= f.text_field :total, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :description %><br>
+			    <%= f.text_field :description, class: "form-control" %>
+			  </p>
+			</div>
 
-	  <p>
-	    <%= f.label :req_date %><br>
-	    <%= f.text_field :req_date, class: "form-control" %>
-	  </p>
+			<div class="col-md-6">
+			  <p>
+			    <%= f.label :unit_cost %><br>
+			    <%= f.text_field :unit_cost, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :req_date %><br>
-	    <%= f.text_field :req_date, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :total %><br>
+			    <%= f.text_field :total, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :account_number %><br>
-	    <%= f.text_field :account_number, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :req_date %><br>
+			    <%= f.text_field :req_date, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :usage %><br>
-	    <%= f.text_field :usage, class: "form-control" %>
-	  </p>
-	</table>
+			  <p>
+			    <%= f.label :req_date %><br>
+			    <%= f.text_field :req_date, class: "form-control" %>
+			  </p>
 
+			  <p>
+			    <%= f.label :account_number %><br>
+			    <%= f.text_field :account_number, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :usage %><br>
+			    <%= f.text_field :usage, class: "form-control" %>
+			  </p>
+			</div><!-- /col-6-md -->
+		</div><!-- /row -->
 
 		<form class="form-signin">
 	  <p>
 	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
 	  </p>
-	  <br>
-	<% end %>
-</div> <!-- /container -->
+<% end %>
+	</div> <!-- /container -->
+
+<br>
+
