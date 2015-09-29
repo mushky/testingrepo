@@ -1,0 +1,23 @@
+<div class="container">
+<h1>Inventory Items <%= link_to "Add New Inventory Item", new_inventory_path, class: "btn btn-primary" %>
+</h1>
+  <% @inventories.each do |inventory| %>
+  <table class="table table-hover">
+    <td>
+      
+      <h4>
+        <%= inventory.part%>
+      </h4>
+
+      <%= inventory.serial %><br>
+      <%= inventory.description %><br>
+      <%= inventory.date %><br>
+      Quantity: <%= inventory.quantity %><br>
+
+      |<%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-primary" %>|
+      |<%= link_to 'Edit', edit_inventory_path(inventory), class: "btn-sm btn-warning"%>|
+      |<%= link_to 'Delete', inventory_path(inventory), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    </td>
+  <% end %>
+  </table>
+</div><!-- /container -->

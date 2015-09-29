@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929163903) do
+ActiveRecord::Schema.define(version: 20150929202448) do
 
   create_table "documents", force: :cascade do |t|
     t.string   "filename"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 20150929163903) do
     t.string   "serial"
     t.text     "description"
     t.string   "date"
+    t.integer  "quantity"
+    t.boolean  "completed"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.string   "part"
+    t.string   "serial"
+    t.string   "date"
+    t.text     "description"
     t.integer  "quantity"
     t.boolean  "completed"
     t.datetime "created_at",  null: false

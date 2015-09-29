@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :shipitems, :receiveitems, :inspectitems, :licenses, :documents, :requisitions
+  resources :shipitems, :receiveitems, :inspectitems, :licenses, :documents, :requisitions, :inventories
 
   root 'welcome#index'
 

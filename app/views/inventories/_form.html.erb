@@ -1,0 +1,137 @@
+<div class="container">
+	<%= form_for :inventory, html: {class: "form-horizontal"}, url: inventories_path do |f| %>
+		<% if @inventory.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@inventory.errors.count, "error") %> Prohibited this post from being saved:</h2>
+					<ul>
+					<% @inventory.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>  	
+		<p>
+	    <%= f.label :part %><br>
+	    <%= f.text_field :part, class: "form-control  input-medium" %>
+	  </p>
+	 
+	  <p>
+	    <%= f.label :serial %><br>
+	    <%= f.text_field :serial, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :date %><br>
+	    <%= f.text_field :date, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description, class: "form-control" %>
+	  </p>
+
+	  <p>
+	    <%= f.label :quantity %><br>
+	    <%= f.text_field :quantity, class: "form-control" %>
+	  </p>
+
+	  <h3>Checklist</h3>
+	  <em>Maintain Inventory IAW iAT-00-0392 Property Management Process, Para. 5.6</em>
+
+	  <h4>1. Identify Inventory:</h4>
+		<ul>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Program
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Corporate
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    All
+			  </label>
+			</div>
+		</ul>
+
+		<h4>2. Program Inventory Audits:</h4>
+		<ul>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Generate program specific inventory report from WASP
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Review inventory report completeness check (i.e, WASP inventory fields; location, quantity, description, etc)
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Perform physical inventory of program assets.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Findings/Corrective actions documented per iAT-00-0205 Preventive and Corrective Actions
+			  </label>
+			</div>
+		</ul>
+
+		<h4>3. Annual Corporate Audits:</h4>
+		<ul>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Generate program specific inventory report from WASP
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Review inventory report completeness check (i.e, WASP inventory fields; location, quantity, description, etc)
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Perform physical inventory of program assets.
+			  </label>
+			</div>
+
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="">
+			    Findings/Corrective actions documented per iAT-00-0205 Preventive and Corrective Actions
+			  </label>
+			</div>
+		</ul>
+
+		<h4>
+			<%= label_tag(:completed, "Shipping Checklist Complete?") %>		
+			<%= check_box_tag(:completed) %>
+		</h4>
+		<form class="form-signin">
+	  <p>
+	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+	  </p>
+	  <br>
+	<% end %>
+</div> <!-- /container -->
