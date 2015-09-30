@@ -8,10 +8,11 @@
 </head>
 <body>
 <div class="container">
-	<%= link_to root_path do %>
-	   <%= image_tag "iaccess_logo.png" %>
-	<% end %>
-
+	<div class="LogoHover">
+		<%= link_to root_path do %>
+		  <%= image_tag "iaccess_logo.png" %>
+		<% end %>
+	</div>
 	<p class="navbar-text pull-right">
 	<% if user_signed_in? %>
 	  Logged in as <strong><%= current_user.email %></strong>.
