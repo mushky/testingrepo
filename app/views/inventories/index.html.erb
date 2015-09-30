@@ -5,14 +5,8 @@
   <table class="table table-hover">
     <td>
       
-      <h4>
-        <%= inventory.part%>
-      </h4>
-
-      <%= inventory.serial %><br>
       <%= inventory.description %><br>
       <%= inventory.date %><br>
-      Quantity: <%= inventory.quantity %><br>
 
       |<%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-primary" %>|
       |<%= link_to 'Edit', edit_inventory_path(inventory), class: "btn-sm btn-warning"%>|
