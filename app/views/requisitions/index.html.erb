@@ -1,1 +1,35 @@
-
+<div class="container">
+	<h1>
+		Received Items 
+		<%= link_to "Add New Requisition Purchase", new_requisition_path, class: "btn btn-primary" %>
+	</h1>
+	  <% @requisitions.each do |requisition| %>
+	  <table class="table table-hover">
+	    <td>
+	      <h4><%= requisition.requestor%></h4>
+	      <%= requisition.pr_number %><br>
+	      <%= requisition.pr_date %><br>
+	      <%= requisition.company %><br>
+	      <%= requisition.address %><br>
+	      <%= requisition.phone %><br>
+	      <%= requisition.contact %><br>
+	      <%= requisition.comments %><br>
+	      <%= requisition.for_export %><br>
+	      <%= requisition.to_where %><br>
+	      <%= requisition.description_of_use %><br>
+	      <%= requisition.quantity %><br>
+	      <%= requisition.uom %><br>
+	      <%= requisition.part_number %><br>
+	      <%= requisition.description %><br>
+	      <%= requisition.unit_cost %><br>
+	      <%= requisition.total %><br>
+	      <%= requisition.req_date %><br>
+	      <%= requisition.acct_number %><br>
+	      <%= requisition.usage %><br>
+	      |<%= link_to 'View', requisition_path(requisition), class: "btn-sm btn-primary" %>|
+	      |<%= link_to 'Edit', edit_requisition_path(requisition), class: "btn-sm btn-warning"%>|
+	      |<%= link_to 'Delete', requisition_path(requisition), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+	    </td>
+	  <% end %>
+	  </table>
+</div>
