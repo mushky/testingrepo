@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="Failure_Form.css">
+</head>
+
+<div class="container">
+<form>
+  <div class="form-group">
+    <input type="text" id="name" value="Failure Report No:" border-style: solid; readonly>
+    <input type="text" id="name" value="iAT-00-0571" border-style: solid>
+    <input type="text" id="name" value="Failure Report Date:" border-style: solid align="right" readonly>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Program:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid; size = "71">
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Supplier:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid; size = "71">
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Address:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid; size = "71">
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="POC:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="RMA Number:" align="right" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Phone/Mobile No.:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid size = "71">
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Email:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid size = "71">
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Manufacturer:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid size = "71">
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Ship Date:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="Date Received:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="P.O. No.:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="Reference PR No.:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="iAccess Contract No.:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid size = "71">
+  </div>
+  <br>
+  <div class="form-group">
+    <input type="text" id="name" value="Failure Information:" border-style: solid; readonly>
+    <input type="text" id="name" value="Date of Failure:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Reported By:" border-style: solid; readonly>
+    <br>
+    <div style="border:1px solid red;float:left">
+      <input type="radio" name = "Reported By:" id="iAccess" border-style: solid>
+      <label for="iAccess">iAccess</label>
+      <input type="radio" name = "Reported By:" id="iAccess Subcontractor" border-style: solid; readonly>
+      <label for="iAccess Subcontractor">iAccess Subcontractor</label>
+      <input type="radio" name = "Reported By:" id="Customer" border-style: solid>
+      <label for="Customer">Customer</label>
+      <input type="radio" name = "Reported By:" id="End User" border-style: solid>
+      <label for="End User">End User</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <br>
+    <br>
+    <input type="text" id="name" value="Phase/Activity:" border-style: solid; readonly>
+    <br>
+  <div style="border:1px solid red;float:left">
+    <input type="radio" name = "Phase/Activity:" id ="Receiving Inspection" style="vertical-align: middle" border-style: solid size = "40">
+    <label for="Receiving Inspection">Receiving Inspection</label>
+    <input type="radio" name = "Phase/Activity:" id ="Engr. Test" style="vertical-align: middle" border-style: solid>
+    <label for="Engr. Test">Engr. Test</label>
+    <input type="radio" name = "Phase/Activity:" id ="Factory I&T" style="vertical-align: middle" border-style: solid>
+    <label for="Factory I&T">Factory I&T</label>
+    <input type="radio" name = "Phase/Activity:" id ="Qual. Test" style="vertical-align: middle" border-style: solid>
+    <label for="Qual. Test">Qual. Test</label>
+    <input type="radio" name = "Phase/Activity:" id ="Factory ATP" style="vertical-align: middle" border-style: solid>
+    <label for="Factory ATP">Factory ATP</label>
+  
+    <input type="radio" name = "Phase/Activity:" id = "A/C Integration" style="vertical-align: middle" border-style: solid>
+    <label for="A/C Integration">A/C Integration</label>
+    <br>
+    <input type="radio" name = "Phase/Activity:" id = "Ground Test" style="vertical-align: middle" border-style: solid>
+    <label for="Ground Test">Ground Test</label>
+    <input type="radio" name = "Phase/Activity:" id = "FCF/DT&E" style="vertical-align: middle" border-style: solid>
+    <label for="FCF/DT&E">FCF/DT&E</label>
+    <input type="radio" name = "Phase/Activity:" id = "Formal FT/OT&E" style="vertical-align: middle" border-style: solid>
+    <label for="Formal FT/OT&E">Formal FT/OT&E</label>
+    <input type="radio" name = "Phase/Activity:" id = "Operations" style="vertical-align: middle" border-style: solid>
+    <label for="Operations">Operations</label>
+  </div>
+  <br>
+  <br>
+  <div class="form-group">
+    <br>
+    <input type="text" id="name" value="Point of Contact:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid size = "71">
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Contact Info:" border-style: solid; readonly>
+    <input type="text" id="name" value="" border-style: solid size = "71">
+  </div>
+  <br>
+  <div class="form-group">
+    <input type="text" id="name" value="Part Number" border-style: solid; readonly>
+    <input type="text" id="name" value="Serial Number" border-style: solid>
+    <input type="text" id="name" value="Description" border-style: solid; readonly>
+    <input type="text" id="name" value="Qty" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <br>
+  <div class="form-group">
+    <input type="text" id="name" value="Failure Description" border-style: solid size = "97">
+  </div>
+  <div class="form-group">
+    <!--input type="text" id="name" value="" border-style: solid size = "97" width="48" height="48"-->
+    <textarea rows="10" cols="97"></textarea>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Reference:" border-style: solid size = "71">
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Provided By:" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="Date:" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <input type="text" id="name" value="Failure Description" border-style: solid size = "97">
+  </div>
+  <div class="form-group">
+    <textarea rows="10" cols="97"></textarea>
+    <!--input type="text" id="name" value="" border-style: solid size = "97"-->
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Reference:" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+  <div class="form-group">
+    <input type="text" id="name" value="Provided By:" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+    <input type="text" id="name" value="Date:" border-style: solid>
+    <input type="text" id="name" value="" border-style: solid>
+  </div>
+</body>
