@@ -1,6 +1,6 @@
 <div class="container">
 	<%= form_for :requisition, html: {class: "form-horizontal"}, url: requisitions_path do |f| %>
-		<% if @requesition.errors.any? %>
+		<% if @requisition.errors.any? %>
 				<div id="error_explanation">
 					<h2>
 						<%= pluralize(@requisition.errors.count, "error") %> Prohibited this post from being saved:
