@@ -1,17 +1,5 @@
 <div class="container">
 	<%= form_for :requisition, html: {class: "form-horizontal"}, url: requisitions_path do |f| %>
-		<% if @requisition.errors.any? %>
-				<div id="error_explanation">
-					<h2>
-						<%= pluralize(@requisition.errors.count, "error") %> Prohibited this post from being saved:
-					</h2>
-					<ul>
-						<% @requisition.errors.full_messages.each do |msg| %>
-							<li><%= msg %></li>
-						<% end %>
-					</ul>
-				</div>
-			<% end %>
 		<div class="row">
 			<div class="col-md-6">
 				<p>
@@ -130,8 +118,7 @@
 	  <p>
 	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
 	  </p>
-<% end %>
+	<% end %>
 	</div> <!-- /container -->
-
 <br>
 
