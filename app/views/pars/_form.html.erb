@@ -1,0 +1,204 @@
+<div class="container">
+	<%= form_for :par, html: {class: "form-horizontal"}, url: pars_path do |f| %>
+		<div class="row">
+			<div class="col-md-6">
+				<p>
+				  <%= f.label :cpar_number %>
+				  <%= f.text_field :cpar_number, class: "form-control" %>
+				</p>
+				 
+				<p>
+				  <%= f.label :program %>
+				  <%= f.text_field :program, class: "form-control" %>
+				</p>
+
+				<p>
+				  <%= f.label :cpar_source %>
+				  <%= f.text_field :cpar_source, class: "form-control" %>
+				</p>
+
+			  <p>
+					<%= f.label :category_phase %>		
+					<%= f.text_field(:category_phase) %>
+			  </p>
+
+			  <p>
+			    <%= f.label :specific_source  %><br>
+			    <%= f.text_field :specific_source, class: "form-control" %>
+			  </p>
+			</div>
+
+	  	<div class="col-md-6">
+			  <p>
+			    <%= f.label :other_category %><br>
+			    <%= f.text_field :other_category, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :raised_by %><br>
+			    <%= f.text_area :raised_by, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :assigned_to %><br>
+			    <%= f.text_field :assigned_to, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :date %><br>
+			    <%= f.text_field :date, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :raised_by_remarks %><br>
+			    <%= f.text_area :raised_by_remarks, class: "form-control" %>
+			  </p>
+		
+
+			</div>
+		</div>
+
+		<hr>
+
+	  <h3>Item Details</h3>
+	  <div class="row">
+	  	<div class="col-md-6">
+
+			  <p>
+			    <%= f.label :solution_required_by_date %><br>
+			    <%= f.text_field :solution_required_by_date, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :solution_required_remarks %><br>
+			    <%= f.text_field :solution_required_remarks, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :form_completed_by %><br>
+			    <%= f.text_field :form_completed_by, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :form_completed_by_date %><br>
+			    <%= f.text_field :form_completed_by_date, class: "form-control" %>
+			  </p>
+			</div>
+
+			<div class="col-md-6">
+			  <p>
+			    <%= f.label :form_completed_by_remarks %><br>
+			    <%= f.text_field :form_completed_by_remarks, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :finding %><br>
+			    <%= f.text_field :finding, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :finding_impact %><br>
+			    <%= f.text_field :finding_impact, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :proposed_immediate_action %><br>
+			    <%= f.text_field :proposed_immediate_action, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :proposed_immediate_action_completed_by %><br>
+			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
+			  </p>
+
+				<p>
+			    <%= f.label :proposed_immediate_action_date %><br>
+			    <%= f.text_field :proposed_immediate_action_date, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :proposed_immediate_action_remarks %><br>
+			    <%= f.text_field :proposed_immediate_action_remarks, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :root_cause_analysis_required %><br>
+			    <%= f.text_field :root_cause_analysis_required, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :underlying_root_cause %><br>
+			    <%= f.text_field :underlying_root_cause, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :determined_by %><br>
+			    <%= f.text_field :determined_by, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :underlying_root_cause_date %><br>
+			    <%= f.text_field :underlying_root_cause_date, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :underlying_root_cause_remarks %><br>
+			    <%= f.text_field :underlying_root_cause_remarks, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :proposed_action_for_longterm_solution %><br>
+			    <%= f.text_field :proposed_action_for_longterm_solution, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :proposed_immediate_action_completed_by %><br>
+			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :proposed_action_for_longterm_solution_date %><br>
+			    <%= f.text_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :proposed_action_for_longterm_solution_remarks %><br>
+			    <%= f.text_field :proposed_action_for_longterm_solution_remarks, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :evaluation_of_effectiveness_of_action %><br>
+			    <%= f.text_field :evaluation_of_effectiveness_of_action, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :objective_evidence %><br>
+			    <%= f.text_field :objective_evidence, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :closed_out_by %><br>
+			    <%= f.text_field :closed_out_by, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :evaluation_of_effectiveness_of_action_date %><br>
+			    <%= f.text_field :evaluation_of_effectiveness_of_action_date, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :evaluation_of_effectiveness_of_action_remarks %><br>
+			    <%= f.text_field :evaluation_of_effectiveness_of_action_remarks, class: "form-control" %>
+			  </p>
+
+			</div><!-- /col-6-md -->
+		</div><!-- /row -->
+
+		<form class="form-signin">
+	  <p>
+	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+	  </p>
+	<% end %>
+	</div> <!-- /container -->
+<br>
+
