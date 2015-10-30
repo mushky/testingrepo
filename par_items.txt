@@ -1,44 +1,72 @@
-Table: PAR
+TABLE: CPAR
 
-cpar_number:integer,
-program:string,
-cpar_source:string,
-category_phase:string,
-specific_source:string,
-other_category:string,
-raised_by:string,
-assigned_to:string,
-date:integer,
-raised_by_remarks:text,
-solution_required_by_date:integer,
-solution_required_remarks:text,
-form_completed_by:string,
-form_completed_by_date:integer,
-form_completed_by_remarks:text,
-finding:text,
-finding_impact:text,
+    	t.integer :cpar_number
+	t.string :form
+	t.string :iat_number
+	t.string :program
+	t.string :cpar_source
+	t.string :category_phase
+	t.string :specific_source
+	t.string :other_category
+	t.string :raised_by
+	t.string :assigned_to
+	t.string :date
+	t.text :raised_by_remarks
+	
+	t.string :solution_required_by_date
+	t.text :solution_required_remarks
+	t.string :form_completed_by
+	t.integer :form_completed_by_date
+	t.text :form_completed_by_remarks
 
-proposed_immediate_action:text,
-proposed_immediate_action_completed_by:string,
-proposed_immediate_action_date:integer,
-proposed_immediate_action_remarks:text,
+	t.boolean :affects_delivered_product
+	t.text :affects_delivered_product_describe
+	t.string :manufacturer
+	t.string :supplier
+	t.string :part_number
+	t.string :nomenclature
+	t.integer :quantity
+	t.string :serial_numbers
+	t.string :disposition
+	t.string :supplier_action
+	t.string :follow_up_action 
+	t.string :other_action
+	t.string :disposition_by
+	t.string :disposition_date
+	t.string :disposition_remarks
+	t.string :sub_contract_po_number
+	t.string :rma_no
+	t.string :supplier_name
+	t.string :address
+	t.string :point_of_contact 
+	t.string :telephone
+	t.string :mobile
+	t.string :email
 
-root_cause_analysis_required:boolean,
-underlying_root_cause:text,
-determined_by:string,
-underlying_root_cause_date:integer,
-underlying_root_cause_remarks:text,
+	t.text :finding
+	t.text :finding_impact
 
-proposed_action_for_longterm_solution:text,
-proposed_action_for_longterm_solution_completed_by:string,
-proposed_action_for_longterm_solution_date:integer,
-proposed_action_for_longterm_solution_remarks:text,
+	t.text :proposed_immediate_action
+	t.string :proposed_immediate_action_completed_by
+	t.integer :proposed_immediate_action_date
+	t.text :proposed_immediate_action_remarks
 
-evaluation_of_effectiveness_of_action:text,
-objective_evidence:text,
-closed_out_by:string,
-evaluation_of_effectiveness_of_action_date:integer,
-evaluation_of_effectiveness_of_action_remarks:text
+	t.boolean :root_cause_analysis_required
+	t.text :underlying_root_cause
+	t.string :determined_by
+	t.integer :underlying_root_cause_date
+	t.text :underlying_root_cause_remarks
+
+	t.text :proposed_action_for_longterm_solution
+	t.string :proposed_action_for_longterm_solution_completed_by
+	t.integer :proposed_action_for_longterm_solution_date
+	t.text :proposed_action_for_longterm_solution_remarks
+
+	t.text :evaluation_of_effectiveness_of_action
+	t.text :objective_evidence
+	t.string :closed_out_by
+	t.integer :evaluation_of_effectiveness_of_action_date
+	t.text :evaluation_of_effectiveness_of_action_remarks
 
 
 

@@ -1,7 +1,7 @@
-class CreatePars < ActiveRecord::Migration
+class CreateCpars < ActiveRecord::Migration
   def change
-    create_table :pars do |t|
-			t.integer :cpar_number
+    create_table :cpars do |t|
+    	t.integer :cpar_number
 			t.string :form
 			t.integer :iat_number
 			t.string :program
@@ -30,7 +30,7 @@ class CreatePars < ActiveRecord::Migration
 			t.string :serial_numbers
 			t.string :disposition
 			t.string :supplier_action
-			t.string :follow_up_action :string
+			t.string :follow_up_action 
 			t.string :other_action
 			t.string :disposition_by
 			t.string :disposition_date
@@ -68,7 +68,7 @@ class CreatePars < ActiveRecord::Migration
 			t.string :closed_out_by
 			t.integer :evaluation_of_effectiveness_of_action_date
 			t.text :evaluation_of_effectiveness_of_action_remarks
-
+			
       t.timestamps null: false
     end
   end
