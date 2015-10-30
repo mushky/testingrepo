@@ -1,12 +1,7 @@
 <div class="container">
-	<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |f| %>
+	<%= form_for :car, html: {class: "form-horizontal"}, url: cars_path do |f| %>
 		<div class="row">
-			<div class="col-md-12">
-				<p>
-				  <%= f.label :form, "Form Type:" %>
-				  <%= f.select(:form, options_for_select([['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-conforming Material', 'Non-conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement']]),{ class: "btn btn-default dropdown-toggle" }) %>
-				</p>			
-					 
+			<div class="col-md-12">					 
 				<p>
 				  <%= f.label :program, "Program:" %>
 				  <%= f.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
@@ -76,128 +71,7 @@
 			    <%= f.label :form_completed_by_remarks, "Form Completed by Remarks" %>
 			    <%= f.text_field :form_completed_by_remarks, class: "form-control" %>
 			  </p>
-
-			  <hr>
-
-			  <div class="non_conforming_material">	  
-	  		<h3>If Non Conforming Material</h3>
-
-				<p>
-			    <%= f.label :affects_delivered_product, "Affects Delivered Product" %>
-			    <%= f.text_field :affects_delivered_product, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :affects_delivered_product_describe, "Affects Delivered Product Describe" %>
-			    <%= f.text_field :affects_delivered_product_describe, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :manufacturer, "Manufacturer" %>
-			    <%= f.text_area :manufacturer, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :supplier, "Supplier" %>
-			    <%= f.text_field :supplier, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :part_number, "Part Number" %>
-			    <%= f.text_field :part_number, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :nomenclature, "Nomenclature" %>
-			    <%= f.text_area :nomenclature, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :quantity, "Quantity" %>
-			    <%= f.text_field :quantity, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :serial_numbers, "Serial Numbers" %>
-			    <%= f.text_field :serial_numbers, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition, "Disposition:" %>
-			    <%= f.select(:disposition, options_for_select([['Use As Is', 'Use As Is'], ['Regrade', 'Regrade'],['Scrap', 'Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
-			  </p>
-
-			  <p>
-			    <%= f.label :supplier_action, "Supplier Action:" %>
-			    <%= f.select(:supplier_action, options_for_select([['Notify Customer', 'Notify Customer'], ['Request Waiver', 'Request Waiver'],['Request Authority to Scrap', 'Request Authority to Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>			  
-			  </p>
-
-			  <p>
-			    <%= f.label :follow_up_action, "Follow up Action:" %>
-			    <%= f.select(:follow_up_action, options_for_select([['Write CAR', 'Write CAR'], ['Write PAR', 'Write PAR'],['Write SCAR', 'Write SCAR'], ['Re-inspect', 'Re-inspect'], ['Other (Specify', 'Other (Specify'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
-			  </p>
-
-			  <p>
-			    <%= f.label :other_action, "Other Action" %>
-			    <%= f.text_field :other_action, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition_by, "Disposition by" %>
-			    <%= f.text_field :disposition_by, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition_date, "Date" %>
-			    <%= f.text_field :disposition_date, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition_remarks, "Disposition Remarks" %>
-			    <%= f.text_field :disposition_remarks, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :sub_contract_po_number, "Sub Contract PO Number" %>
-			    <%= f.text_field :sub_contract_po_number, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :rma_no, "RMA Number" %>
-			    <%= f.text_field :rma_no, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :supplier_name, "Supplier Name" %>
-			    <%= f.text_field :supplier_name, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :address, "Address" %>
-			    <%= f.text_field :address, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :point_of_contact, "Point of Contact" %>
-			    <%= f.text_field :point_of_contact, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :telephone, "Telephone" %>
-			    <%= f.text_field :telephone, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :mobile, "Mobile" %>
-			    <%= f.text_field :mobile, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :email, "Email" %>
-			    <%= f.text_field :email, class: "form-control" %>
-			  </p>
-		  </div> <!-- /non-conforming material -->
-
+			<hr>
 		  <div class="finding">
 		  <h3> Finding </h3>
 			  <p>

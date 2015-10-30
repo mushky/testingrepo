@@ -1,204 +1,187 @@
 <div class="container">
 	<%= form_for :par, html: {class: "form-horizontal"}, url: pars_path do |f| %>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">					 
 				<p>
-				  <%= f.label :cpar_number %>
-				  <%= f.text_field :cpar_number, class: "form-control" %>
-				</p>
-				 
-				<p>
-				  <%= f.label :program %>
-				  <%= f.text_field :program, class: "form-control" %>
+				  <%= f.label :program, "Program:" %>
+				  <%= f.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>
-				  <%= f.label :cpar_source %>
-				  <%= f.text_field :cpar_source, class: "form-control" %>
+				  <%= f.label :cpar_source, "CPAR Source:" %>
+				  <%= f.select(:cpar_source, options_for_select([['Audit Nonconformity', 'Audit Nonconformity'], ['Customer Complaint', 'Customer Complaint'],['Missed Schedule', 'Missed Schedule'], ['Non-responsive', 'Non-responsive'], ['Inspection', 'Inspection'], ['Test', 'Test'], ['Other (Internal)', 'Other (Internal)'], ['Other (External)', 'Other (External)']]), { class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 			  <p>
-					<%= f.label :category_phase %>		
-					<%= f.text_field(:category_phase) %>
+					<%= f.label :category_phase, "Category Phase:" %>		
+				  <%= f.select(:category_phase, options_for_select([['Receiving Inspection', 'Receiving Inspection'], ['SIL Test', 'SIL Test'], ['Guidance Doc.', 'Guidance Doc.'], ['Other Doc. (Specify)', 'Other Doc (Specify)'], ['Integration & Test', 'Integration & Test'], ['Gnd/Flt Test', 'Gnd/Flt Test'], ['In Service', 'In Service'], ['Other (Specify)', 'Other (Specify)']]), { class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
-			    <%= f.label :specific_source  %><br>
+			    <%= f.label :specific_source, "Specific Source"  %>
 			    <%= f.text_field :specific_source, class: "form-control" %>
 			  </p>
-			</div>
 
-	  	<div class="col-md-6">
 			  <p>
-			    <%= f.label :other_category %><br>
+			    <%= f.label :other_category, "Other Category" %>
 			    <%= f.text_field :other_category, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :raised_by %><br>
-			    <%= f.text_area :raised_by, class: "form-control" %>
+			    <%= f.label :raised_by, "Raised By" %>
+			    <%= f.text_field :raised_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :assigned_to %><br>
+			    <%= f.label :assigned_to, "Assigned To" %>
 			    <%= f.text_field :assigned_to, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :date %><br>
+			    <%= f.label :date, "Date" %>
 			    <%= f.text_field :date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :raised_by_remarks %><br>
+			    <%= f.label :raised_by_remarks, "Raised by Remarks" %>
 			    <%= f.text_area :raised_by_remarks, class: "form-control" %>
 			  </p>
-		
-
-			</div>
-		</div>
-
-		<hr>
-
-	  <h3>Item Details</h3>
-	  <div class="row">
-	  	<div class="col-md-6">
 
 			  <p>
-			    <%= f.label :solution_required_by_date %><br>
+			    <%= f.label :solution_required_by_date, "Solution Required by Date" %>
 			    <%= f.text_field :solution_required_by_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :solution_required_remarks %><br>
+			    <%= f.label :solution_required_remarks, "Solution Required Remarks" %>
 			    <%= f.text_field :solution_required_remarks, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :form_completed_by %><br>
+			    <%= f.label :form_completed_by, "Form Completed by" %>
 			    <%= f.text_field :form_completed_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :form_completed_by_date %><br>
+			    <%= f.label :form_completed_by_date, "Form Completed by Date" %>
 			    <%= f.text_field :form_completed_by_date, class: "form-control" %>
 			  </p>
-			</div>
 
-			<div class="col-md-6">
 			  <p>
-			    <%= f.label :form_completed_by_remarks %><br>
+			    <%= f.label :form_completed_by_remarks, "Form Completed by Remarks" %>
 			    <%= f.text_field :form_completed_by_remarks, class: "form-control" %>
 			  </p>
-
+			<hr>
+		  <div class="finding">
+		  <h3> Finding </h3>
 			  <p>
-			    <%= f.label :finding %><br>
+			    <%= f.label :finding, "Finding" %>
 			    <%= f.text_field :finding, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :finding_impact %><br>
+			    <%= f.label :finding_impact, "Finding Impact" %>
 			    <%= f.text_field :finding_impact, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action %><br>
+			    <%= f.label :proposed_immediate_action, "Proposed Immediate Action" %>
 			    <%= f.text_field :proposed_immediate_action, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by %><br>
+			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 				<p>
-			    <%= f.label :proposed_immediate_action_date %><br>
+			    <%= f.label :proposed_immediate_action_date, "Proposed Immediate Action Date" %>
 			    <%= f.text_field :proposed_immediate_action_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_remarks %><br>
+			    <%= f.label :proposed_immediate_action_remarks, "Proposed Immediate Action Remarks" %>
 			    <%= f.text_field :proposed_immediate_action_remarks, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :root_cause_analysis_required %><br>
+			    <%= f.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
 			    <%= f.text_field :root_cause_analysis_required, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :underlying_root_cause %><br>
+			    <%= f.label :underlying_root_cause, "Underlying Root Cause" %>
 			    <%= f.text_field :underlying_root_cause, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :determined_by %><br>
+			    <%= f.label :determined_by, "Determined By" %>
 			    <%= f.text_field :determined_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :underlying_root_cause_date %><br>
+			    <%= f.label :underlying_root_cause_date, "Underlying Root Cause Date" %><br>
 			    <%= f.text_field :underlying_root_cause_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :underlying_root_cause_remarks %><br>
+			    <%= f.label :underlying_root_cause_remarks, "Underlying Root Cause Remarks" %>
 			    <%= f.text_field :underlying_root_cause_remarks, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution %><br>
+			    <%= f.label :proposed_action_for_longterm_solution, "Proposed Action for Longterm Solution" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by %><br>
+			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_date %><br>
+			    <%= f.label :proposed_action_for_longterm_solution_date, "Proposed Action for Longterm Solution Date" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_remarks %><br>
+			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Proposed Action for Longterm Solution Remarks" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution_remarks, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :evaluation_of_effectiveness_of_action %><br>
+			    <%= f.label :evaluation_of_effectiveness_of_action, "Evaluation of Effectiveness of Action" %>
 			    <%= f.text_field :evaluation_of_effectiveness_of_action, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :objective_evidence %><br>
+			    <%= f.label :objective_evidence, "Objective Evidence" %>
 			    <%= f.text_field :objective_evidence, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :closed_out_by %><br>
+			    <%= f.label :closed_out_by, "Closed Out By" %>
 			    <%= f.text_field :closed_out_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :evaluation_of_effectiveness_of_action_date %><br>
+			    <%= f.label :evaluation_of_effectiveness_of_action_date, "Date" %>
 			    <%= f.text_field :evaluation_of_effectiveness_of_action_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :evaluation_of_effectiveness_of_action_remarks %><br>
+			    <%= f.label :evaluation_of_effectiveness_of_action_remarks, "Remarks" %>
 			    <%= f.text_field :evaluation_of_effectiveness_of_action_remarks, class: "form-control" %>
 			  </p>
-
-			</div><!-- /col-6-md -->
-		</div><!-- /row -->
+			</div><!-- /finding -->
 
 		<form class="form-signin">
 	  <p>
 	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
 	  </p>
-	<% end %>
+			<% end %>
+			</div><!-- /col-12-md -->
+		</div><!-- /row -->
 	</div> <!-- /container -->
 <br>
 

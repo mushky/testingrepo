@@ -14,7 +14,7 @@ class CparsController < ApplicationController
   end
 
   def create
-    @cpar = Cpar.new(par_params)
+    @cpar = Cpar.new(cpar_params)
     if @cpar.save
       redirect_to cpars_path
     else
@@ -47,7 +47,7 @@ class CparsController < ApplicationController
   end
 
   private
-    def cpars_params
+    def cpar_params
       params.require(:cpar).permit(:cpar_number,
 																	:form,
 																	:iat_number,

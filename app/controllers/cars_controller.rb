@@ -1,54 +1,56 @@
-class ParsController < ApplicationController
+class CarsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-  	@pars = Par.all
+  	@cars = Car.all
   end
 
   def new
-  	@par = Par.new
+  	@car = Car.new
   end
 
   def show
-  	@par = Par.find(params[:id])
+  	@car = Car.find(params[:id])
   end
 
   def create
-    @par = Par.new(par_params)
-    if @par.save
-      redirect_to pars_path
+    @car = Car.new(car_params)
+    if @car.save
+      redirect_to cars_path
     else
       render 'new'
     end
   end
 
   def edit
-    @par = Par.find(params[:id])
+    @car = Car.find(params[:id])
   end
 
   def update
-    @par = Par.find(params[:id])
-    if @par.update(par_params)
-      redirect_to pars_path
+    @car = Car.find(params[:id])
+    if @car.update(car_params)
+      redirect_to cars_path
     else
       render 'edit'
     end
   end
 
   def delete
-    @par = Par.find(params[:id])
+    @cpar = Car.find(params[:id])
   end
 
   def destroy
-    @par = Par.find(params[:id])
-    @par.destroy
+    @car = Car.find(params[:id])
+    @car.destroy
 
-    redirect_to pars_path
+    redirect_to cars_path
   end
 
   private
-    def par_params
-      params.require(:par).permit(:cpar_number,
+    def car_params
+      params.require(:car).permit(:cpar_number,
+																	:form,
+																	:iat_number,
 																	:program,
 																	:cpar_source,
 																	:category_phase,
@@ -63,6 +65,7 @@ class ParsController < ApplicationController
 																	:form_completed_by,
 																	:form_completed_by_date,
 																	:form_completed_by_remarks,
+
 																	:finding,
 																	:finding_impact,
 																	:proposed_immediate_action,
