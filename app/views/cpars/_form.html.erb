@@ -4,8 +4,8 @@
 			<div class="col-md-12">
 
 				<p>
-				  <%= f.label :form, "Program:" %>
-				  <%= f.select(:form, options_for_select([['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
+				  <%= f.label :form, "Form Type:" %>
+				  <%= f.select(:form, options_for_select([["Blank", "Blank"],['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
 
 				<p>
@@ -314,20 +314,20 @@
 	</div> <!-- /container -->
 <br>
 <script>
-		function showDiv(elem) {
-	    if (elem.value == "Corrective Action")
-				document.getElementById("non_conforming_material").style.display = "none"; 
+	function showDiv(elem) {
+	  if (elem.value == "Corrective Action")
+			document.getElementById("non_conforming_material").style.display = "none"; 
 
-			else if (elem.value == "Preventive Action")
-				document.getElementById("non_conforming_material").style.display = "none";
+		else if (elem.value == "Preventive Action")
+			document.getElementById("non_conforming_material").style.display = "none";
 
-			else if (elem.value == "Non-Conforming Material")
-				document.getElementById("finding").style.display = "block" ? "none": "block";
+		else if (elem.value == "Non-Conforming Material")
+			document.getElementById("finding").style.display = "block" ? "none": "block";
 
-			else if (elem.value == "Supplier Corrective Action")
-				document.getElementById("non_conforming_material").style.display = "none" ? "block": "none";
+		else if (elem.value == "Supplier Corrective Action")
+			document.getElementById("non_conforming_material").style.display = "none" ? "block": "none";
 
-			else if (elem.value == "Continual Improvement")
-				document.getElementById("non_conforming_material").style.display = "block" ? "none": "block";
+		else if (elem.value == "Continual Improvement")
+			document.getElementById("non_conforming_material").style.display = "block" ? "none": "block";
 		} 
 </script>
