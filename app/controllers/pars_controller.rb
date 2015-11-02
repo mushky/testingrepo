@@ -29,7 +29,7 @@ class ParsController < ApplicationController
   def update
     @par = Par.find(params[:id])
     if @par.update(par_params)
-      redirect_to pars_path
+      redirect_to @par
     else
       render 'edit'
     end

@@ -14,7 +14,7 @@
 
 				<p>
 				  <%= f.label :pr_date %>
-				  <%= f.text_field :pr_date, class: "form-control" %>
+				  <%= f.date_field :pr_date, class: "form-control" %>
 				</p>
 
 			<h3>Program</h3>
@@ -42,7 +42,7 @@
 
 			  <p>
 			    <%= f.label :phone %><br>
-			    <%= f.text_field :phone, class: "form-control" %>
+			    <%= f.text_area :phone, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -67,7 +67,7 @@
 
 			  <p>
 			    <%= f.label :quantity %><br>
-			    <%= f.text_field :quantity, class: "form-control" %>
+			    <%= f.number_field :quantity, class: "form-control" %>
 			  </p>
 
 			  <p>

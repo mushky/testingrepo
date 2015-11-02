@@ -30,7 +30,7 @@ class RequisitionsController < ApplicationController
   def update
     @requisition = Requisition.find(params[:id])
     if @requisition.update(requisition_params)
-      redirect_to requisitions_path
+      redirect_to @requesition
     else
       render 'edit'
     end

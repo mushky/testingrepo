@@ -29,7 +29,7 @@ class ReceiveitemsController < ApplicationController
   def update
     @ReceiveItem = ReceiveItem.find(params[:id])
     if @ReceiveItem.update(receive_params)
-      redirect_to receiveitems_path
+      redirect_to @ReceiveItem
     else
       render 'edit'
     end

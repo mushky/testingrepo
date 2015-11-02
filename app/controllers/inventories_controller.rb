@@ -29,7 +29,7 @@ class InventoriesController < ApplicationController
   def update
     @inventory = Inventory.find(params[:id])
     if @inventory.update(inventory_params)
-      redirect_to inventories_path
+      redirect_to @inventory
     else
       render 'edit'
     end

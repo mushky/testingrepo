@@ -29,7 +29,7 @@ class InspectitemsController < ApplicationController
   def update
     @InspectItem = InspectItem.find(params[:id])
     if @InspectItem.update(receive_params)
-      redirect_to inspectitems_path
+      redirect_to @InspectItem
     else
       render 'edit'
     end

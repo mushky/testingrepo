@@ -30,7 +30,7 @@ class DocumentsController < ApplicationController
   def update
     @Document = Document.find(params[:id])
     if @Document.update(Document_params)
-      redirect_to documents_path
+      redirect_to @Document
     else
       render 'edit'
     end

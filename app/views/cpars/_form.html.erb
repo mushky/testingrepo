@@ -2,11 +2,12 @@
 	<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |f| %>
 		<div class="row">
 			<div class="col-md-12">
+
 				<p>
-				  <%= f.label :form, "Form Type:" %>
-				  <%= f.select(:form, options_for_select([['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-conforming Material', 'Non-conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement']]),{ class: "btn btn-default dropdown-toggle" }) %>
-				</p>			
-					 
+				  <%= f.label :form, "Program:" %>
+				  <%= f.select(:form, options_for_select([['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
+				</p>
+
 				<p>
 				  <%= f.label :program, "Program:" %>
 				  <%= f.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
@@ -44,7 +45,7 @@
 
 			  <p>
 			    <%= f.label :date, "Date" %>
-			    <%= f.text_field :date, class: "form-control" %>
+			    <%= f.date_field :date, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -54,7 +55,7 @@
 
 			  <p>
 			    <%= f.label :solution_required_by_date, "Solution Required by Date" %>
-			    <%= f.text_field :solution_required_by_date, class: "form-control" %>
+			    <%= f.date_field :solution_required_by_date, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -69,7 +70,7 @@
 
 			  <p>
 			    <%= f.label :form_completed_by_date, "Form Completed by Date" %>
-			    <%= f.text_field :form_completed_by_date, class: "form-control" %>
+			    <%= f.date_field :form_completed_by_date, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -79,7 +80,7 @@
 
 			  <hr>
 
-			  <div class="non_conforming_material">	  
+			  <div id="non_conforming_material">	  
 	  		<h3>If Non Conforming Material</h3>
 
 				<p>
@@ -149,7 +150,7 @@
 
 			  <p>
 			    <%= f.label :disposition_date, "Date" %>
-			    <%= f.text_field :disposition_date, class: "form-control" %>
+			    <%= f.date_field :disposition_date, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -184,12 +185,12 @@
 
 			  <p>
 			    <%= f.label :telephone, "Telephone" %>
-			    <%= f.text_field :telephone, class: "form-control" %>
+			    <%= f.telephone_field :telephone, class: "form-control" %>
 			  </p>
 
 			  <p>
 			    <%= f.label :mobile, "Mobile" %>
-			    <%= f.text_field :mobile, class: "form-control" %>
+			    <%= f.telephone_field :mobile, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -198,7 +199,7 @@
 			  </p>
 		  </div> <!-- /non-conforming material -->
 
-		  <div class="finding">
+		  <div id="finding">
 		  <h3> Finding </h3>
 			  <p>
 			    <%= f.label :finding, "Finding" %>
@@ -222,7 +223,7 @@
 
 				<p>
 			    <%= f.label :proposed_immediate_action_date, "Proposed Immediate Action Date" %>
-			    <%= f.text_field :proposed_immediate_action_date, class: "form-control" %>
+			    <%= f.date_field :proposed_immediate_action_date, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -247,7 +248,7 @@
 
 			  <p>
 			    <%= f.label :underlying_root_cause_date, "Underlying Root Cause Date" %><br>
-			    <%= f.text_field :underlying_root_cause_date, class: "form-control" %>
+			    <%= f.date_field :underlying_root_cause_date, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -267,14 +268,16 @@
 
 			  <p>
 			    <%= f.label :proposed_action_for_longterm_solution_date, "Proposed Action for Longterm Solution Date" %>
-			    <%= f.text_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
+			    <%= f.date_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
 			  </p>
 
 			  <p>
 			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Proposed Action for Longterm Solution Remarks" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution_remarks, class: "form-control" %>
 			  </p>
-
+			</div><!-- /finding -->
+			<div id="evaluation_of_supplier_action">
+				<h3>Evaluation of Supplier Action</h3>
 			  <p>
 			    <%= f.label :evaluation_of_effectiveness_of_action, "Evaluation of Effectiveness of Action" %>
 			    <%= f.text_field :evaluation_of_effectiveness_of_action, class: "form-control" %>
@@ -292,14 +295,14 @@
 
 			  <p>
 			    <%= f.label :evaluation_of_effectiveness_of_action_date, "Date" %>
-			    <%= f.text_field :evaluation_of_effectiveness_of_action_date, class: "form-control" %>
+			    <%= f.date_field :evaluation_of_effectiveness_of_action_date, class: "form-control" %>
 			  </p>
 
 			  <p>
 			    <%= f.label :evaluation_of_effectiveness_of_action_remarks, "Remarks" %>
-			    <%= f.text_field :evaluation_of_effectiveness_of_action_remarks, class: "form-control" %>
+			    <%= f.text_area :evaluation_of_effectiveness_of_action_remarks, class: "form-control" %>
 			  </p>
-			</div><!-- /finding -->
+			</div><!-- /evaluation_of_supplier_action -->
 
 		<form class="form-signin">
 	  <p>
@@ -310,4 +313,21 @@
 		</div><!-- /row -->
 	</div> <!-- /container -->
 <br>
+<script>
+		function showDiv(elem) {
+	    if (elem.value == "Corrective Action")
+				document.getElementById("non_conforming_material").style.display = "none"; 
 
+			else if (elem.value == "Preventive Action")
+				document.getElementById("non_conforming_material").style.display = "none";
+
+			else if (elem.value == "Non-Conforming Material")
+				document.getElementById("finding").style.display = "block" ? "none": "block";
+
+			else if (elem.value == "Supplier Corrective Action")
+				document.getElementById("non_conforming_material").style.display = "none" ? "block": "none";
+
+			else if (elem.value == "Continual Improvement")
+				document.getElementById("non_conforming_material").style.display = "block" ? "none": "block";
+		} 
+</script>

@@ -29,7 +29,7 @@ class ShipitemsController < ApplicationController
   def update
     @ShipItem = ShipItem.find(params[:id])
     if @ShipItem.update(shipitem_params)
-      redirect_to shipitems_path
+      redirect_to @ShipItem
     else
       render 'edit'
     end

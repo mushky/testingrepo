@@ -29,7 +29,7 @@ class LicensesController < ApplicationController
   def update
     @license = License.find(params[:id])
     if @license.update(receive_params)
-      redirect_to licenses_path
+      redirect_to @license
     else
       render 'edit'
     end
