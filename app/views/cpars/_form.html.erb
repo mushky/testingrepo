@@ -22,8 +22,8 @@
 			<div class="col-md-12">
 		
 			<div id="choose">
+				<h2>Select CPAR Form</h2>
 				<p>
-					<%= f.label :form, "Form Type:" %>
 					<%= f.select(:form, options_for_select([['Choose Form', 'Choose Form'],['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
 
@@ -54,8 +54,9 @@
 				  <%= f.text_field :other_category, class: "form-control" %>
 				</p>
 
+				<hr>
+				<h3>Raised By</h3>
 				<p>
-				  <%= f.label :raised_by, "Raised By" %>
 				  <%= f.text_field :raised_by, class: "form-control" %>
 				</p>
 
@@ -70,12 +71,13 @@
 				</p>
 
 			  <p>
-			    <%= f.label :raised_by_remarks, "Raised by Remarks" %>
+			    <%= f.label :raised_by_remarks, "Remarks" %>
 			    <%= f.text_area :raised_by_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+			  <h3>Solution Required By</h3>
 				<p>
-			    <%= f.label :solution_required_by_date, "Solution Required by Date" %>
 			    <%= f.date_field :solution_required_by_date, class: "form-control" %>
 			  </p>
 
@@ -90,49 +92,52 @@
 			  </p>
 
 				  <p>
-				    <%= f.label :form_completed_by_date, "Form Completed by Date" %>
+				    <%= f.label :form_completed_by_date, "Date" %>
 				    <%= f.date_field :form_completed_by_date, class: "form-control" %>
 				  </p>
 
 				  <p>
-				    <%= f.label :form_completed_by_remarks, "Form Completed by Remarks" %>
-				    <%= f.text_field :form_completed_by_remarks, class: "form-control" %>
+				    <%= f.label :form_completed_by_remarks, "Remarks" %>
+				    <%= f.text_area :form_completed_by_remarks, class: "form-control" %>
 				  </p>
-
+				<hr>
 		  	<h3>Finding</h3>
 			  <p>
-			    <%= f.label :finding, "Finding" %>
-			    <%= f.text_field :finding, class: "form-control" %>
+			    <%= f.text_area :finding, class: "form-control" %>
 			  </p>
 
 			  <p>
 			    <%= f.label :finding_impact, "Finding Impact" %>
-			    <%= f.text_field :finding_impact, class: "form-control" %>
+			    <%= f.text_area :finding_impact, class: "form-control" %>
 			  </p>
 
+			  <hr>
+			  
+			  <h3>Proposed Immediate Action</h3>
 			  <p>
-			    <%= f.label :proposed_immediate_action, "Proposed Immediate Action" %>
 			    <%= f.text_field :proposed_immediate_action, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
+			    <%= f.label :proposed_immediate_action_completed_by, "Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 				<p>
-			    <%= f.label :proposed_immediate_action_date, "Proposed Immediate Action Date" %>
+			    <%= f.label :proposed_immediate_action_date, "Date" %>
 			    <%= f.date_field :proposed_immediate_action_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_remarks, "Proposed Immediate Action Remarks" %>
+			    <%= f.label :proposed_immediate_action_remarks, "Remarks" %>
 			    <%= f.text_field :proposed_immediate_action_remarks, class: "form-control" %>
 			  </p>
+			  <hr>
 
+			  <h3>Root Cause Analysis</h3>
 			  <p>
 			    <%= f.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-			    <%= f.text_field :root_cause_analysis_required, class: "form-control" %>
+					<%= f.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
@@ -155,29 +160,34 @@
 			    <%= f.text_field :underlying_root_cause_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+			  
+			  <h3>Proposed Action for Long-term Solution</h3>
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution, "Proposed Action for Longterm Solution" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
+			    <%= f.label :proposed_immediate_action_completed_by, "Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_date, "Proposed Action for Longterm Solution Date" %>
+			    <%= f.label :proposed_action_for_longterm_solution_date, "Date" %>
 			    <%= f.date_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Proposed Action for Longterm Solution Remarks" %>
+			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Remarks" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution_remarks, class: "form-control" %>
 			  </p>
-				<h3>Evaluation of Supplier Action</h3>
+			  
+			  <hr>
+				
+				<h3>Evaluation of Effectiveness of Action</h3>
+			  
 			  <p>
-			    <%= f.label :evaluation_of_effectiveness_of_action, "Evaluation of Effectiveness of Action" %>
-			    <%= f.text_field :evaluation_of_effectiveness_of_action, class: "form-control" %>
+			    <%= f.text_area :evaluation_of_effectiveness_of_action, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -228,8 +238,9 @@
 				  <%= f.text_field :other_category, class: "form-control" %>
 				</p>
 
+				<hr>
+				<h3>Raised By</h3>
 				<p>
-				  <%= f.label :raised_by, "Raised By" %>
 				  <%= f.text_field :raised_by, class: "form-control" %>
 				</p>
 
@@ -244,12 +255,13 @@
 				</p>
 
 			  <p>
-			    <%= f.label :raised_by_remarks, "Raised by Remarks" %>
+			    <%= f.label :raised_by_remarks, "Remarks" %>
 			    <%= f.text_area :raised_by_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+			  <h3>Solution Required By</h3>
 				<p>
-			    <%= f.label :solution_required_by_date, "Solution Required by Date" %>
 			    <%= f.date_field :solution_required_by_date, class: "form-control" %>
 			  </p>
 
@@ -264,49 +276,52 @@
 			  </p>
 
 				  <p>
-				    <%= f.label :form_completed_by_date, "Form Completed by Date" %>
+				    <%= f.label :form_completed_by_date, "Date" %>
 				    <%= f.date_field :form_completed_by_date, class: "form-control" %>
 				  </p>
 
 				  <p>
-				    <%= f.label :form_completed_by_remarks, "Form Completed by Remarks" %>
-				    <%= f.text_field :form_completed_by_remarks, class: "form-control" %>
+				    <%= f.label :form_completed_by_remarks, "Remarks" %>
+				    <%= f.text_area :form_completed_by_remarks, class: "form-control" %>
 				  </p>
-
+				<hr>
 		  	<h3>Finding</h3>
 			  <p>
-			    <%= f.label :finding, "Finding" %>
-			    <%= f.text_field :finding, class: "form-control" %>
+			    <%= f.text_area :finding, class: "form-control" %>
 			  </p>
 
 			  <p>
 			    <%= f.label :finding_impact, "Finding Impact" %>
-			    <%= f.text_field :finding_impact, class: "form-control" %>
+			    <%= f.text_area :finding_impact, class: "form-control" %>
 			  </p>
 
+			  <hr>
+			  
+			  <h3>Proposed Immediate Action</h3>
 			  <p>
-			    <%= f.label :proposed_immediate_action, "Proposed Immediate Action" %>
 			    <%= f.text_field :proposed_immediate_action, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
+			    <%= f.label :proposed_immediate_action_completed_by, "Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 				<p>
-			    <%= f.label :proposed_immediate_action_date, "Proposed Immediate Action Date" %>
+			    <%= f.label :proposed_immediate_action_date, "Date" %>
 			    <%= f.date_field :proposed_immediate_action_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_remarks, "Proposed Immediate Action Remarks" %>
+			    <%= f.label :proposed_immediate_action_remarks, "Remarks" %>
 			    <%= f.text_field :proposed_immediate_action_remarks, class: "form-control" %>
 			  </p>
+			  <hr>
 
+			  <h3>Root Cause Analysis</h3>
 			  <p>
 			    <%= f.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-			    <%= f.text_field :root_cause_analysis_required, class: "form-control" %>
+					<%= f.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
@@ -329,29 +344,34 @@
 			    <%= f.text_field :underlying_root_cause_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+			  
+			  <h3>Proposed Action for Long-term Solution</h3>
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution, "Proposed Action for Longterm Solution" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
+			    <%= f.label :proposed_immediate_action_completed_by, "Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_date, "Proposed Action for Longterm Solution Date" %>
+			    <%= f.label :proposed_action_for_longterm_solution_date, "Date" %>
 			    <%= f.date_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Proposed Action for Longterm Solution Remarks" %>
+			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Remarks" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution_remarks, class: "form-control" %>
 			  </p>
-				<h3>Evaluation of Supplier Action</h3>
+			  
+			  <hr>
+				
+				<h3>Evaluation of Effectiveness of Action</h3>
+			  
 			  <p>
-			    <%= f.label :evaluation_of_effectiveness_of_action, "Evaluation of Effectiveness of Action" %>
-			    <%= f.text_field :evaluation_of_effectiveness_of_action, class: "form-control" %>
+			    <%= f.text_area :evaluation_of_effectiveness_of_action, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -374,7 +394,6 @@
 			    <%= f.text_area :evaluation_of_effectiveness_of_action_remarks, class: "form-control" %>
 			  </p>
 			</div><!-- /car -->
-
 
 			<div id="ncmr">
 				<h2>Non-Conforming Material Report (NCMR)</h2> 
@@ -403,8 +422,11 @@
 			    <%= f.text_field :other_category, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
+			  <h3>Raised By</h3>
+
 			  <p>
-			    <%= f.label :raised_by, "Raised By" %>
 			    <%= f.text_field :raised_by, class: "form-control" %>
 			  </p>
 
@@ -423,8 +445,10 @@
 			    <%= f.text_area :raised_by_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
+			  <h3>Solution Required By</h3>
 			  <p>
-			    <%= f.label :solution_required_by_date, "Solution Required by Date" %>
 			    <%= f.date_field :solution_required_by_date, class: "form-control" %>
 			  </p>
 
@@ -447,17 +471,19 @@
 			    <%= f.label :form_completed_by_remarks, "Form Completed by Remarks" %>
 			    <%= f.text_field :form_completed_by_remarks, class: "form-control" %>
 			  </p>
-			   
+			  
+			  <hr>
+
 	  		<h3>If Non Conforming Material</h3>
 
 				<p>
 			    <%= f.label :affects_delivered_product, "Affects Delivered Product" %>
-			    <%= f.text_field :affects_delivered_product, class: "form-control" %>
+					<%= f.select(:affects_delivered_product, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
 			    <%= f.label :affects_delivered_product_describe, "Affects Delivered Product Describe" %>
-			    <%= f.text_field :affects_delivered_product_describe, class: "form-control" %>
+			    <%= f.text_area :affects_delivered_product_describe, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -521,10 +547,13 @@
 			  </p>
 
 			  <p>
-			    <%= f.label :disposition_remarks, "Disposition Remarks" %>
+			    <%= f.label :disposition_remarks, "Remarks" %>
 			    <%= f.text_field :disposition_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
+			  <h3>If Supplier Action</h3>
 			  <p>
 			    <%= f.label :sub_contract_po_number, "Sub Contract PO Number" %>
 			    <%= f.text_field :sub_contract_po_number, class: "form-control" %>
@@ -565,66 +594,20 @@
 			    <%= f.text_field :email, class: "form-control" %>
 			  </p>
 
-			  <h3>Finding</h3>
+			  <hr>
+
+			  <h3>If Non-conformance</h3>
 				  <p>
-				    <%= f.label :finding, "Finding" %>
-				    <%= f.text_field :finding, class: "form-control" %>
+				  	<%= f.label :finding, "Details of Non-conformance" %>
+				    <%= f.text_area :finding, class: "form-control" %>
+				  </p>
+				<h3>Impact of Non-conformance</h3>
+				  <p>
+				  	<%= f.label :finding, "Impact of Non-conformance" %>
+				    <%= f.text_area :finding_impact, class: "form-control" %>
 				  </p>
 
-				  <p>
-				    <%= f.label :finding_impact, "Finding Impact" %>
-				    <%= f.text_field :finding_impact, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :proposed_immediate_action, "Proposed Immediate Action" %>
-				    <%= f.text_field :proposed_immediate_action, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
-				    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
-				  </p>
-
-					<p>
-				    <%= f.label :proposed_immediate_action_date, "Proposed Immediate Action Date" %>
-				    <%= f.date_field :proposed_immediate_action_date, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :proposed_immediate_action_remarks, "Proposed Immediate Action Remarks" %>
-				    <%= f.text_field :proposed_immediate_action_remarks, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-				    <%= f.text_field :root_cause_analysis_required, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :underlying_root_cause, "Underlying Root Cause" %>
-				    <%= f.text_field :underlying_root_cause, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :determined_by, "Determined By" %>
-				    <%= f.text_field :determined_by, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :underlying_root_cause_date, "Underlying Root Cause Date" %><br>
-				    <%= f.date_field :underlying_root_cause_date, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :underlying_root_cause_remarks, "Underlying Root Cause Remarks" %>
-				    <%= f.text_field :underlying_root_cause_remarks, class: "form-control" %>
-				  </p>
-
-				  <p>
-				    <%= f.label :proposed_action_for_longterm_solution, "Proposed Action for Longterm Solution" %>
-				    <%= f.text_field :proposed_action_for_longterm_solution, class: "form-control" %>
-				  </p>
+				<h4>
 
 				<h3>Evaluation of Supplier Action</h3>
 			  <p>
@@ -680,8 +663,9 @@
 			    <%= f.text_field :other_category, class: "form-control" %>
 			  </p>
 
+			  <hr>
+			  <h3>Raised By</h3>
 			  <p>
-			    <%= f.label :raised_by, "Raised By" %>
 			    <%= f.text_field :raised_by, class: "form-control" %>
 			  </p>
 
@@ -696,12 +680,14 @@
 			  </p>
 
 			  <p>
-			    <%= f.label :raised_by_remarks, "Raised by Remarks" %>
+			    <%= f.label :raised_by_remarks, "Remarks" %>
 			    <%= f.text_area :raised_by_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
+			  <h3>Solution Required by Date</h3>
 			  <p>
-			    <%= f.label :solution_required_by_date, "Solution Required by Date" %>
 			    <%= f.date_field :solution_required_by_date, class: "form-control" %>
 			  </p>
 
@@ -768,19 +754,23 @@
 			    <%= f.text_field :email, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
 		  	<h3>Finding</h3>
 			  <p>
 			    <%= f.label :finding, "Finding" %>
-			    <%= f.text_field :finding, class: "form-control" %>
+			    <%= f.text_area :finding, class: "form-control" %>
 			  </p>
 
 			  <p>
 			    <%= f.label :finding_impact, "Finding Impact" %>
-			    <%= f.text_field :finding_impact, class: "form-control" %>
+			    <%= f.text_area :finding_impact, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
+			  <h3>Proposed Immediate Action (Containment)</h3>
 			  <p>
-			    <%= f.label :proposed_immediate_action, "Proposed Immediate Action (Containment)" %>
 			    <%= f.text_field :proposed_immediate_action, class: "form-control" %>
 			  </p>
 
@@ -799,14 +789,18 @@
 			    <%= f.text_field :proposed_immediate_action_remarks, class: "form-control" %>
 			  </p>
 
-			  <p>
-			    <%= f.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-			    <%= f.text_field :root_cause_analysis_required, class: "form-control" %>
-			  </p>
+			  <hr>
 
 			  <p>
+			    <%= f.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
+					<%= f.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
+
+
+			  <h3>Underlying Root Cause</h3>
+			  <p>
 			    <%= f.label :underlying_root_cause, "Underlying Root Cause" %>
-			    <%= f.text_field :underlying_root_cause, class: "form-control" %>
+			    <%= f.text_area :underlying_root_cause, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -821,21 +815,23 @@
 
 			  <p>
 			    <%= f.label :underlying_root_cause_remarks, "Remarks" %>
-			    <%= f.text_field :underlying_root_cause_remarks, class: "form-control" %>
+			    <%= f.text_area :underlying_root_cause_remarks, class: "form-control" %>
+			  </p>
+
+			  <hr>
+
+			  <h3>Proposed Action for Long-term Solution</h3>
+			  <p>
+			    <%= f.text_area :proposed_action_for_longterm_solution, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution, "Proposed Action for Longterm Solution" %>
-			    <%= f.text_field :proposed_action_for_longterm_solution, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
+			    <%= f.label :proposed_immediate_action_completed_by, "Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_date, "Proposed Action for Longterm Solution Date" %>
+			    <%= f.label :proposed_action_for_longterm_solution_date, "Date" %>
 			    <%= f.date_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
 			  </p>
 
@@ -843,10 +839,13 @@
 			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Proposed Action for Longterm Solution Remarks" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution_remarks, class: "form-control" %>
 			  </p>
+			  
+			  <hr>
+
 				<h3>Evaluation of Supplier Action</h3>
 			  <p>
 			    <%= f.label :evaluation_of_effectiveness_of_action, "Evaluation of Effectiveness of Action" %>
-			    <%= f.text_field :evaluation_of_effectiveness_of_action, class: "form-control" %>
+			    <%= f.text_area :evaluation_of_effectiveness_of_action, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -897,8 +896,10 @@
 			    <%= f.text_field :other_category, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
+			  <h3>Raised By</h3>
 			  <p>
-			    <%= f.label :raised_by, "Raised By" %>
 			    <%= f.text_field :raised_by, class: "form-control" %>
 			  </p>
 
@@ -913,12 +914,12 @@
 			  </p>
 
 			  <p>
-			    <%= f.label :raised_by_remarks, "Raised by Remarks" %>
+			    <%= f.label :raised_by_remarks, "Remarks" %>
 			    <%= f.text_area :raised_by_remarks, class: "form-control" %>
 			  </p>
 
+			  <h3>Solution Required by (Date)</h3>
 			  <p>
-			    <%= f.label :solution_required_by_date, "Solution Required by Date" %>
 			    <%= f.date_field :solution_required_by_date, class: "form-control" %>
 			  </p>
 
@@ -933,182 +934,74 @@
 			  </p>
 
 			  <p>
-			    <%= f.label :form_completed_by_date, "Form Completed by Date" %>
+			    <%= f.label :form_completed_by_date, "Date" %>
 			    <%= f.date_field :form_completed_by_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :form_completed_by_remarks, "Form Completed by Remarks" %>
+			    <%= f.label :form_completed_by_remarks, "Remarks" %>
 			    <%= f.text_field :form_completed_by_remarks, class: "form-control" %>
 			  </p>
 
-	  		<h3>If Non Conforming Material</h3>
-
-				<p>
-			    <%= f.label :affects_delivered_product, "Affects Delivered Product" %>
-			    <%= f.text_field :affects_delivered_product, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :affects_delivered_product_describe, "Affects Delivered Product Describe" %>
-			    <%= f.text_field :affects_delivered_product_describe, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :manufacturer, "Manufacturer" %>
-			    <%= f.text_area :manufacturer, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :supplier, "Supplier" %>
-			    <%= f.text_field :supplier, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :part_number, "Part Number" %>
-			    <%= f.text_field :part_number, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :nomenclature, "Nomenclature" %>
-			    <%= f.text_area :nomenclature, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :quantity, "Quantity" %>
-			    <%= f.text_field :quantity, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :serial_numbers, "Serial Numbers" %>
-			    <%= f.text_field :serial_numbers, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition, "Disposition:" %>
-			    <%= f.select(:disposition, options_for_select([['Use As Is', 'Use As Is'], ['Regrade', 'Regrade'],['Scrap', 'Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
-			  </p>
-
-			  <p>
-			    <%= f.label :supplier_action, "Supplier Action:" %>
-			    <%= f.select(:supplier_action, options_for_select([['Notify Customer', 'Notify Customer'], ['Request Waiver', 'Request Waiver'],['Request Authority to Scrap', 'Request Authority to Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>			  
-			  </p>
-
-			  <p>
-			    <%= f.label :follow_up_action, "Follow up Action:" %>
-			    <%= f.select(:follow_up_action, options_for_select([['Write CAR', 'Write CAR'], ['Write PAR', 'Write PAR'],['Write SCAR', 'Write SCAR'], ['Re-inspect', 'Re-inspect'], ['Other (Specify', 'Other (Specify'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
-			  </p>
-
-			  <p>
-			    <%= f.label :other_action, "Other Action" %>
-			    <%= f.text_field :other_action, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition_by, "Disposition by" %>
-			    <%= f.text_field :disposition_by, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition_date, "Date" %>
-			    <%= f.date_field :disposition_date, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :disposition_remarks, "Disposition Remarks" %>
-			    <%= f.text_field :disposition_remarks, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :sub_contract_po_number, "Sub Contract PO Number" %>
-			    <%= f.text_field :sub_contract_po_number, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :rma_no, "RMA Number" %>
-			    <%= f.text_field :rma_no, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :supplier_name, "Supplier Name" %>
-			    <%= f.text_field :supplier_name, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :address, "Address" %>
-			    <%= f.text_field :address, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :point_of_contact, "Point of Contact" %>
-			    <%= f.text_field :point_of_contact, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :telephone, "Telephone" %>
-			    <%= f.telephone_field :telephone, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :mobile, "Mobile" %>
-			    <%= f.telephone_field :mobile, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :email, "Email" %>
-			    <%= f.text_field :email, class: "form-control" %>
-			  </p>
+			  <hr>
 
 		  	<h3>Recommendation</h3>
 			  <p>
 			    <%= f.label :finding, "Recommendation" %>
-			    <%= f.text_field :finding, class: "form-control" %>
+			    <%= f.text_area :finding, class: "form-control" %>
 			  </p>
 
 			  <p>
 			    <%= f.label :finding_impact, "Rationale" %>
-			    <%= f.text_field :finding_impact, class: "form-control" %>
+			    <%= f.text_area :finding_impact, class: "form-control" %>
+			  </p>
+
+			  <hr>
+
+			  <h3>Proposed Immediate Action (Containment)</h3>
+			  <p>
+			    <%= f.text_area :proposed_immediate_action, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action, "Proposed Immediate Action (Containment)" %>
-			    <%= f.text_field :proposed_immediate_action, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
+			    <%= f.label :proposed_immediate_action_completed_by, "Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 				<p>
-			    <%= f.label :proposed_immediate_action_date, "Proposed Immediate Action Date" %>
+			    <%= f.label :proposed_immediate_action_date, "Date" %>
 			    <%= f.date_field :proposed_immediate_action_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_remarks, "Proposed Immediate Action Remarks" %>
-			    <%= f.text_field :proposed_immediate_action_remarks, class: "form-control" %>
+			    <%= f.label :proposed_immediate_action_remarks, "Remarks" %>
+			    <%= f.text_area :proposed_immediate_action_remarks, class: "form-control" %>
 			  </p>
 
+			  <hr>
+
+			  <h3>Proposed ACtion for Long-term Solution</h3>
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution, "Proposed Action for Longterm Solution" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_immediate_action_completed_by, "Proposed Immediate Action Completed By" %>
+			    <%= f.label :proposed_immediate_action_completed_by, "Completed By" %>
 			    <%= f.text_field :proposed_immediate_action_completed_by, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_date, "Proposed Action for Longterm Solution Date" %>
+			    <%= f.label :proposed_action_for_longterm_solution_date, "Date" %>
 			    <%= f.date_field :proposed_action_for_longterm_solution_date, class: "form-control" %>
 			  </p>
 
 			  <p>
-			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Proposed Action for Longterm Solution Remarks" %>
+			    <%= f.label :proposed_action_for_longterm_solution_remarks, "Remarks" %>
 			    <%= f.text_field :proposed_action_for_longterm_solution_remarks, class: "form-control" %>
 			  </p>
+
+			  <hr>
+				
 				<h3>Evaluation of Supplier Action</h3>
 			  <p>
 			    <%= f.label :evaluation_of_effectiveness_of_action, "Evaluation of Effectiveness of Action" %>
@@ -1195,4 +1088,3 @@
 		}
 	} 
 </script>
-
