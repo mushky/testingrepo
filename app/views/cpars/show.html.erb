@@ -1,38 +1,50 @@
 <div class="container">
 	<h3>iAT-00-02<%= @cpar.id %></h3>
-		<%= @cpar.program %><br>
-		<%= @cpar.category_phase %><br>
-		<%= @cpar.cpar_source %><br>
-		<%= @cpar.category_phase %><br>
-		<%= @cpar.specific_source %><br>
-		<%= @cpar.other_category %><br>
-		<%= @cpar.raised_by %><br>
-		<%= @cpar.assigned_to %></br>
-		<%= @cpar.date %><br>
-		<%= @cpar.raised_by_remarks %><br>
-		<%= @cpar.solution_required_by_date %><br>
-		<%= @cpar.solution_required_remarks %><br>
-		<%= @cpar.form_completed_by %><br>
-		<%= @cpar.form_completed_by_date %><br>
-		<%= @cpar.form_completed_by_remarks %><br>
-		<%= @cpar.finding %><br>
-		<%= @cpar.finding_impact %><br>
-		<%= @cpar.proposed_immediate_action %><br>
-		<%= @cpar.proposed_immediate_action_completed_by %><br>
-		<%= @cpar.proposed_immediate_action_date %><br>
-		<%= @cpar.proposed_immediate_action_remarks %><br>
-		<%= @cpar.root_cause_analysis_required %><br>
-		<%= @cpar.underlying_root_cause %><br>
-		<%= @cpar.determined_by %><br>
-		<%= @cpar.underlying_root_cause_date %><br>
-		<%= @cpar.underlying_root_cause_remarks %><br>
-		<%= @cpar.proposed_action_for_longterm_solution %><br>
-		<%= @cpar.proposed_action_for_longterm_solution_completed_by %><br>
-		<%= @cpar.proposed_action_for_longterm_solution_date %><br>
-		<%= @cpar.proposed_action_for_longterm_solution_remarks %><br>
-		<%= @cpar.evaluation_of_effectiveness_of_action %><br>
-		<%= @cpar.objective_evidence %><br>
-		<%= @cpar.closed_out_by %><br>
-		<%= @cpar.evaluation_of_effectiveness_of_action_date %><br>
-		<%= @cpar.evaluation_of_effectiveness_of_action_remarks %><br>
+		<strong>Program:</strong> <%= @cpar.program %><br>
+		<strong>Category Phase:</strong> <%= @cpar.category_phase %><br>
+		<strong>CPAR Source:</strong> <%= @cpar.cpar_source %><br>
+		<strong>Specific Source:</strong> <%= @cpar.specific_source %><br>
+		<strong>Other Category:</strong> <%= @cpar.other_category %><br>
+
+		<h3>Raised By:<%= @cpar.raised_by %></h3>
+		<strong>Assigned To:</strong> <%= @cpar.assigned_to %></br>
+		<strong>Date:</strong> <%= @cpar.date %><br>
+		<strong>Remakrs:</strong> <%= @cpar.raised_by_remarks %><br>
+
+		<h3>Solution Required By</h3>
+		<strong>Date:</strong> <%= @cpar.solution_required_by_date %><br>
+		<strong>Remarks:</strong> <%= @cpar.solution_required_remarks %><br>
+		<strong>Completed By:</strong> <%= @cpar.form_completed_by %><br>
+		<strong>Date:</strong> <%= @cpar.form_completed_by_date %><br>
+		<strong>Remarks:</strong> <%= @cpar.form_completed_by_remarks %><br>
+
+		<h3>Finding</h3>
+		<strong>Finding:</strong> <%= @cpar.finding %><br>
+		<strong>Finding Impact:</strong> <%= @cpar.finding_impact %><br>
+
+		<h3>Proposed Immediate Action</h3>
+		<strong>Proposed Immediate Action:</strong> <%= @cpar.proposed_immediate_action %><br>
+		<strong>Completed By:</strong> <%= @cpar.proposed_immediate_action_completed_by %><br>
+		<strong>Date:</strong> <%= @cpar.proposed_immediate_action_date %><br>
+		<strong>Remarks:</strong> <%= @cpar.proposed_immediate_action_remarks %><br>
+
+		<h3>Root Cause Analysis</h3>
+		<strong>Root Cause Analysis Required?:</strong> <%= @cpar.root_cause_analysis_required %><br>
+		<strong>Underlying Root Cause:</strong> <%= @cpar.underlying_root_cause %><br>
+		<strong>Determined By:</strong> <%= @cpar.determined_by %><br>
+		<strong>Date:</strong> <%= @cpar.underlying_root_cause_date %><br>
+		<strong>Remarks:</strong> <%= @cpar.underlying_root_cause_remarks %><br>
+
+		<h3>Proposed Action</h3>
+		<strong>Proposed Action for Long-term Solution:</strong> <%= @cpar.proposed_action_for_longterm_solution %><br>
+		<strong>Completed By:</strong> <%= @cpar.proposed_action_for_longterm_solution_completed_by %><br>
+		<strong>Date:</strong> <%= @cpar.proposed_action_for_longterm_solution_date %><br>
+		<strong>Remarks:</strong> <%= @cpar.proposed_action_for_longterm_solution_remarks %><br>
+
+		<h3>Evaluation of Effectiveness of Action</h3>
+		<strong>Evaluation of Effectiveness of Action:</strong> <%= @cpar.evaluation_of_effectiveness_of_action %><br>
+		<strong>Objective Evidence:</strong> <%= @cpar.objective_evidence %><br>
+		<strong>Closed Out By:</strong> <%= @cpar.closed_out_by %><br>
+		<strong>Date:</strong><%= @cpar.evaluation_of_effectiveness_of_action_date %><br>
+		<strong>Remarks:</strong><%= @cpar.evaluation_of_effectiveness_of_action_remarks %><br>
 </div>
