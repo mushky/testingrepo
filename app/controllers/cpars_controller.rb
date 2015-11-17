@@ -2,7 +2,7 @@ class CparsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-  	@cpars = Cpar.all
+  	@cpars = Cpar.all.order("created_at DESC")
   end
 
   def new

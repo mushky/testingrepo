@@ -2,7 +2,7 @@ class ReceiveitemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-  	@ReceiveItems = ReceiveItem.all
+  	@ReceiveItems = ReceiveItem.all.order("created_at DESC")
   end
 	
   def new

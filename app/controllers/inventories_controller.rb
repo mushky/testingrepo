@@ -2,7 +2,7 @@ class InventoriesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-  	@inventories = Inventory.all
+  	@inventories = Inventory.all.order("created_at DESC")
   end
 	
   def new
