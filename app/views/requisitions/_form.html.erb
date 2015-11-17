@@ -18,10 +18,10 @@
 				</p>
 
 			<h3>Program</h3>
-			  <p>
-					<%= label_tag(:export, "Is this for Export?") %>		
-					<%= check_box_tag(:export) %>
-			  </p>
+				<p>
+			    <%= f.label :export, "For Export?" %>
+					<%= f.select(:export, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+				</p>
 
 			  <p>
 			    <%= f.label :where_export  %><br>

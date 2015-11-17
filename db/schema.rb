@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030214900) do
+ActiveRecord::Schema.define(version: 20151116232527) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "cpar_number"
@@ -72,9 +72,9 @@ ActiveRecord::Schema.define(version: 20151030214900) do
     t.string   "solution_required_by_date"
     t.text     "solution_required_remarks"
     t.string   "form_completed_by"
-    t.integer  "form_completed_by_date"
+    t.string   "form_completed_by_date"
     t.text     "form_completed_by_remarks"
-    t.boolean  "affects_delivered_product"
+    t.string   "affects_delivered_product"
     t.text     "affects_delivered_product_describe"
     t.string   "manufacturer"
     t.string   "supplier"
@@ -101,21 +101,21 @@ ActiveRecord::Schema.define(version: 20151030214900) do
     t.text     "finding_impact"
     t.text     "proposed_immediate_action"
     t.string   "proposed_immediate_action_completed_by"
-    t.integer  "proposed_immediate_action_date"
+    t.string   "proposed_immediate_action_date"
     t.text     "proposed_immediate_action_remarks"
     t.boolean  "root_cause_analysis_required"
     t.text     "underlying_root_cause"
     t.string   "determined_by"
-    t.integer  "underlying_root_cause_date"
+    t.string   "underlying_root_cause_date"
     t.text     "underlying_root_cause_remarks"
     t.text     "proposed_action_for_longterm_solution"
     t.string   "proposed_action_for_longterm_solution_completed_by"
-    t.integer  "proposed_action_for_longterm_solution_date"
+    t.string   "proposed_action_for_longterm_solution_date"
     t.text     "proposed_action_for_longterm_solution_remarks"
     t.text     "evaluation_of_effectiveness_of_action"
     t.text     "objective_evidence"
     t.string   "closed_out_by"
-    t.integer  "evaluation_of_effectiveness_of_action_date"
+    t.string   "evaluation_of_effectiveness_of_action_date"
     t.text     "evaluation_of_effectiveness_of_action_remarks"
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
@@ -157,7 +157,7 @@ ActiveRecord::Schema.define(version: 20151030214900) do
     t.string   "name"
     t.text     "description"
     t.string   "user"
-    t.integer  "expiration"
+    t.string   "expiration"
     t.string   "key"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -217,13 +217,13 @@ ActiveRecord::Schema.define(version: 20151030214900) do
   create_table "requisitions", force: :cascade do |t|
     t.string   "requestor"
     t.string   "pr_number"
-    t.integer  "pr_date"
+    t.string   "pr_date"
     t.string   "company"
     t.string   "address"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "contact"
     t.text     "comments"
-    t.boolean  "for_export"
+    t.string   "for_export"
     t.string   "to_where"
     t.text     "description_of_use"
     t.integer  "quantity"
@@ -232,11 +232,11 @@ ActiveRecord::Schema.define(version: 20151030214900) do
     t.text     "description"
     t.float    "unit_cost"
     t.float    "total"
-    t.integer  "req_date"
+    t.string   "req_date"
     t.string   "acct_number"
     t.string   "usage"
     t.string   "approval"
-    t.integer  "approval_date"
+    t.string   "approval_date"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
