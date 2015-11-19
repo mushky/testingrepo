@@ -5,10 +5,10 @@
   <table class="table table-hover">
     <td>
       <% if cpar.form == "Preventive Action" %>
-        <% @form_name = "CA" %>
+        <% @form_name = "PA" %>
 
         <% elsif cpar.form == 'Corrective Action' %>
-          <% @form_name = "PA" %>
+          <% @form_name = "CA" %>
       
         <% elsif cpar.form == 'Non-Conforming Material' %>
           <% @form_name = "NC" %>
