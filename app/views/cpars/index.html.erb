@@ -43,7 +43,24 @@
       <% end %>
 
       <h4>
-        iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id%> 
+        iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id %>
+        <!-- iAT + program_id + form_name program_enum + cpar_id -->
+        
+        <%# if cpar.form == "Preventive Action" %>
+          <%# cpar.par_counter %>
+
+        <%# elsif cpar.form == 'Corrective Action' %>
+          <%# cpar.car_counter %>
+      
+        <%# elsif cpar.form == 'Non-Conforming Material' %>
+          <%# cpar.ncmr_counter %>
+
+        <%# elsif cpar.form == "Supplier Corrective Action" %>
+          <%# cpar.scar_counter %>
+
+        <%# elsif cpar.form == "Continual Improvement" %>
+          <%# cpar.ci_counter %>
+        <%# end %> 
         <!-- iAT + program_id + form_name program_enum + cpar_id -->
       </h4>
       <%= cpar.form %><br>

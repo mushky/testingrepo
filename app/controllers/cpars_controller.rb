@@ -14,12 +14,13 @@ class CparsController < ApplicationController
   end
 
   def create
-    @cpar = Cpar.new(cpar_params)
-    if @cpar.save
-      redirect_to cpars_path
-    else
-      render 'new'
-    end
+    @cpar = Cpar.new(cpar_params)  
+	    if @cpar.save
+	      redirect_to cpars_path
+	    else
+	      render 'new'
+	    end
+	  
   end
 
   def edit
@@ -45,6 +46,25 @@ class CparsController < ApplicationController
 
     redirect_to cpars_path
   end
+
+  def form_counter
+  	@cpar = Cpar.new
+  	if @cpar.form == "Preventive Action"
+		  @cpar.par_counter+=1
+		end
+		if @cpar.form == "Corrective Action"
+		  @cpar.car_counter+=1 
+		end  
+		if @cpar.form == "Non-Conforming Material"
+		 	@cpar.ncmr_counter+=1 
+		end  
+		if @cpar.form == "Supplier Corrective Action"
+		 	@cpar.scar_counter+=1
+		end  
+		if @cpar.form == "Continual Improvement"
+		 	@cpar.ci_counter+=1
+		end
+	end
 
   private
     def cpar_params
@@ -110,6 +130,11 @@ class CparsController < ApplicationController
 																	:closed_out_by,
 																	:evaluation_of_effectiveness_of_action_date,
 																	:evaluation_of_effectiveness_of_action_remarks,
-																	:program_enum)
-    end  
+																	:program_enum,
+																	:car_counter,
+																	:par_counter,
+																	:ci_counter,
+																	:ncmr_counter,
+																	:scar_counter)
+    end
 end

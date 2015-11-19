@@ -39,7 +39,7 @@
 			  </p>
 
 				<p>
-					<%= par.select(:form, options_for_select([['Preventive Action', 'Preventive Action']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
+					<%= par.select(:form, options_for_select([['Preventive Action', 'Preventive Action']]), {},{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
 
 				<p>
@@ -728,7 +728,9 @@
 			  </p>
 
 			  <hr>
+
 			  <h3>Raised By</h3>
+
 			  <p>
 			    <%= scar.text_field :raised_by, class: "form-control" %>
 			  </p>
@@ -751,6 +753,7 @@
 			  <hr>
 
 			  <h3>Solution Required by Date</h3>
+			  
 			  <p>
 			    <%= scar.date_field :solution_required_by_date, class: "form-control" %>
 			  </p>
@@ -773,6 +776,85 @@
 			  <p>
 			    <%= scar.label :form_completed_by_remarks, "Form Completed by Remarks" %>
 			    <%= scar.text_field :form_completed_by_remarks, class: "form-control" %>
+			  </p>
+
+			  <hr>
+
+				<h3>If Non Conforming Material</h3>
+
+				<p>
+			    <%= scar.label :affects_delivered_product, "Affects Delivered Product" %>
+					<%= scar.select(:affects_delivered_product, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :affects_delivered_product_describe, "Affects Delivered Product Describe" %>
+			    <%= scar.text_area :affects_delivered_product_describe, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :manufacturer, "Manufacturer" %>
+			    <%= scar.text_area :manufacturer, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :supplier, "Supplier" %>
+			    <%= scar.text_field :supplier, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :part_number, "Part Number" %>
+			    <%= scar.text_field :part_number, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :nomenclature, "Nomenclature" %>
+			    <%= scar.text_area :nomenclature, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :quantity, "Quantity" %>
+			    <%= scar.text_field :quantity, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :serial_numbers, "Serial Numbers" %>
+			    <%= scar.text_field :serial_numbers, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :disposition, "Disposition:" %>
+			    <%= scar.select(:disposition, options_for_select([['Use As Is', 'Use As Is'], ['Regrade', 'Regrade'],['Scrap', 'Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :supplier_action, "Supplier Action:" %>
+			    <%= scar.select(:supplier_action, options_for_select([['Notify Customer', 'Notify Customer'], ['Request Waiver', 'Request Waiver'],['Request Authority to Scrap', 'Request Authority to Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>			  
+			  </p>
+
+			  <p>
+			    <%= scar.label :follow_up_action, "Follow up Action:" %>
+			    <%= scar.select(:follow_up_action, options_for_select([['Write CAR', 'Write CAR'], ['Write PAR', 'Write PAR'],['Write SCAR', 'Write SCAR'], ['Re-inspect', 'Re-inspect'], ['Other (Specify', 'Other (Specify'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :other_action, "Other Action" %>
+			    <%= scar.text_field :other_action, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :disposition_by, "Disposition by" %>
+			    <%= scar.text_field :disposition_by, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :disposition_date, "Date" %>
+			    <%= scar.date_field :disposition_date, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= scar.label :disposition_remarks, "Remarks" %>
+			    <%= scar.text_field :disposition_remarks, class: "form-control" %>
 			  </p>
 
 			  <hr>
