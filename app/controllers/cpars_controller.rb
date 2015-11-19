@@ -28,7 +28,7 @@ class CparsController < ApplicationController
 
   def update
     @cpar = Cpar.find(params[:id])
-    if @cpar.update(par_params)
+    if @cpar.update(cpar_params)
       redirect_to @cpar
     else
       render 'edit'
