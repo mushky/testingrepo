@@ -1,7 +1,7 @@
 <div class="container">
 <h1>Shipping Items <%= link_to "Add New Shipping Item", new_shipitem_path, class: "btn btn-primary" %>
 </h1>
-  <% @ShipItems.each do |shipitem| %>
+  <% @shipitems.each do |shipitem| %>
   <table class="table table-hover">
     <td>
       <h4><%= shipitem.part%></h4>

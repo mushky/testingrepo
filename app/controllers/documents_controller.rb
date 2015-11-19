@@ -2,16 +2,16 @@ class DocumentsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-  	@Documents = Document.all.order("created_at DESC")
+  	@documents = Document.all.order("created_at DESC")
   end
 	
   def new
-    @Document = Document.new
+    @document = Document.new
   end
 
   def create
-    @Document = Document.new(document_params)
-    if @Document.save
+    @document = Document.new(document_params)
+    if @document.save
       redirect_to documents_path
     else
       render 'new'
@@ -24,25 +24,25 @@ class DocumentsController < ApplicationController
 	end
 
   def edit
-    @Document = Document.find(params[:id])
+    @document = Document.find(params[:id])
   end
 
   def update
-    @Document = Document.find(params[:id])
-    if @Document.update(Document_params)
-      redirect_to @Document
+    @document = Document.find(params[:id])
+    if @document.update(document_params)
+      redirect_to @document
     else
       render 'edit'
     end
   end
 
   def delete
-    @Document = Document.find(params[:id])
+    @document = Document.find(params[:id])
   end
 
   def destroy
-    @Document = Document.find(params[:id])
-    @Document.destroy
+    @document = Document.find(params[:id])
+    @document.destroy
 
     redirect_to documents_path
   end

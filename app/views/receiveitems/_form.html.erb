@@ -4,7 +4,7 @@
 				<div id="error_explanation">
 					<h2><%= pluralize(@ReceiveItem.errors.count, "error") %> Prohibited this post from being saved:</h2>
 					<ul>
-					<% @receiveitem.errors.full_messages.each do |msg| %>
+					<% @ReceiveItem.errors.full_messages.each do |msg| %>
 						<li><%= msg %></li>
 					<% end %>
 					</ul>

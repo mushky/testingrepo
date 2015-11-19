@@ -6,11 +6,11 @@ class RequisitionsController < ApplicationController
   end
 
   def new
-  	@requesition = Requisition.new
+  	@requisition = Requisition.new
   end
 
   def show
-  	@requesition = Requisition.find(params[:id])
+  	@requisition = Requisition.find(params[:id])
   end
 
   def create
@@ -30,7 +30,7 @@ class RequisitionsController < ApplicationController
   def update
     @requisition = Requisition.find(params[:id])
     if @requisition.update(requisition_params)
-      redirect_to @requesition
+      redirect_to @requisition
     else
       render 'edit'
     end
@@ -49,7 +49,8 @@ class RequisitionsController < ApplicationController
 
   private
     def requisition_params
-      params.require(:requisition).permit(:requestor, 
+      params.require(:requisition).permit(:id,
+                                          :requestor, 
                                           :pr_number, 
                                           :pr_date, 
                                           :company, 

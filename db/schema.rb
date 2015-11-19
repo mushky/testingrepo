@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116232527) do
+ActiveRecord::Schema.define(version: 20151118213231) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "cpar_number"
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(version: 20151116232527) do
     t.text     "evaluation_of_effectiveness_of_action_remarks"
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
+    t.string   "program_enum"
   end
 
   create_table "documents", force: :cascade do |t|

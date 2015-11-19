@@ -109,6 +109,7 @@ class CparsController < ApplicationController
 																	:objective_evidence,
 																	:closed_out_by,
 																	:evaluation_of_effectiveness_of_action_date,
-																	:evaluation_of_effectiveness_of_action_remarks)
+																	:evaluation_of_effectiveness_of_action_remarks,
+																	:program_enum)
     end  
 end

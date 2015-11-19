@@ -20,17 +20,23 @@
 	<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |f| %>
 		<div class="row">
 			<div class="col-md-12">
-		
+
 			<div id="choose">
 				<h2>Select CPAR Form</h2>
 				<p>
-					<%= f.select(:form, options_for_select([['Choose Form', 'Choose Form'],['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
+					<%= f.select(:form, options_for_select( [['Choose Form', 'Choose Form'],['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
+
 			<% end %>
 
 			<div id="par">
 				<h2>Preventive Action Report (PAR)</h2>
 				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |par| %>
+
+				<p>
+			    <%= par.label :program_enum, "Program Enumeration" %>
+					<%= par.select(:program_enum, options_for_select([["01", "01"],["02", "02"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
 
 				<p>
 					<%= par.select(:form, options_for_select([['Preventive Action', 'Preventive Action']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
@@ -228,6 +234,11 @@
 				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |car| %>
 
 				<p>
+			    <%= car.label :program_enum, "Program Enumeration" %>
+					<%= car.select(:program_enum, options_for_select([["01", "01"],["02", "02"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
+
+				<p>
 					<%= car.select(:form, options_for_select([['Corrective Action', 'Corrective Action']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
 
@@ -422,6 +433,11 @@
 				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |ncmr| %>
 
 				<h2>Non-Conforming Material Report (NCMR)</h2> 
+
+				<p>
+			    <%= ncmr.label :program_enum, "Program Enumeration" %>
+					<%= ncmr.select(:program_enum, options_for_select([["01", "01"],["02", "02"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
 
 				<p>
 					<%= ncmr.select(:form, options_for_select([['Non-Conforming Material', 'Non-Conforming Material']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
@@ -676,6 +692,12 @@
 				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |scar| %>
 
 				<h2>Supplier Corrective Action Request (SCAR)</h2>
+				
+				<p>
+			    <%= scar.label :program_enum, "Program Enumeration" %>
+					<%= scar.select(:program_enum, options_for_select([["01", "01"],["02", "02"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
+
 				<p>
 					<%= scar.select(:form, options_for_select([['Supplier Corrective Action', 'Supplier Corrective Action']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
@@ -920,6 +942,11 @@
 				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |ci| %>
 
 				<h2>Continual Improvement Report (CI)</h2>
+
+				<p>
+			    <%= ci.label :program_enum, "Program Enumeration" %>
+					<%= ci.select(:program_enum, options_for_select([["01", "01"],["02", "02"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			  </p>
 				<p>
 					<%= ci.select(:form, options_for_select([['Continual Improvement', 'Continual Improvement']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>

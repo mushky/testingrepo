@@ -4,9 +4,47 @@
   <% @cpars.each do |cpar| %>
   <table class="table table-hover">
     <td>
+      <% if cpar.form == "Preventive Action" %>
+        <% @form_name = "CA" %>
+
+        <% elsif cpar.form == 'Corrective Action' %>
+          <% @form_name = "PA" %>
       
+        <% elsif cpar.form == 'Non-Conforming Material' %>
+          <% @form_name = "NC" %>
+
+        <% elsif cpar.form == "Supplier Corrective Action" %>
+          <% @form_name = "SC" %>
+
+        <% elsif cpar.form == "Continual Improvement" %>
+          <% @form_name = "CI" %>
+      <% end %>
+
+      <% if cpar.program == "Corporate" %>
+        <% @program_id = "00" %>
+        
+        <% elsif cpar.program == "IRAD" %>
+          <% @program_id = "01" %>
+
+        <% elsif cpar.program == "MCTF" %>
+          <% @program_id = "02" %>
+
+        <% elsif cpar.program == "UAEAF" %>
+          <% program_id = "03" %>
+
+        <% elsif cpar.program == "TAF" %>
+          <% @program_id = "04" %>
+
+        <% elsif cpar.program == "DAW" %>
+          <% @program_id = "05" %>
+
+        <% elsif cpar.program == "ESTS" %>
+          <% @program_id = "07" %>
+      <% end %>
+
       <h4>
-        iAT-00-02<%= cpar.id%>
+        iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id%> 
+        <!-- iAT + program_id + form_name program_enum + cpar_id -->
       </h4>
       <%= cpar.form %><br>
       <%= cpar.program %><br>

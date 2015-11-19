@@ -2,16 +2,16 @@ class ShipitemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-  	@ShipItems = ShipItem.all.order("created_at DESC")
+  	@shipitems = ShipItem.all.order("created_at DESC")
   end
 	
   def new
-    @ShipItem = ShipItem.new
+    @shipitem = ShipItem.new
   end
 
   def create
-    @ShipItem = ShipItem.new(shipitem_params)
-    if @ShipItem.save
+    @shipitem = ShipItem.new(shipitem_params)
+    if @shipitem.save
       redirect_to shipitems_path
     else
       render 'new'
@@ -19,29 +19,29 @@ class ShipitemsController < ApplicationController
   end
 
   def show
-  	@ShipItem = ShipItem.find(params[:id])
+  	@shipitem = ShipItem.find(params[:id])
   end
 
   def edit
-    @ShipItem = ShipItem.find(params[:id])
+    @shipitem = ShipItem.find(params[:id])
   end
 
   def update
-    @ShipItem = ShipItem.find(params[:id])
-    if @ShipItem.update(shipitem_params)
-      redirect_to @ShipItem
+    @shipitem = ShipItem.find(params[:id])
+    if @shipitem.update(shipitem_params)
+      redirect_to @shipitem
     else
       render 'edit'
     end
   end
 
   def delete
-    @ShipItem = ShipItem.find(params[:id])
+    @shipitem = ShipItem.find(params[:id])
   end
 
   def destroy
-    @ShipItem = ShipItem.find(params[:id])
-    @ShipItem.destroy
+    @shipitem = ShipItem.find(params[:id])
+    @shipitem.destroy
 
     redirect_to shipitems_path
   end
@@ -49,6 +49,6 @@ class ShipitemsController < ApplicationController
 
   private
     def shipitem_params
-      params.require(:shipitem).permit(:part, :serial, :date, :description, :quantity, :completed)
+      params.require(:shipitem).permit(:id, :part, :serial, :date, :description, :quantity, :completed)
     end
 end

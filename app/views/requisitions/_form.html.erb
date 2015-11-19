@@ -1,5 +1,5 @@
 <div class="container">
-	<%= form_for :requisition, html: {class: "form-horizontal"}, url: requisitions_path do |f| %>
+	<%= form_for @requisition, html: {class: "form-horizontal"} do |f| %>
 		<div class="row">
 			<div class="col-md-6">
 				<p>
@@ -19,12 +19,12 @@
 
 			<h3>Program</h3>
 				<p>
-			    <%= f.label :export, "For Export?" %>
-					<%= f.select(:export, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			    <%= f.label :for_export, "For Export?" %>
+					<%= f.select(:for_export, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 			  <p>
-			    <%= f.label :where_export  %><br>
+			    <%= f.label :to_where, "(If For Export), to Where?" %><br>
 			    <%= f.text_field :to_where, class: "form-control" %>
 			  </p>
 			</div>
