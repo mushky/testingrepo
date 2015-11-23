@@ -13,6 +13,8 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'devise', '~> 3.4.0'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'will_paginate', '~> 3.0.6'
+
 
 group :development, :test do
   gem 'byebug'

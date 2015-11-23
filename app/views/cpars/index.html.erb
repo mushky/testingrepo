@@ -1,6 +1,18 @@
 <div class="container">
-<h1>CPAR <%= link_to "Create New CPAR", new_cpar_path, class: "btn btn-primary" %>
-</h1>
+  <div class="row">
+  <form class="navbar-form navbar-right" role="search">
+    <div class="form-group", id="form-search">
+      <%= form_tag(cpars_path, :method => "get", class: "navbar-form navbar-right") do %>
+        <em><%= text_field_tag :search, params[:search], placeholder: "Search CPARs...", class: "form-control" %></em>
+        <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+      <% end %>
+    </div>
+  </form>
+  <div class="col-md-3">
+  <h1>CPAR</h1>
+
+  <%= link_to "Create New CPAR", new_cpar_path, class: "btn btn-primary" %><br><br>
+
   <% @cpars.each do |cpar| %>
   <table class="table table-hover">
     <td>
@@ -74,3 +86,256 @@
     </td>
   <% end %>
   </table>
+  </div><!-- /Row 1 -->
+  <!-- Row 2 -->
+  <!-- PAR CHART -->
+  <div class="col-md-3">
+    <h4>Preventive Action</h4>
+    <canvas id="par_chart" width="150" height="150"></canvas>
+    <script>
+    var ParData = [
+      
+      {
+        value: <%= Cpar.where(form: "Preventive Action",program:"Corporate").count %>,
+        label: 'Corporate', 
+        color: '#46BFBD'
+
+      },
+      {
+        value: <%= Cpar.where(form: "Preventive Action",program:"IRAD").count %>,
+        label: 'IRAD',
+        color: '#9CBABA'
+      },
+      {
+        value: <%= Cpar.where(form: "Preventive Action",program:"MCTF").count %>,
+        label: 'MCTF', 
+        color: '#F7464A'
+      },
+      {
+        value : <%= Cpar.where(form: "Preventive Action",program:"UAEAF").count %>,
+        label: 'UAEAF',
+        color: '#6AE128'
+      },
+      {
+        value: <%= Cpar.where(form: "Preventive Action",program:"TAF").count %>,
+        label: 'TAF',
+        color: '#9b59b6'
+      },
+      {
+        value: <%= Cpar.where(form: "Preventive Action",program:"DAW").count %>, 
+        label: 'DAW', 
+        color: '#3498db'
+      },
+      {
+        value: <%= Cpar.where(form: "Preventive Action",program:"ESTS").count %>, 
+        label: 'ESTS', 
+        color: '#999999'
+      }
+
+    ];
+    var context = document.getElementById('par_chart').getContext('2d');
+    var ParChart = new Chart(context).Pie(ParData);
+
+    </script>
+
+    <!-- NCMR CHART -->
+    <h4>Non-Conforming Material</h4>
+    <canvas id="ncmr_chart" width="150" height="150"></canvas>
+
+    <script>
+    var NcmrData = [
+      
+      {
+        value: <%= Cpar.where(form: "Non-Conforming Material",program:"Corporate").count %>,
+        label: 'Corporate', 
+        color: '#46BFBD'
+      },
+      {
+        value: <%= Cpar.where(form: "Non-Conforming Material",program:"IRAD").count %>,
+        label: 'IRAD',
+        color: '#9CBABA'
+      },
+      {
+        value: <%= Cpar.where(form: "Non-Conforming Material",program:"MCTF").count %>,
+        label: 'MCTF', 
+        color: '#F7464A'
+      },
+      {
+        value : <%= Cpar.where(form: "Non-Conforming Material",program:"UAEAF").count %>,
+        label: 'UAEAF',
+        color: '#6AE128'
+      },
+      {
+        value: <%= Cpar.where(form: "Non-Conforming Material",program:"TAF").count %>,
+        label: 'TAF',
+        color: '#9b59b6'
+      },
+      {
+        value: <%= Cpar.where(form: "Non-Conforming Material",program:"DAW").count %>, 
+        label: 'DAW', 
+        color: '#3498db'
+      },
+      {
+        value: <%= Cpar.where(form: "Non-Corrective Material",program:"ESTS").count %>, 
+        label: 'ESTS', 
+        color: '#f39c12'
+      }
+
+    ];
+    var context = document.getElementById('ncmr_chart').getContext('2d');
+    var NcmrChart = new Chart(context).Pie(NcmrData);
+
+    </script>
+  </div><!-- /Row 2 -->
+
+  <!-- Row 3 -->
+  <div class="col-md-3">
+    <!-- CI CHART -->
+    <h4>Continual Improvement</h4>
+    <canvas id="ci_chart" width="150" height="150"></canvas>
+    <script>
+    var CiData = [
+      
+      {
+        value: <%= Cpar.where(form: "Continual Improvement",program:"Corporate").count %>,
+        label: 'Corporate', 
+        color: '#46BFBD'
+      },
+      {
+        value: <%= Cpar.where(form: "Continual Improvement",program:"IRAD").count %>,
+        label: 'IRAD',
+        color: '#9CBABA'
+      },
+      {
+        value: <%= Cpar.where(form: "Continual Improvement",program:"MCTF").count %>,
+        label: 'MCTF', 
+        color: '#F7464A'
+      },
+      {
+        value : <%= Cpar.where(form: "Continual Improvement",program:"UAEAF").count %>,
+        label: 'UAEAF',
+        color: '#6AE128'
+      },
+      {
+        value: <%= Cpar.where(form: "Continual Improvement",program:"TAF").count %>,
+        label: 'TAF',
+        color: '#9b59b6'
+      },
+      {
+        value: <%= Cpar.where(form: "Continual Improvement",program:"DAW").count %>, 
+        label: 'DAW', 
+        color: '#3498db'
+      },
+      {
+        value: <%= Cpar.where(form: "Continual Improvement",program:"ESTS").count %>, 
+        label: 'ESTS', 
+        color: '#f39c12'
+      }
+
+    ];
+    var context = document.getElementById('ci_chart').getContext('2d');
+    var CiChart = new Chart(context).Pie(CiData);
+
+    </script>
+
+    <!-- CAR CHART -->
+    <h4>Corrective Action Report</h4>
+    <canvas id="car_chart" width="150" height="150"></canvas>
+    <script>
+    var CarData = [
+      
+      {
+        value: <%= Cpar.where(form: "Corrective Action",program:"Corporate").count %>,
+        label: 'Corporate', 
+        color: '#46BFBD'
+      },
+      {
+        value: <%= Cpar.where(form: "Corrective Action",program:"Corporate").count %>,
+        label: 'IRAD',
+        color: '#9CBABA'
+      },
+      {
+        value: <%= Cpar.where(form: "Corrective Action",program:"MCTF").count %>,
+        label: 'MCTF', 
+        color: '#F7464A'
+      },
+      {
+        value : <%= Cpar.where(form: "Corrective Action",program:"UAEAF").count %>,
+        label: 'UAEAF',
+        color: '#6AE128'
+      },
+      {
+        value: <%= Cpar.where(form: "Corrective Action",program:"TAF").count %>,
+        label: 'TAF',
+        color: '#9b59b6'
+      },
+      {
+        value: <%= Cpar.where(form: "Corrective Action",program:"DAW").count %>, 
+        label: 'DAW', 
+        color: '#3498db'
+      },
+      {
+        value: <%= Cpar.where(form: "Corrective Action",program:"ESTS").count %>, 
+        label: 'ESTS', 
+        color: '#f39c12'
+      }
+
+    ];
+    var context = document.getElementById('car_chart').getContext('2d');
+    var CarChart = new Chart(context).Pie(CarData);
+
+    </script>
+  </div> <!-- /Row 3 -->
+
+  <!-- Row 4 -->
+  <div class="col-md-3">
+    <!-- SCAR CHART -->
+    <h4>Supplier Corrective Action (SCAR)</h4>
+    <canvas id="scar_chart" width="150" height="150"></canvas>
+
+    <script>
+    var ScarData = [
+      
+      {
+        value: <%= Cpar.where(form: "Supplier Corrective Action",program:"Corporate").count %>,
+        label: 'Corporate', 
+        color: '#46BFBD'
+      },
+      {
+        value: <%= Cpar.where(form: "Supplier Corrective Action",program:"IRAD").count %>,
+        label: 'IRAD',
+        color: '#9CBABA'
+      },
+      {
+        value: <%= Cpar.where(form: "Supplier Corrective Action",program:"MCTF").count %>,
+        label: 'MCTF', 
+        color: '#F7464A'
+      },
+      {
+        value : <%= Cpar.where(form: "Supplier Corrective Action",program:"UAEAF").count %>,
+        label: 'UAEAF',
+        color: '#6AE128'
+      },
+      {
+        value: <%= Cpar.where(form: "Supplier Corrective Action",program:"TAF").count %>,
+        label: 'TAF',
+        color: '#9b59b6'
+      },
+      {
+        value: <%= Cpar.where(form: "Supplier Corrective Action",program:"DAW").count %>, 
+        label: 'DAW', 
+        color: '#3498db'
+      },
+      {
+        value: <%= Cpar.where(form: "Supplier Corrective Action",program:"ESTS").count %>, 
+        label: 'ESTS', 
+        color: '#f39c12'
+      }
+    ];
+    var context = document.getElementById('scar_chart').getContext('2d');
+    var ScarChart = new Chart(context).Pie(ScarData);
+    </script>
+    </div><!-- /Row 4 -->
+  </div><!-- /row -->
+  <%= will_paginate @cpar %>
+</div><!-- /container -->
