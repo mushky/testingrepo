@@ -1,13 +1,13 @@
 <div class="container">
-	<h3>Part # <%= @ShipItem.part %></h3>
+	<h3>Part # <%= @shipitem.part %></h3>
 	<strong>Serial #:</strong>
-	<%= @ShipItem.serial %><br>
+	<%= @shipitem.serial %><br>
 	<strong>Date:</strong>
-	<%= @ShipItem.date %><br>
+	<%= @shipitem.date %><br>
 	<strong>Description:</strong>
-	<%= @ShipItem.description %><br>
+	<%= @shipitem.description %><br>
 	<strong>Quantity:</strong>
-	<%= @ShipItem.quantity %>
+	<%= @shipitem.quantity %>
 	<br>
 	<%= link_to "Back", shipitems_path, class: "btn btn-default" %>
 
