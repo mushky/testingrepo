@@ -308,10 +308,11 @@
 	var CiReceivedData = [
 
 	{
-		value: <%= Cpar.where(form: "Corrective Action", closed_out_by: "").count %>,
+		value: <%= Cpar.where(form: "Corrective Action", closed_out_by: "Nathan Manelkar", closed_out_by: "Cynthia Dent").count %>,
 		label: 'Closed Out', 
 		color: 'red'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Corrective Action").count %>,
 		label: 'Received', 

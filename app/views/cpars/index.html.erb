@@ -9,7 +9,7 @@
     </div>
   </form>
   <div class="col-md-3">
-  <h1>CPAR</h1>
+  <h1><%= link_to "CPAR", cpars_path %></h1>
   <div id="pie" style="width:auto; height:auto;"></div>
 
 
@@ -91,7 +91,7 @@
   </div><!-- /Row 1 -->
   
   <%= render '/shared/chart_data' %>
-  
+
 
   <%= will_paginate @cpar %>
 </div><!-- /container -->
