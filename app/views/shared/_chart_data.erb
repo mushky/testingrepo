@@ -233,7 +233,7 @@
 	var ParReceivedData = [
 
 	{
-		value: <%= Cpar.where(form: "Preventive Action", closed_out_by: "Nathan Manelkar", closed_out_by: "Cynthia Dent").count %>,
+		value: <%= Cpar.where(form: "Preventive Action", closed_out_by: "Nathan Manelkar").count %>,
 		label: 'Closed Out', 
 		color: 'red'
 	},
