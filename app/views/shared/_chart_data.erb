@@ -234,12 +234,10 @@
 
 	{
 		value: <%= Cpar.where(form: "Preventive Action", closed_out_by: "Nathan Manelkar").count + Cpar.where(form: "Preventive Action", closed_out_by: "Cynthia Dent").count %>,
-		label: 'Closed Out', 
 		color: '#e74c3c'
 	},
 	{
 		value: <%= Cpar.where(form: "Preventive Action").count %>,
-		label: 'Received', 
 		color: '#2980b9'
 	}
 	];
