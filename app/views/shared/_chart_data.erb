@@ -17,6 +17,7 @@
 		value: <%= Cpar.where(form: "Preventive Action",program:"Corporate").count %>,
 		color: '#e74c3c' // RED Corporate
 	},
+
 	{
 		value: <%= Cpar.where(form: "Preventive Action",program:"IRAD").count %>,
 		color: 'silver' // IRAD
@@ -25,18 +26,22 @@
 		value: <%= Cpar.where(form: "Preventive Action",program:"MCTF").count %>,
 		color: '#9b59b6' // MCTF PURPLE
 	},
+
 	{
 		value : <%= Cpar.where(form: "Preventive Action",program:"UAEAF").count %>,
 		color: '#f1c40f' // UAEAF YELLOW
 	},
+
 	{
 		value: <%= Cpar.where(form: "Preventive Action",program:"TAF").count %>,
 		color: '#e67e22' // TAF ORANGE
 	},
+
 	{
 		value: <%= Cpar.where(form: "Preventive Action",program:"DAW").count %>, 
 		color: '#27ae60' // DAW
 	},
+
 	{
 		value: <%= Cpar.where(form: "Preventive Action",program:"ESTS").count %>, 
 		color: '#2980b9' // ESTS
@@ -65,26 +70,32 @@
 		value: <%= Cpar.where(form: "Non-Conforming Material",program:"Corporate").count %>,
 		color: '#e74c3c'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Non-Conforming Material",program:"IRAD").count %>,
 		color: 'silver'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Non-Conforming Material",program:"MCTF").count %>,
 		color: '#9b59b6'
 	},
+
 	{
 		value : <%= Cpar.where(form: "Non-Conforming Material",program:"UAEAF").count %>,
 		color: '#f1c40f'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Non-Conforming Material",program:"TAF").count %>,
 		color: '#e67e22'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Non-Conforming Material",program:"DAW").count %>, 
 		color: '#27ae60'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Non-Corrective Material",program:"ESTS").count %>, 
 		color: '#2980b9'
@@ -111,6 +122,7 @@
 		value: <%= Cpar.where(form: "Supplier Corrective Action", closed_out_by: "").count %>,
 		color: '#e74c3c'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Supplier Corrective Action").count %>,
 		color: '#2980b9'
@@ -138,26 +150,32 @@
 		value: <%= Cpar.where(form: "Continual Improvement",program:"Corporate").count %>,
 		color: '#e74c3c'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Continual Improvement",program:"IRAD").count %>,
 		color: 'silver'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Continual Improvement",program:"MCTF").count %>,
 		color: '#9b59b6'
 	},
+
 	{
 		value : <%= Cpar.where(form: "Continual Improvement",program:"UAEAF").count %>,
 		color: '#f1c40f'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Continual Improvement",program:"TAF").count %>,
 		color: '#e67e22'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Continual Improvement",program:"DAW").count %>, 
 		color: '#27ae60'
 	},
+
 	{
 		value: <%= Cpar.where(form: "Continual Improvement",program:"ESTS").count %>, 
 		color: '#2980b9'
@@ -236,6 +254,7 @@
 		value: <%= Cpar.where(form: "Preventive Action", closed_out_by: "Nathan Manelkar").count + Cpar.where(form: "Preventive Action", closed_out_by: "Cynthia Dent").count %>,
 		color: '#e74c3c'
 	},
+	
 	{
 		value: <%= Cpar.where(form: "Preventive Action").count %>,
 		color: '#2980b9'
