@@ -8,14 +8,14 @@
   $(function () {
     Highcharts.setOptions(
       {colors: 
-      ['#3498db', 
-       '#2ecc71', 
-       '#9b59b6', 
-       '#f1c40f', 
-       '#e74c3c', 
-       '#2c3e50', 
-       '#bdc3c7'],
-     });
+        ['#3498db', 
+        '#e74c3c', 
+        '#9b59b6', 
+        '#f1c40f', 
+        '#2ecc71', 
+        '#2c3e50', 
+        '#bdc3c7'],
+      });
     $('#par_chart').highcharts({
       chart: {
         plotBackgroundColor: null,
@@ -50,31 +50,31 @@
       series: [{
         type: 'pie',
         data: 
-      [['Corporate', <%= Cpar.where(form: "Preventive Action", program: "Corporate").count %>],
-      ['MCTF',<%= Cpar.where(form: "Preventive Action", program: "MCTF").count %>], 
-      ['IRAD', <%= Cpar.where(form: "Preventive Action", program: "IRAD").count %>], 
-      ['UAEAF', <%= Cpar.where(form: "Preventive Action", program: "UAEAF").count %>], 
-      ['TAF', <%= Cpar.where(form: "Preventive Action", program: "TAF").count %>], 
-      ['DAW', <%= Cpar.where(form: "Preventive Action", program: "DAW").count %>],
-      ['ESTS', <%= Cpar.where(form: "Preventive Action", program: "ESTS").count %>]]
+        [['Corporate', <%= Cpar.where(form: "Preventive Action", program: "Corporate").count %>],
+        ['MCTF',<%= Cpar.where(form: "Preventive Action", program: "MCTF").count %>], 
+        ['IRAD', <%= Cpar.where(form: "Preventive Action", program: "IRAD").count %>], 
+        ['UAEAF', <%= Cpar.where(form: "Preventive Action", program: "UAEAF").count %>], 
+        ['TAF', <%= Cpar.where(form: "Preventive Action", program: "TAF").count %>], 
+        ['DAW', <%= Cpar.where(form: "Preventive Action", program: "DAW").count %>],
+        ['ESTS', <%= Cpar.where(form: "Preventive Action", program: "ESTS").count %>]]
       }]
     });
-  });
+});
 </script>
 <!-- CAR CHART -->
 <div id="car_chart" style="width:auto; height:auto;"></div>
 <script type="text/javascript">
 $(function () {
   Highcharts.setOptions(
-    {colors: [
-    '#3498db', 
-    '#2ecc71', 
-    '#9b59b6', 
-    '#f1c40f', 
-    '#e74c3c', 
-    '#2c3e50', 
-    '#bdc3c7'],
-  });
+    {colors: 
+      ['#3498db', 
+      '#e74c3c', 
+      '#9b59b6', 
+      '#f1c40f', 
+      '#2ecc71', 
+      '#2c3e50', 
+      '#bdc3c7'],
+    });
   $('#car_chart').highcharts({
     chart: {
       plotBackgroundColor: null,
@@ -124,14 +124,14 @@ $(function () {
 $(function () {
   Highcharts.setOptions(
     {colors: 
-    ['#3498db', 
-     '#2ecc71', 
-     '#9b59b6', 
-     '#f1c40f', 
-     '#e74c3c', 
-     '#2c3e50', 
-     '#bdc3c7'],
-   });
+      ['#3498db', 
+      '#e74c3c', 
+      '#9b59b6', 
+      '#f1c40f', 
+      '#2ecc71', 
+      '#2c3e50', 
+      '#bdc3c7'],
+    });
   $('#ncmr_chart').highcharts({
     chart: {
       plotBackgroundColor: null,
@@ -183,14 +183,14 @@ $(function () {
     $(function () {
       Highcharts.setOptions(
         {colors: 
-        ['#3498db', 
-         '#2ecc71', 
-         '#9b59b6', 
-         '#f1c40f', 
-         '#e74c3c', 
-         '#2c3e50', 
-         '#bdc3c7'],
-       });
+          ['#3498db', 
+          '#e74c3c', 
+          '#9b59b6', 
+          '#f1c40f', 
+          '#2ecc71', 
+          '#2c3e50', 
+          '#bdc3c7'],
+        });
       $('#scar_chart').highcharts({
         chart: {
           plotBackgroundColor: null,
@@ -220,66 +220,66 @@ $(function () {
         credits: {
           enabled: false
         },
-      series: [{
-        type: 'pie',
-        data: 
-      [['Corporate', <%= Cpar.where(form: "Supplier Corrective Action", program: "Corporate").count %>],
-      ['MCTF',<%= Cpar.where(form: "Supplier Corrective Action", program: "MCTF").count %>], 
-      ['IRAD', <%= Cpar.where(form: "Supplier Corrective Action", program: "IRAD").count %>], 
-      ['UAEAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "UAEAF").count %>], 
-      ['TAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "TAF").count %>], 
-      ['DAW', <%= Cpar.where(form: "Supplier Corrective Action", program: "DAW").count %>],
-      ['ESTS', <%= Cpar.where(form: "Supplier Corrective Action", program: "ESTS").count %>]]
+        series: [{
+          type: 'pie',
+          data: 
+          [['Corporate', <%= Cpar.where(form: "Supplier Corrective Action", program: "Corporate").count %>],
+          ['MCTF',<%= Cpar.where(form: "Supplier Corrective Action", program: "MCTF").count %>], 
+          ['IRAD', <%= Cpar.where(form: "Supplier Corrective Action", program: "IRAD").count %>], 
+          ['UAEAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "UAEAF").count %>], 
+          ['TAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "TAF").count %>], 
+          ['DAW', <%= Cpar.where(form: "Supplier Corrective Action", program: "DAW").count %>],
+          ['ESTS', <%= Cpar.where(form: "Supplier Corrective Action", program: "ESTS").count %>]]
         }]
       });
-    });
+});
 </script>
 <div id="ci_chart" style="width:auto; height:auto;"></div>
-  <script type="text/javascript">
-  $(function () {
-    Highcharts.setOptions(
-      {colors: 
+<script type="text/javascript">
+$(function () {
+  Highcharts.setOptions(
+    {colors: 
       ['#3498db', 
-       '#2ecc71', 
-       '#9b59b6', 
-       '#f1c40f', 
-       '#e74c3c', 
-       '#2c3e50', 
-       '#bdc3c7'],
+      '#e74c3c', 
+      '#9b59b6', 
+      '#f1c40f', 
+      '#2ecc71', 
+      '#2c3e50', 
+      '#bdc3c7'],
     });
-    $('#ci_chart').highcharts({
-      chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false
-      },
-      title: {
-        text: 'CI Breakdown'
-      },
-      tooltip: {
-        pointFormat: '<b>{point.percentage:.1f}%</b>'
+  $('#ci_chart').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false
+    },
+    title: {
+      text: 'CI Breakdown'
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
 
-      },
-      plotOptions: {
-        pie: {
-          size:'75%',
-          allowPointSelect: true,
-          cursor: 'pointer',
-          showInLegend: true,
-          dataLabels: {
-            enabled: true,
-            color: '#000000',
-            connectorColor: '#000000',
-            format: '{point.percentage:.1f} %'
-          }
+    },
+    plotOptions: {
+      pie: {
+        size:'75%',
+        allowPointSelect: true,
+        cursor: 'pointer',
+        showInLegend: true,
+        dataLabels: {
+          enabled: true,
+          color: '#000000',
+          connectorColor: '#000000',
+          format: '{point.percentage:.1f} %'
         }
-      },
-      credits: {
-        enabled: false
-      },
-      series: [{
-        type: 'pie',
-        data: 
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      type: 'pie',
+      data: 
       [['Corporate', <%= Cpar.where(form: "Continual Improvement", program: "Corporate").count %>],
       ['MCTF',<%= Cpar.where(form: "Continual Improvement", program: "MCTF").count %>], 
       ['IRAD', <%= Cpar.where(form: "Continual Improvement", program: "IRAD").count %>], 
@@ -287,9 +287,9 @@ $(function () {
       ['TAF', <%= Cpar.where(form: "Continual Improvement", program: "TAF").count %>], 
       ['DAW', <%= Cpar.where(form: "Continual Improvement", program: "DAW").count %>],
       ['ESTS', <%= Cpar.where(form: "Continual Improvement", program: "ESTS").count %>]]
-      }]
-    });
+    }]
   });
+});
 </script>
 </div>
 </div>
