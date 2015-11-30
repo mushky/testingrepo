@@ -26,18 +26,21 @@
         text: 'PAR Breakdown'
       },
       tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        pointFormat: '<b>{point.percentage:.1f}%</b>'
+        //pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
       },
       plotOptions: {
         pie: {
-          size:'40%',
+          size:'75%',
           allowPointSelect: true,
           cursor: 'pointer',
+          showInLegend: true,
           dataLabels: {
             enabled: true,
             color: '#000000',
             connectorColor: '#000000',
-            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            format: '{point.percentage:.1f} %'
+            //format: '<b>{point.name}</b>: {point.percentage:.1f} %'
           }
         }
       },
@@ -82,18 +85,19 @@ $(function () {
       text: 'CAR Breakdown'
     },
     tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
     },
     plotOptions: {
       pie: {
-        size:'40%',
+        size:'75%',
         allowPointSelect: true,
         cursor: 'pointer',
+        showInLegend: true,
         dataLabels: {
           enabled: true,
           color: '#000000',
           connectorColor: '#000000',
-          format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+          format: '{point.percentage:.1f} %'
         }
       }
     },
@@ -138,18 +142,19 @@ $(function () {
       text: 'NCMR Breakdown'
     },
     tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
     },
     plotOptions: {
       pie: {
-        size:'40%',
+        size:'75%',
         allowPointSelect: true,
         cursor: 'pointer',
+        showInLegend: true,
         dataLabels: {
           enabled: true,
           color: '#000000',
           connectorColor: '#000000',
-          format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+          format: '{point.percentage:.1f} %'
         }
       }
     },
@@ -196,18 +201,19 @@ $(function () {
           text: 'SCAR Breakdown'
         },
         tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          pointFormat: '<b>{point.percentage:.1f}%</b>'
         },
         plotOptions: {
           pie: {
-            size:'40%',
+            size:'75%',
             allowPointSelect: true,
             cursor: 'pointer',
+            showInLegend: true,
             dataLabels: {
               enabled: true,
               color: '#000000',
               connectorColor: '#000000',
-              format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+              format: '{point.percentage:.1f} %'
             }
           }
         },
@@ -251,18 +257,20 @@ $(function () {
         text: 'CI Breakdown'
       },
       tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        pointFormat: '<b>{point.percentage:.1f}%</b>'
+
       },
       plotOptions: {
         pie: {
-          size:'40%',
+          size:'75%',
           allowPointSelect: true,
           cursor: 'pointer',
+          showInLegend: true,
           dataLabels: {
             enabled: true,
             color: '#000000',
             connectorColor: '#000000',
-            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            format: '{point.percentage:.1f} %'
           }
         }
       },
