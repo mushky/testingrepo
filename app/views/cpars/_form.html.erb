@@ -1,19 +1,9 @@
 <style>
-	#car {
-		display: none;
-	}
-	#par {
-		display: none;
-	}
-	#scar {
-		display: none;
-	}
-	#ci {
-		display: none;
-	}
-	#ncmr {
-		display: none;
-	}
+	#car  {display:none;}
+	#par  {display:none;}
+	#scar {display:none;}
+	#ci   {display:none;}
+	#ncmr {display:none;}
 </style>
 
 <div class="container">
@@ -40,6 +30,11 @@
 
 				<p>
 					<%= par.select(:form, options_for_select([['Preventive Action', 'Preventive Action']]), {},{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
+				</p>
+
+				<p>
+				  <%= par.label :title, "Title" %>
+				  <%= par.text_field :title, class: "form-control" %>
 				</p>
 
 				<p>
@@ -243,6 +238,11 @@
 				</p>
 
 				<p>
+				  <%= car.label :title, "Title" %>
+				  <%= car.text_field :title, class: "form-control" %>
+				</p>
+
+				<p>
 					<%= car.label :program, "Program:" %>
 					<%= car.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
@@ -443,6 +443,10 @@
 					<%= ncmr.select(:form, options_for_select([['Non-Conforming Material', 'Non-Conforming Material']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
 
+				<p>
+				  <%= ncmr.label :title, "Title" %>
+				  <%= ncmr.text_field :title, class: "form-control" %>
+				</p>
 
 				<p>
 				  <%= ncmr.label :program, "Program:" %>
@@ -700,6 +704,11 @@
 
 				<p>
 					<%= scar.select(:form, options_for_select([['Supplier Corrective Action', 'Supplier Corrective Action']]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
+				</p>
+
+				<p>
+				  <%= scar.label :title, "Title" %>
+				  <%= scar.text_field :title, class: "form-control" %>
 				</p>
 
 				<p>
@@ -1036,6 +1045,11 @@
 				<p>
 				  <%= ci.label :program, "Program:" %>
 				  <%= ci.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+				</p>
+
+				<p>
+				  <%= ci.label :title, "Title" %>
+				  <%= ci.text_field :title, class: "form-control" %>
 				</p>
 
 				<p>

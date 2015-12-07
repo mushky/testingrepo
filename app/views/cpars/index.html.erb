@@ -3,7 +3,7 @@
   <form class="navbar-form navbar-right" role="search">
     <div class="form-group", id="form-search">
       <%= form_tag(cpars_path, :method => "get", class: "navbar-form navbar-right") do %>
-        <em><%= text_field_tag :search, params[:search], placeholder: "Search by Program...", class: "form-control" %></em>
+        <em><%= text_field_tag :search, params[:search], placeholder: "Search by id#...", class: "form-control" %></em>
         <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
       <% end %>
     </div>
