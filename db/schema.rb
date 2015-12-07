@@ -126,9 +126,6 @@ ActiveRecord::Schema.define(version: 20151207182057) do
     t.integer  "ncmr_counter"
     t.integer  "scar_counter"
     t.string   "title"
-    t.string   "filename"
-    t.string   "content_type"
-    t.binary   "file_contents"
   end
 
   create_table "documents", force: :cascade do |t|
