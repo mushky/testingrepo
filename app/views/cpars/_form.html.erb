@@ -12,7 +12,7 @@
 			<div class="col-md-12">
 
 			<div id="choose">
-				<h2>Select CPAR Form</h2>
+				<h2>Select CAPA Form</h2>
 				<p>
 					<%= f.select(:form, options_for_select( [['Choose Form', 'Choose Form'],['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
@@ -30,11 +30,6 @@
 
 				<p>
 					<%= par.select(:form, options_for_select([['Preventive Action', 'Preventive Action']]), {},{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
-				</p>
-
-				<p>
-				  <%= par.label :title, "Title" %>
-				  <%= par.text_field :title, class: "form-control" %>
 				</p>
 
 				<p>
@@ -60,6 +55,11 @@
 				<p>
 				  <%= par.label :other_category, "Other Category" %>
 				  <%= par.text_field :other_category, class: "form-control" %>
+				</p>
+
+				<p>
+				  <%= par.label :title, "Title" %>
+				  <%= par.text_field :title, class: "form-control" %>
 				</p>
 
 				<hr>
