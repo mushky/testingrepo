@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208004528) do
+ActiveRecord::Schema.define(version: 20151208231020) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "cpar_number"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 20151208004528) do
     t.string   "proposed_immediate_action_completed_by"
     t.string   "proposed_immediate_action_date"
     t.text     "proposed_immediate_action_remarks"
-    t.boolean  "root_cause_analysis_required"
+    t.string   "root_cause_analysis_required"
     t.text     "underlying_root_cause"
     t.string   "determined_by"
     t.string   "underlying_root_cause_date"
