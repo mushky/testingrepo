@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207182057) do
+ActiveRecord::Schema.define(version: 20151208004528) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "cpar_number"
@@ -126,6 +126,10 @@ ActiveRecord::Schema.define(version: 20151207182057) do
     t.integer  "ncmr_counter"
     t.integer  "scar_counter"
     t.string   "title"
+    t.string   "filename"
+    t.string   "content_type"
+    t.binary   "file_contents"
+    t.string   "old_id"
   end
 
   create_table "documents", force: :cascade do |t|
