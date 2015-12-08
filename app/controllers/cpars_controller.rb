@@ -24,7 +24,6 @@ class CparsController < ApplicationController
 	    else
 	      render 'new'
 	    end
-	  
   end
 
   def edit

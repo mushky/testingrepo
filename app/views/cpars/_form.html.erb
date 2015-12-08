@@ -21,7 +21,7 @@
 
 			<div id="par">
 				<h2>Preventive Action Report (PAR)</h2>
-				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |par| %>
+				<%= form_for @cpar, html: {class: "form-horizontal"} do |par| %>
 
 				<p>
 			    <%= par.label :program_enum, "Program Enumeration" %>
@@ -231,7 +231,7 @@
 
 			<div id="car">
 				<h2>Corrective Action Report (CAR)</h2>
-				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |car| %>
+				<%= form_for @cpar, html: {class: "form-horizontal"} do |car| %>
 
 				<p>
 			    <%= car.label :program_enum, "Program Enumeration" %>
@@ -440,7 +440,7 @@
 			</div><!-- /car -->
 
 			<div id="ncmr">
-				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |ncmr| %>
+				<%= form_for @cpar, html: {class: "form-horizontal"} do |ncmr| %>
 
 				<h2>Non-Conforming Material Report (NCMR)</h2> 
 
@@ -709,7 +709,7 @@
 			</div><!-- /ncmr -->
 
 			<div id="scar">
-				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |scar| %>
+				<%= form_for @cpar, html: {class: "form-horizontal"} do |scar| %>
 
 				<h2>Supplier Corrective Action Request (SCAR)</h2>
 				
@@ -1052,7 +1052,7 @@
 			</div><!-- /scar -->
 
 			<div id="ci">
-				<%= form_for :cpar, html: {class: "form-horizontal"}, url: cpars_path do |ci| %>
+				<%= form_for @cpar, html: {class: "form-horizontal"} do |ci| %>
 
 				<h2>Continual Improvement Report (CI)</h2>
 
