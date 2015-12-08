@@ -140,6 +140,7 @@ class CparsController < ApplicationController
 																	:ci_counter,
 																	:ncmr_counter,
 																	:scar_counter,
-																	:title)
+																	:title,
+																	:old_id)
     end
 end
