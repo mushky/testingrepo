@@ -12,7 +12,7 @@ class Cpar < ActiveRecord::Base
   def self.search(query)
   	# where("form like ?", "%#{query}%")
   	# where("program like ?", "%#{query}%")
-  	where("id like ?", "%#{query}%")
+  	where("old_id like ?", "%#{query}%")
   end
   
 	private

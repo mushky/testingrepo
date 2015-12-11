@@ -25,7 +25,7 @@
 
 				<p>
 			    <%= par.label :program_enum, "Program Enumeration" %>
-					<%= par.select(:program_enum, options_for_select([["02", "02"],["01", "01"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+					<%= par.select(:program_enum, options_for_select([["01", "01"],["02", "02"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 				<p>
@@ -264,7 +264,7 @@
 
 				<p>
 					<%= car.label :category_phase, "Category Phase:" %>		
-					<%= car.select(:category_phase, options_for_select([['Receiving Inspection', 'Receiving Inspection'],['Test Failure', 'Test Failure'], ['SIL Test', 'SIL Test'], ['Guidance Doc.', 'Guidance Doc.'], ['Other Doc. (Specify)', 'Other Doc (Specify)'], ['Integration & Test', 'Integration & Test'], ['Gnd/Flt Test', 'Gnd/Flt Test'], ['In Service', 'In Service'], ['Other (Specify)', 'Other (Specify)']]), { class: "btn btn-default dropdown-toggle" }) %>
+					<%= car.select(:category_phase, options_for_select([['Guidance Doc.', 'Guidance Doc.'], ['Receiving Inspection', 'Receiving Inspection'],['Test Failure', 'Test Failure'], ['SIL Test', 'SIL Test'],  ['Other Doc. (Specify)', 'Other Doc (Specify)'], ['Integration & Test', 'Integration & Test'], ['Gnd/Flt Test', 'Gnd/Flt Test'], ['In Service', 'In Service'], ['Other (Specify)', 'Other (Specify)']]), { class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>
@@ -360,7 +360,7 @@
 			  <h3>Root Cause Analysis</h3>
 			  <p>
 			    <%= car.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-					<%= car.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+					<%= car.select(:root_cause_analysis_required, options_for_select([["YES", "YES"],["NO", "NO"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
@@ -466,17 +466,17 @@
 
 				<p>
 				  <%= ncmr.label :program, "Program:" %>
-				  <%= ncmr.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+				  <%= ncmr.select(:program, options_for_select([['UAEAF', 'UAEAF'], ['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'],  ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>
 				  <%= ncmr.label :cpar_source, "CPAR Source:" %>
-				  <%= ncmr.select(:cpar_source, options_for_select([['Audit Nonconformity', 'Audit Nonconformity'], ['Customer Complaint', 'Customer Complaint'],['Missed Schedule', 'Missed Schedule'], ['Non-responsive', 'Non-responsive'], ['Inspection', 'Inspection'], ['Test', 'Test'], ['Other (Internal)', 'Other (Internal)'], ['Other (External)', 'Other (External)']]), { class: "btn btn-default dropdown-toggle" }) %>
+				  <%= ncmr.select(:cpar_source, options_for_select([['Customer Complaint', 'Customer Complaint'],['Audit Nonconformity', 'Audit Nonconformity'], ['Missed Schedule', 'Missed Schedule'], ['Non-responsive', 'Non-responsive'], ['Inspection', 'Inspection'], ['Test', 'Test'], ['Other (Internal)', 'Other (Internal)'], ['Other (External)', 'Other (External)']]), { class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 			  <p>
 					<%= ncmr.label :category_phase, "Category Phase:" %>		
-				  <%= ncmr.select(:category_phase, options_for_select([['Receiving Inspection', 'Receiving Inspection'],['Test Failure', 'Test Failure'], ['SIL Test', 'SIL Test'], ['Guidance Doc.', 'Guidance Doc.'], ['Other Doc. (Specify)', 'Other Doc (Specify)'], ['Integration & Test', 'Integration & Test'], ['Gnd/Flt Test', 'Gnd/Flt Test'], ['In Service', 'In Service'], ['Other (Specify)', 'Other (Specify)']]), { class: "btn btn-default dropdown-toggle" }) %>
+				  <%= ncmr.select(:category_phase, options_for_select([['Gnd/Flt Test', 'Gnd/Flt Test'], ['Receiving Inspection', 'Receiving Inspection'],['Test Failure', 'Test Failure'], ['SIL Test', 'SIL Test'], ['Guidance Doc.', 'Guidance Doc.'], ['Other Doc. (Specify)', 'Other Doc (Specify)'], ['Integration & Test', 'Integration & Test'],  ['In Service', 'In Service'], ['Other (Specify)', 'Other (Specify)']]), { class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
@@ -545,7 +545,7 @@
 
 				<p>
 			    <%= ncmr.label :affects_delivered_product, "Affects Delivered Product" %>
-					<%= ncmr.select(:affects_delivered_product, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+					<%= ncmr.select(:affects_delivered_product, options_for_select([["YES", "YES"],["NO", "NO"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
@@ -585,17 +585,17 @@
 
 			  <p>
 			    <%= ncmr.label :disposition, "Disposition:" %>
-			    <%= ncmr.select(:disposition, options_for_select([['Use As Is', 'Use As Is'], ['Regrade', 'Regrade'],['Scrap', 'Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
+			    <%= ncmr.select(:disposition, options_for_select([['Return to Supplier', 'Return to Supplier'],['Use As Is', 'Use As Is'], ['Regrade', 'Regrade'],['Scrap', 'Scrap'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
 			    <%= ncmr.label :supplier_action, "Supplier Action:" %>
-			    <%= ncmr.select(:supplier_action, options_for_select([['Notify Customer', 'Notify Customer'], ['Request Waiver', 'Request Waiver'],['Request Authority to Scrap', 'Request Authority to Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>			  
+			    <%= ncmr.select(:supplier_action, options_for_select([['N/A to Customer', 'N/A to Customer'],['Notify Customer', 'Notify Customer'], ['Request Waiver', 'Request Waiver'],['Request Authority to Scrap', 'Request Authority to Scrap'], ['Return to Supplier', 'Return to Supplier'], ['Other Suppl. Action', 'Other Suppl. Action'], ['Rework', 'Rework'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>			  
 			  </p>
 
 			  <p>
 			    <%= ncmr.label :follow_up_action, "Follow up Action:" %>
-			    <%= ncmr.select(:follow_up_action, options_for_select([['Write CAR', 'Write CAR'], ['Write PAR', 'Write PAR'],['Write SCAR', 'Write SCAR'], ['Re-inspect', 'Re-inspect'], ['Other (Specify', 'Other (Specify'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
+			    <%= ncmr.select(:follow_up_action, options_for_select([['Write SCAR', 'Write SCAR'],['Write CAR', 'Write CAR'], ['Write PAR', 'Write PAR'], ['Re-inspect', 'Re-inspect'], ['Other (Specify', 'Other (Specify'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>
@@ -865,7 +865,7 @@
 
 			  <p>
 			    <%= scar.label :follow_up_action, "Follow up Action:" %>
-			    <%= scar.select(:follow_up_action, options_for_select([['Write CAR', 'Write CAR'], ['Write PAR', 'Write PAR'],['Write SCAR', 'Write SCAR'], ['Re-inspect', 'Re-inspect'], ['Other (Specify', 'Other (Specify'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
+			    <%= scar.select(:follow_up_action, options_for_select([['Write SCAR', 'Write SCAR'], ['Write CAR', 'Write CAR'], ['Write PAR', 'Write PAR'],['Re-inspect', 'Re-inspect'], ['Other (Specify', 'Other (Specify'], ['N/A', 'N/A']]), { class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
 
 			  <p>

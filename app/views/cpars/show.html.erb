@@ -2,69 +2,66 @@
 	<h3>iAT-<%= @program_id %>-<%= @form_name %><%= @cpar.program_enum %><%= @cpar.id%></h3> 
 	<!-- iAT + program_id + form_name program_enum + cpar_id -->
 		<h4><%= @cpar.form %> Report</h4>
-		<div class="row">
-			<div class="col-md-3">	
+<!-- 		<div class="row">
+			<div class="col-md-3">	 -->
 				<h3>Program</h3>	
-				<strong>Title:</strong> <%= @cpar.title %><br>
-				<strong>Old Id:</strong> <%= @cpar.old_id %><br>
-				<strong>Program:</strong> <%= @cpar.program %><br>
-				<strong>Category Phase:</strong> <%= @cpar.category_phase %><br>
-				<strong>CPAR Source:</strong> <%= @cpar.cpar_source %><br>
-				<strong>Specific Source:</strong> <%= @cpar.specific_source %><br>
-				<strong>Other Category:</strong> <%= @cpar.other_category %><br>
+				<strong>Title:</strong><p><%= @cpar.title %></p>
+				<strong>Old Id:</strong><p><%= @cpar.old_id %></p>
+				<strong>Program:</strong><p><%= @cpar.program %></p>
+				<strong>Category Phase:</strong><p><%= @cpar.category_phase %></p>
+				<strong>CPAR Source:</strong><p><%= @cpar.cpar_source %></p>
+				<strong>Specific Source:</strong><p> <%= @cpar.specific_source %></p>
+				<strong>Other Category:</strong><p> <%= @cpar.other_category %></p>
 
 				<h3>Raised By:<%= @cpar.raised_by %></h3>
 
-				<strong>Assigned To:</strong> <%= @cpar.assigned_to %></br>
-				<strong>Date:</strong> <%= @cpar.date %><br>
-				<strong>Remarks:</strong> <%= @cpar.raised_by_remarks %><br>
+				<strong>Assigned To:</strong><p> <%= @cpar.assigned_to %></p>
+				<strong>Date:</strong><p> <%= @cpar.date %></p>
+				<strong>Remarks:</strong><p> <%= @cpar.raised_by_remarks %></p>
 
 				<h3>Solution Required By</h3>
 
-				<strong>Date:</strong> <%= @cpar.solution_required_by_date %><br>
-				<strong>Remarks:</strong> <%= @cpar.solution_required_remarks %><br>
-				<strong>Completed By:</strong> <%= @cpar.form_completed_by %><br>
-				<strong>Date:</strong> <%= @cpar.form_completed_by_date %><br>
-				<strong>Remarks:</strong> <%= @cpar.form_completed_by_remarks %><br>
-			</div>
-			<div class="col-md-3">
+				<strong>Date:</strong><p> <%= @cpar.solution_required_by_date %></p>
+				<strong>Remarks:</strong><p> <%= @cpar.solution_required_remarks %></p>
+				<strong>Completed By:</strong><p> <%= @cpar.form_completed_by %></p>
+				<strong>Date:</strong><p> <%= @cpar.form_completed_by_date %></p>
+				<strong>Remarks:</strong><p> <%= @cpar.form_completed_by_remarks %></p>
+
 				<h3>Finding</h3>
 
-				<strong>Finding:</strong> <%= @cpar.finding %><br>
-				<strong>Finding Impact:</strong> <%= @cpar.finding_impact %><br>
+				<strong>Finding:</strong><p> <%= @cpar.finding %></p>
+				<strong>Finding Impact:</strong><p> <%= @cpar.finding_impact %></p>
 
 				<h3>Proposed Immediate Action</h3>
 
-				<strong>Proposed Immediate Action:</strong> <%= @cpar.proposed_immediate_action %><br>
-				<strong>Completed By:</strong> <%= @cpar.proposed_immediate_action_completed_by %><br>
-				<strong>Date:</strong> <%= @cpar.proposed_immediate_action_date %><br>
-				<strong>Remarks:</strong> <%= @cpar.proposed_immediate_action_remarks %><br>
+				<strong>Proposed Immediate Action:</strong><p> <%= @cpar.proposed_immediate_action %></p>
+				<strong>Completed By:</strong><p> <%= @cpar.proposed_immediate_action_completed_by %></p>
+				<strong>Date:</strong><p> <%= @cpar.proposed_immediate_action_date %></p>
+				<strong>Remarks:</strong><p> <%= @cpar.proposed_immediate_action_remarks %></p>
 
 				<h3>Root Cause Analysis</h3>
 
-				<strong>Root Cause Analysis Required?:</strong> <%= @cpar.root_cause_analysis_required %><br>
-				<strong>Underlying Root Cause:</strong> <%= @cpar.underlying_root_cause %><br>
-				<strong>Determined By:</strong> <%= @cpar.determined_by %><br>
-				<strong>Date:</strong> <%= @cpar.underlying_root_cause_date %><br>
-				<strong>Remarks:</strong> <%= @cpar.underlying_root_cause_remarks %><br>
-			</div>
-			<div class="col-md-3">
+				<strong>Root Cause Analysis Required?:</strong><p> <%= @cpar.root_cause_analysis_required %></p>
+				<strong>Underlying Root Cause:</strong><p> <%= @cpar.underlying_root_cause %></p>
+				<strong>Determined By:</strong><p> <%= @cpar.determined_by %></p>
+				<strong>Date:</strong><p> <%= @cpar.underlying_root_cause_date %></p>
+				<strong>Remarks:</strong><p> <%= @cpar.underlying_root_cause_remarks %></p>
+				
 				<h3>Proposed Action</h3>
 
-				<strong>Proposed Action for Long-term Solution:</strong> <%= @cpar.proposed_action_for_longterm_solution %><br>
-				<strong>Completed By:</strong> <%= @cpar.proposed_action_for_longterm_solution_completed_by %><br>
-				<strong>Date:</strong> <%= @cpar.proposed_action_for_longterm_solution_date %><br>
-				<strong>Remarks:</strong> <%= @cpar.proposed_action_for_longterm_solution_remarks %><br>
+				<strong>Proposed Action for Long-term Solution:</strong><p> <%= @cpar.proposed_action_for_longterm_solution %></p>
+				<strong>Completed By:</strong><p> <%= @cpar.proposed_action_for_longterm_solution_completed_by %></p>
+				<strong>Date:</strong><p><%= @cpar.proposed_action_for_longterm_solution_date %></p>
+				<strong>Remarks:</strong><p> <%= @cpar.proposed_action_for_longterm_solution_remarks %></p>
 
 				<h3>Evaluation of Effectiveness of Action</h3>
 
-				<strong>Evaluation of Effectiveness of Action:</strong> <%= @cpar.evaluation_of_effectiveness_of_action %><br>
-				<strong>Objective Evidence:</strong> <%= @cpar.objective_evidence %><br>
-				<strong>Closed Out By:</strong> <%= @cpar.closed_out_by %><br>
-				<strong>Date:</strong><%= @cpar.evaluation_of_effectiveness_of_action_date %><br>
-				<strong>Remarks:</strong><%= @cpar.evaluation_of_effectiveness_of_action_remarks %><br><br>
-			</div>
-		</div> <!-- /row -->
+				<strong>Evaluation of Effectiveness of Action:</strong><p> <%= @cpar.evaluation_of_effectiveness_of_action %></p>
+				<strong>Objective Evidence:</strong><p> <%= @cpar.objective_evidence %></p>
+				<strong>Closed Out By:</strong><p> <%= @cpar.closed_out_by %></p>
+				<strong>Date:</strong><p><%= @cpar.evaluation_of_effectiveness_of_action_date %></p>
+				<strong>Remarks:</strong><p><%= @cpar.evaluation_of_effectiveness_of_action_remarks %></p><br>
+
 		<%= link_to "Back", cpars_path, class: "btn btn-default" %>
 		<%= link_to "Edit", edit_cpar_path, class: "btn btn-default" %><br><br>
 </div><!-- /container -->
