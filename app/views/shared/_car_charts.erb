@@ -1,7 +1,8 @@
+<h1>Additional Data</h1>
 <!-- Row 2 -->
-<!-- PAR CHART -->
+<!-- car_q4_2013_receive -->
 <div class="col-md-4">
-  <div id="car_q1_receive" style="width:auto; height:auto;"></div>
+  <div id="car_q4_2013_receive" style="width:auto; height:auto;"></div>
   <script type="text/javascript">
   $(function () {
     Highcharts.setOptions(
@@ -14,7 +15,7 @@
         '#2c3e50', 
         '#bdc3c7'],
       });
-    $('#car_q1_receive').highcharts({
+    $('#car_q4_2013_receive').highcharts({
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -57,8 +58,8 @@
     });
 });
 </script>
-<!-- CAR CHART -->
-<div id="car_chart" style="width:auto; height:auto;"></div>
+<!-- car_q1_2014_receive -->
+<div id="car_q1_2014_receive" style="width:auto; height:auto;"></div>
 <script type="text/javascript">
 $(function () {
   Highcharts.setOptions(
@@ -71,14 +72,14 @@ $(function () {
       '#2c3e50', 
       '#bdc3c7'],
     });
-  $('#car_chart').highcharts({
+  $('#car_q1_2014_receive').highcharts({
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false
     },
     title: {
-      text: 'Received CARs Q1 2014'
+      text: 'Received CARs Q4 2014'
     },
     tooltip: {
       pointFormat: '<b>{point.percentage:.1f}%</b>'
@@ -112,8 +113,8 @@ $(function () {
   });
 });
 </script>
-<!-- NCMR CHART -->
-<div id="ncmr_chart" style="width:auto; height:auto;"></div>
+<!-- car_q4_2014_receive -->
+<div id="car_q4_2014_receive" style="width:auto; height:auto;"></div>
 <script type="text/javascript">
 $(function () {
   Highcharts.setOptions(
@@ -126,7 +127,7 @@ $(function () {
       '#2c3e50', 
       '#bdc3c7'],
     });
-  $('#ncmr_chart').highcharts({
+  $('#car_q4_2014_receive').highcharts({
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: null,
@@ -158,13 +159,11 @@ $(function () {
     series: [{
       type: 'pie',
       data: 
-      [['Corporate', <%= Cpar.where(form: "Non-Conforming Material", program: "Corporate").count %>],
-      ['MCTF',<%= Cpar.where(form: "Non-Conforming Material", program: "MCTF").count %>], 
-      ['IRAD', <%= Cpar.where(form: "Non-Conforming Material", program: "IRAD").count %>], 
-      ['UAEAF', <%= Cpar.where(form: "Non-Conforming Material", program: "UAEAF").count %>], 
-      ['TAF', <%= Cpar.where(form: "Non-Conforming Material", program: "TAF").count %>], 
-      ['DAW', <%= Cpar.where(form: "Non-Conforming Material", program: "DAW").count %>],
-      ['ESTS', <%= Cpar.where(form: "Non-Conforming Material", program: "ESTS").count %>]]
+        [['Corporate', 40],
+        ['MCTF', 0], 
+        ['UAEAF', 1], 
+        ['TAF', 7], 
+        ['ESTS', 0]]
     }]
   });
 });
@@ -172,7 +171,7 @@ $(function () {
 </div><!-- /Row 2 -->
 <div class="row">
   <div class="col-md-4">
-    <div id="scar_chart" style="width:auto; height:auto;"></div>
+    <div id="car_q1_2014_closed" style="width:auto; height:auto;"></div>
     <script type="text/javascript">
     $(function () {
       Highcharts.setOptions(
@@ -185,14 +184,14 @@ $(function () {
           '#2c3e50', 
           '#bdc3c7'],
         });
-      $('#scar_chart').highcharts({
+      $('#car_q1_2014_closed').highcharts({
         chart: {
           plotBackgroundColor: null,
           plotBorderWidth: null,
           plotShadow: false
         },
         title: {
-          text: 'SCAR Breakdown'
+          text: 'Closed Out CARs Q1 2014'
         },
         tooltip: {
           pointFormat: '<b>{point.percentage:.1f}%</b>'
@@ -217,18 +216,16 @@ $(function () {
         series: [{
           type: 'pie',
           data: 
-          [['Corporate', <%= Cpar.where(form: "Supplier Corrective Action", program: "Corporate").count %>],
-          ['MCTF',<%= Cpar.where(form: "Supplier Corrective Action", program: "MCTF").count %>], 
-          ['IRAD', <%= Cpar.where(form: "Supplier Corrective Action", program: "IRAD").count %>], 
-          ['UAEAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "UAEAF").count %>], 
-          ['TAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "TAF").count %>], 
-          ['DAW', <%= Cpar.where(form: "Supplier Corrective Action", program: "DAW").count %>],
-          ['ESTS', <%= Cpar.where(form: "Supplier Corrective Action", program: "ESTS").count %>]]
+          [['Corporate', 13],
+          ['MCTF', 1], 
+          ['UAEAF', 1], 
+          ['TAF', 0], 
+          ['ESTS', 0]]
         }]
       });
 });
 </script>
-<div id="ci_chart" style="width:auto; height:auto;"></div>
+<div id="car_q4_2014_closed" style="width:auto; height:auto;"></div>
 <script type="text/javascript">
 $(function () {
   Highcharts.setOptions(
@@ -241,14 +238,14 @@ $(function () {
       '#2c3e50', 
       '#bdc3c7'],
     });
-  $('#ci_chart').highcharts({
+  $('#car_q4_2014_closed').highcharts({
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false
     },
     title: {
-      text: 'CI Breakdown'
+      text: 'Closed Out CARs Q4 2014'
     },
     tooltip: {
       pointFormat: '<b>{point.percentage:.1f}%</b>'
@@ -274,13 +271,11 @@ $(function () {
     series: [{
       type: 'pie',
       data: 
-      [['Corporate', <%= Cpar.where(form: "Continual Improvement", program: "Corporate").count %>],
-      ['MCTF',<%= Cpar.where(form: "Continual Improvement", program: "MCTF").count %>], 
-      ['IRAD', <%= Cpar.where(form: "Continual Improvement", program: "IRAD").count %>], 
-      ['UAEAF', <%= Cpar.where(form: "Continual Improvement", program: "UAEAF").count %>], 
-      ['TAF', <%= Cpar.where(form: "Continual Improvement", program: "TAF").count %>], 
-      ['DAW', <%= Cpar.where(form: "Continual Improvement", program: "DAW").count %>],
-      ['ESTS', <%= Cpar.where(form: "Continual Improvement", program: "ESTS").count %>]]
+          [['Corporate', 31],
+          ['MCTF', 0], 
+          ['UAEAF', 0], 
+          ['TAF', 5], 
+          ['ESTS', 0]]
     }]
   });
 });
