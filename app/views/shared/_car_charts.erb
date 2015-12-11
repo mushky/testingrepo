@@ -1,0 +1,290 @@
+<!-- Row 2 -->
+<!-- PAR CHART -->
+<div class="col-md-4">
+  <div id="par_chart" style="width:auto; height:auto;"></div>
+  <script type="text/javascript">
+  $(function () {
+    Highcharts.setOptions(
+      {colors: 
+        ['#3498db', 
+        '#e74c3c', 
+        '#9b59b6', 
+        '#f1c40f', 
+        '#2ecc71', 
+        '#2c3e50', 
+        '#bdc3c7'],
+      });
+    $('#par_chart').highcharts({
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false
+      },
+      title: {
+        text: 'Received CARs Q4 2013'
+      },
+      tooltip: {
+        pointFormat: '<b>{point.percentage:.1f}%</b>'
+        //pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          size:'75%',
+          allowPointSelect: true,
+          cursor: 'pointer',
+          showInLegend: true,
+          dataLabels: {
+            enabled: true,
+            color: '#000000',
+            connectorColor: '#000000',
+            format: '{point.percentage:.1f} %'
+            //format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+          }
+        }
+      },
+      credits: {
+        enabled: false
+      },
+      series: [{
+        type: 'pie',
+        data: 
+        [['Corporate', 19],
+        ['MCTF', 1], 
+        ['UAEAF', 1], 
+        ['TAF', 0], 
+        ['ESTS', 0]]
+      }]
+    });
+});
+</script>
+<!-- CAR CHART -->
+<div id="car_chart" style="width:auto; height:auto;"></div>
+<script type="text/javascript">
+$(function () {
+  Highcharts.setOptions(
+    {colors: 
+      ['#3498db', 
+      '#e74c3c', 
+      '#9b59b6', 
+      '#f1c40f', 
+      '#2ecc71', 
+      '#2c3e50', 
+      '#bdc3c7'],
+    });
+  $('#car_chart').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false
+    },
+    title: {
+      text: 'CAR Breakdown'
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        size:'75%',
+        allowPointSelect: true,
+        cursor: 'pointer',
+        showInLegend: true,
+        dataLabels: {
+          enabled: true,
+          color: '#000000',
+          connectorColor: '#000000',
+          format: '{point.percentage:.1f} %'
+        }
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      type: 'pie',
+      data: 
+        [['Corporate', 5],
+        ['MCTF', 0], 
+        ['UAEAF', 1], 
+        ['TAF', 0], 
+        ['ESTS', 0]]
+    }]
+  });
+});
+</script>
+<!-- NCMR CHART -->
+<div id="ncmr_chart" style="width:auto; height:auto;"></div>
+<script type="text/javascript">
+$(function () {
+  Highcharts.setOptions(
+    {colors: 
+      ['#3498db', 
+      '#e74c3c', 
+      '#9b59b6', 
+      '#f1c40f', 
+      '#2ecc71', 
+      '#2c3e50', 
+      '#bdc3c7'],
+    });
+  $('#ncmr_chart').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false
+    },
+    title: {
+      text: 'NCMR Breakdown'
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        size:'75%',
+        allowPointSelect: true,
+        cursor: 'pointer',
+        showInLegend: true,
+        dataLabels: {
+          enabled: true,
+          color: '#000000',
+          connectorColor: '#000000',
+          format: '{point.percentage:.1f} %'
+        }
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      type: 'pie',
+      data: 
+      [['Corporate', <%= Cpar.where(form: "Non-Conforming Material", program: "Corporate").count %>],
+      ['MCTF',<%= Cpar.where(form: "Non-Conforming Material", program: "MCTF").count %>], 
+      ['IRAD', <%= Cpar.where(form: "Non-Conforming Material", program: "IRAD").count %>], 
+      ['UAEAF', <%= Cpar.where(form: "Non-Conforming Material", program: "UAEAF").count %>], 
+      ['TAF', <%= Cpar.where(form: "Non-Conforming Material", program: "TAF").count %>], 
+      ['DAW', <%= Cpar.where(form: "Non-Conforming Material", program: "DAW").count %>],
+      ['ESTS', <%= Cpar.where(form: "Non-Conforming Material", program: "ESTS").count %>]]
+    }]
+  });
+});
+</script>
+</div><!-- /Row 2 -->
+<div class="row">
+  <div class="col-md-4">
+    <div id="scar_chart" style="width:auto; height:auto;"></div>
+    <script type="text/javascript">
+    $(function () {
+      Highcharts.setOptions(
+        {colors: 
+          ['#3498db', 
+          '#e74c3c', 
+          '#9b59b6', 
+          '#f1c40f', 
+          '#2ecc71', 
+          '#2c3e50', 
+          '#bdc3c7'],
+        });
+      $('#scar_chart').highcharts({
+        chart: {
+          plotBackgroundColor: null,
+          plotBorderWidth: null,
+          plotShadow: false
+        },
+        title: {
+          text: 'SCAR Breakdown'
+        },
+        tooltip: {
+          pointFormat: '<b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+          pie: {
+            size:'75%',
+            allowPointSelect: true,
+            cursor: 'pointer',
+            showInLegend: true,
+            dataLabels: {
+              enabled: true,
+              color: '#000000',
+              connectorColor: '#000000',
+              format: '{point.percentage:.1f} %'
+            }
+          }
+        },
+        credits: {
+          enabled: false
+        },
+        series: [{
+          type: 'pie',
+          data: 
+          [['Corporate', <%= Cpar.where(form: "Supplier Corrective Action", program: "Corporate").count %>],
+          ['MCTF',<%= Cpar.where(form: "Supplier Corrective Action", program: "MCTF").count %>], 
+          ['IRAD', <%= Cpar.where(form: "Supplier Corrective Action", program: "IRAD").count %>], 
+          ['UAEAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "UAEAF").count %>], 
+          ['TAF', <%= Cpar.where(form: "Supplier Corrective Action", program: "TAF").count %>], 
+          ['DAW', <%= Cpar.where(form: "Supplier Corrective Action", program: "DAW").count %>],
+          ['ESTS', <%= Cpar.where(form: "Supplier Corrective Action", program: "ESTS").count %>]]
+        }]
+      });
+});
+</script>
+<div id="ci_chart" style="width:auto; height:auto;"></div>
+<script type="text/javascript">
+$(function () {
+  Highcharts.setOptions(
+    {colors: 
+      ['#3498db', 
+      '#e74c3c', 
+      '#9b59b6', 
+      '#f1c40f', 
+      '#2ecc71', 
+      '#2c3e50', 
+      '#bdc3c7'],
+    });
+  $('#ci_chart').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false
+    },
+    title: {
+      text: 'CI Breakdown'
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+
+    },
+    plotOptions: {
+      pie: {
+        size:'75%',
+        allowPointSelect: true,
+        cursor: 'pointer',
+        showInLegend: true,
+        dataLabels: {
+          enabled: true,
+          color: '#000000',
+          connectorColor: '#000000',
+          format: '{point.percentage:.1f} %'
+        }
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      type: 'pie',
+      data: 
+      [['Corporate', <%= Cpar.where(form: "Continual Improvement", program: "Corporate").count %>],
+      ['MCTF',<%= Cpar.where(form: "Continual Improvement", program: "MCTF").count %>], 
+      ['IRAD', <%= Cpar.where(form: "Continual Improvement", program: "IRAD").count %>], 
+      ['UAEAF', <%= Cpar.where(form: "Continual Improvement", program: "UAEAF").count %>], 
+      ['TAF', <%= Cpar.where(form: "Continual Improvement", program: "TAF").count %>], 
+      ['DAW', <%= Cpar.where(form: "Continual Improvement", program: "DAW").count %>],
+      ['ESTS', <%= Cpar.where(form: "Continual Improvement", program: "ESTS").count %>]]
+    }]
+  });
+});
+</script>
+</div>
+</div>
+
