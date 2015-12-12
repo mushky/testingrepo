@@ -89,15 +89,13 @@
   <% end %>
   </table>
   </div><!-- /Row 1 -->
-  
   <strong>CPAR Total:</strong> <%= Cpar.count %><br><br>
-
   <strong>PAR:</strong> <%= Cpar.where(form: "Preventive Action").count %><br>
   <strong>CAR:</strong> <%= Cpar.where(form: "Corrective Action").count %><br>
   <strong>NCMR:</strong> <%= Cpar.where(form: "Non-Conforming Material").count %><br>
   <strong>SCAR:</strong> <%= Cpar.where(form: "Supplier Corrective Action").count %><br>
   <strong>CI:</strong> <%= Cpar.where(form: "Continual Improvement").count %><br>
-  
+
   <%= render '/shared/cpar_highcharts' %>
 
 
@@ -106,3 +104,5 @@
 
 </div><!-- /container -->
   <%= render '/shared/car_charts' %>
+
+  <%= render '/shared/par_charts' %>

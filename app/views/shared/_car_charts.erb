@@ -1,285 +1,296 @@
-<h1>Additional Data</h1>
-<!-- Row 2 -->
-<!-- car_q4_2013_receive -->
-<div class="col-md-4">
-  <div id="car_q4_2013_receive" style="width:auto; height:auto;"></div>
-  <script type="text/javascript">
-  $(function () {
-    Highcharts.setOptions(
-      {colors: 
-        ['#3498db', 
-        '#e74c3c', 
-        '#9b59b6', 
-        '#f1c40f', 
-        '#2ecc71', 
-        '#2c3e50', 
-        '#bdc3c7'],
-      });
-    $('#car_q4_2013_receive').highcharts({
-      chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false
-      },
-      title: {
-        text: 'Received CARs Q4 2013'
-      },
-      tooltip: {
-        pointFormat: '<b>{point.percentage:.1f}%</b>'
-        //pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-      },
-      plotOptions: {
-        pie: {
-          size:'75%',
-          allowPointSelect: true,
-          cursor: 'pointer',
-          showInLegend: true,
-          dataLabels: {
-            enabled: true,
-            color: '#000000',
-            connectorColor: '#000000',
-            format: '{point.percentage:.1f} %'
-            //format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-          }
-        }
-      },
-      credits: {
-        enabled: false
-      },
-      series: [{
-        type: 'pie',
-        data: 
-        [['Corporate', 19],
-        ['MCTF', 1], 
-        ['UAEAF', 1], 
-        ['TAF', 0], 
-        ['ESTS', 0]]
-      }]
-    });
-});
-</script>
-<!-- car_q1_2014_receive -->
-<div id="car_q1_2014_receive" style="width:auto; height:auto;"></div>
-<script type="text/javascript">
-$(function () {
-  Highcharts.setOptions(
-    {colors: 
-      ['#3498db', 
-      '#e74c3c', 
-      '#9b59b6', 
-      '#f1c40f', 
-      '#2ecc71', 
-      '#2c3e50', 
-      '#bdc3c7'],
-    });
-  $('#car_q1_2014_receive').highcharts({
-    chart: {
-      plotBackgroundColor: null,
-      plotBorderWidth: null,
-      plotShadow: false
-    },
-    title: {
-      text: 'Received CARs Q4 2014'
-    },
-    tooltip: {
-      pointFormat: '<b>{point.percentage:.1f}%</b>'
-    },
-    plotOptions: {
-      pie: {
-        size:'75%',
-        allowPointSelect: true,
-        cursor: 'pointer',
-        showInLegend: true,
-        dataLabels: {
-          enabled: true,
-          color: '#000000',
-          connectorColor: '#000000',
-          format: '{point.percentage:.1f} %'
-        }
-      }
-    },
-    credits: {
-      enabled: false
-    },
-    series: [{
-      type: 'pie',
-      data: 
-        [['Corporate', 5],
-        ['MCTF', 0], 
-        ['UAEAF', 1], 
-        ['TAF', 0], 
-        ['ESTS', 0]]
-    }]
-  });
-});
-</script>
-<!-- car_q4_2014_receive -->
-<div id="car_q4_2014_receive" style="width:auto; height:auto;"></div>
-<script type="text/javascript">
-$(function () {
-  Highcharts.setOptions(
-    {colors: 
-      ['#3498db', 
-      '#e74c3c', 
-      '#9b59b6', 
-      '#f1c40f', 
-      '#2ecc71', 
-      '#2c3e50', 
-      '#bdc3c7'],
-    });
-  $('#car_q4_2014_receive').highcharts({
-    chart: {
-      plotBackgroundColor: null,
-      plotBorderWidth: null,
-      plotShadow: false
-    },
-    title: {
-      text: 'Received CARs Q1 2014'
-    },
-    tooltip: {
-      pointFormat: '<b>{point.percentage:.1f}%</b>'
-    },
-    plotOptions: {
-      pie: {
-        size:'75%',
-        allowPointSelect: true,
-        cursor: 'pointer',
-        showInLegend: true,
-        dataLabels: {
-          enabled: true,
-          color: '#000000',
-          connectorColor: '#000000',
-          format: '{point.percentage:.1f} %'
-        }
-      }
-    },
-    credits: {
-      enabled: false
-    },
-    series: [{
-      type: 'pie',
-      data: 
-        [['Corporate', 40],
-        ['MCTF', 0], 
-        ['UAEAF', 1], 
-        ['TAF', 7], 
-        ['ESTS', 0]]
-    }]
-  });
-});
-</script>
-</div><!-- /Row 2 -->
-<div class="row">
-  <div class="col-md-4">
-    <div id="car_q1_2014_closed" style="width:auto; height:auto;"></div>
-    <script type="text/javascript">
-    $(function () {
-      Highcharts.setOptions(
-        {colors: 
-          ['#3498db', 
-          '#e74c3c', 
-          '#9b59b6', 
-          '#f1c40f', 
-          '#2ecc71', 
-          '#2c3e50', 
-          '#bdc3c7'],
+<h1>Additional CAR Data</h1>
+  <div class="container">
+    <div class="row">   
+      <!-- car_q4_2013_receive -->
+      <div class="col-md-4">
+        <div id="car_q4_2013_receive" style="width:auto; height:auto;"></div>
+        <script type="text/javascript">
+        $(function () {
+          Highcharts.setOptions(
+            {colors: 
+              ['#3498db', 
+              '#e74c3c', 
+              '#9b59b6', 
+              '#f1c40f', 
+              '#2ecc71', 
+              '#2c3e50', 
+              '#bdc3c7'],
+            });
+          $('#car_q4_2013_receive').highcharts({
+            chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false
+            },
+            title: {
+              text: 'Received CARs Q4 2013'
+            },
+            tooltip: {
+              pointFormat: '<b>{point.percentage:.1f}%</b>'
+              //pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+              pie: {
+                size:'75%',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                showInLegend: true,
+                dataLabels: {
+                  enabled: true,
+                  color: '#000000',
+                  connectorColor: '#000000',
+                  format: '{point.percentage:.1f} %'
+                  //format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+              }
+            },
+            credits: {
+              enabled: false
+            },
+            series: [{
+              type: 'pie',
+              data: 
+              [['Corporate', 19],
+              ['MCTF', 1], 
+              ['UAEAF', 1], 
+              ['TAF', 0], 
+              ['ESTS', 0]]
+            }]
+          });
         });
-      $('#car_q1_2014_closed').highcharts({
-        chart: {
-          plotBackgroundColor: null,
-          plotBorderWidth: null,
-          plotShadow: false
-        },
-        title: {
-          text: 'Closed Out CARs Q1 2014'
-        },
-        tooltip: {
-          pointFormat: '<b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-          pie: {
-            size:'75%',
-            allowPointSelect: true,
-            cursor: 'pointer',
-            showInLegend: true,
-            dataLabels: {
-              enabled: true,
-              color: '#000000',
-              connectorColor: '#000000',
-              format: '{point.percentage:.1f} %'
-            }
-          }
-        },
-        credits: {
-          enabled: false
-        },
-        series: [{
-          type: 'pie',
-          data: 
-          [['Corporate', 13],
-          ['MCTF', 1], 
-          ['UAEAF', 1], 
-          ['TAF', 0], 
-          ['ESTS', 0]]
-        }]
-      });
-});
-</script>
-<div id="car_q4_2014_closed" style="width:auto; height:auto;"></div>
-<script type="text/javascript">
-$(function () {
-  Highcharts.setOptions(
-    {colors: 
-      ['#3498db', 
-      '#e74c3c', 
-      '#9b59b6', 
-      '#f1c40f', 
-      '#2ecc71', 
-      '#2c3e50', 
-      '#bdc3c7'],
-    });
-  $('#car_q4_2014_closed').highcharts({
-    chart: {
-      plotBackgroundColor: null,
-      plotBorderWidth: null,
-      plotShadow: false
-    },
-    title: {
-      text: 'Closed Out CARs Q4 2014'
-    },
-    tooltip: {
-      pointFormat: '<b>{point.percentage:.1f}%</b>'
+      </script>
+    </div>
 
-    },
-    plotOptions: {
-      pie: {
-        size:'75%',
-        allowPointSelect: true,
-        cursor: 'pointer',
-        showInLegend: true,
-        dataLabels: {
-          enabled: true,
-          color: '#000000',
-          connectorColor: '#000000',
-          format: '{point.percentage:.1f} %'
-        }
-      }
-    },
-    credits: {
-      enabled: false
-    },
-    series: [{
-      type: 'pie',
-      data: 
-          [['Corporate', 31],
-          ['MCTF', 0], 
-          ['UAEAF', 0], 
-          ['TAF', 5], 
-          ['ESTS', 0]]
-    }]
-  });
-});
-</script>
-</div>
+    <!-- car_q1_2014_receive -->
+    <div class="col-md-4">
+      <div id="car_q1_2014_receive" style="width:auto; height:auto;"></div>
+        <script type="text/javascript">
+        $(function () {
+          Highcharts.setOptions(
+            {colors: 
+              ['#3498db', 
+              '#e74c3c', 
+              '#9b59b6', 
+              '#f1c40f', 
+              '#2ecc71', 
+              '#2c3e50', 
+              '#bdc3c7'],
+            });
+          $('#car_q1_2014_receive').highcharts({
+            chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false
+            },
+            title: {
+              text: 'Received CARs Q4 2014'
+            },
+            tooltip: {
+              pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+              pie: {
+                size:'75%',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                showInLegend: true,
+                dataLabels: {
+                  enabled: true,
+                  color: '#000000',
+                  connectorColor: '#000000',
+                  format: '{point.percentage:.1f} %'
+                }
+              }
+            },
+            credits: {
+              enabled: false
+            },
+            series: [{
+              type: 'pie',
+              data: 
+                [['Corporate', 5],
+                ['MCTF', 0], 
+                ['UAEAF', 1], 
+                ['TAF', 0], 
+                ['ESTS', 0]]
+            }]
+          });
+        });
+      </script>
+    </div>
+
+    <!-- car_q4_2014_receive -->
+    <div class="col-md-4">
+      <div id="car_q4_2014_receive" style="width:auto; height:auto;"></div>
+        <script type="text/javascript">
+        $(function () {
+          Highcharts.setOptions(
+            {colors: 
+              ['#3498db', 
+              '#e74c3c', 
+              '#9b59b6', 
+              '#f1c40f', 
+              '#2ecc71', 
+              '#2c3e50', 
+              '#bdc3c7'],
+            });
+          $('#car_q4_2014_receive').highcharts({
+            chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false
+            },
+            title: {
+              text: 'Received CARs Q1 2014'
+            },
+            tooltip: {
+              pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+              pie: {
+                size:'75%',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                showInLegend: true,
+                dataLabels: {
+                  enabled: true,
+                  color: '#000000',
+                  connectorColor: '#000000',
+                  format: '{point.percentage:.1f} %'
+                }
+              }
+            },
+            credits: {
+              enabled: false
+            },
+            series: [{
+              type: 'pie',
+              data: 
+                [['Corporate', 40],
+                ['MCTF', 0], 
+                ['UAEAF', 1], 
+                ['TAF', 7], 
+                ['ESTS', 0]]
+            }]
+          });
+        });
+      </script>
+    </div>
+
+    <div class="col-md-4">
+      <div id="car_q1_2014_closed" style="width:auto; height:auto;"></div>
+        <script type="text/javascript">
+        $(function () {
+          Highcharts.setOptions(
+            {colors: 
+              ['#3498db', 
+              '#e74c3c', 
+              '#9b59b6', 
+              '#f1c40f', 
+              '#2ecc71', 
+              '#2c3e50', 
+              '#bdc3c7'],
+            });
+          $('#car_q1_2014_closed').highcharts({
+            chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false
+            },
+            title: {
+              text: 'Closed Out CARs Q1 2014'
+            },
+            tooltip: {
+              pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+              pie: {
+                size:'75%',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                showInLegend: true,
+                dataLabels: {
+                  enabled: true,
+                  color: '#000000',
+                  connectorColor: '#000000',
+                  format: '{point.percentage:.1f} %'
+                }
+              }
+            },
+            credits: {
+              enabled: false
+            },
+            series: [{
+              type: 'pie',
+              data: 
+              [['Corporate', 13],
+              ['MCTF', 1], 
+              ['UAEAF', 1], 
+              ['TAF', 0], 
+              ['ESTS', 0]]
+            }]
+          });
+        });
+      </script>
+    </div>
+
+    <div class="col-md-4">
+      <div id="car_q4_2014_closed" style="width:auto; height:auto;"></div>
+        <script type="text/javascript">
+        $(function () {
+          Highcharts.setOptions(
+            {colors: 
+              ['#3498db', 
+              '#e74c3c', 
+              '#9b59b6', 
+              '#f1c40f', 
+              '#2ecc71', 
+              '#2c3e50', 
+              '#bdc3c7'],
+            });
+          $('#car_q4_2014_closed').highcharts({
+            chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false
+            },
+            title: {
+              text: 'Closed Out CARs Q4 2014'
+            },
+            tooltip: {
+              pointFormat: '<b>{point.percentage:.1f}%</b>'
+
+            },
+            plotOptions: {
+              pie: {
+                size:'75%',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                showInLegend: true,
+                dataLabels: {
+                  enabled: true,
+                  color: '#000000',
+                  connectorColor: '#000000',
+                  format: '{point.percentage:.1f} %'
+                }
+              }
+            },
+            credits: {
+              enabled: false
+            },
+            series: [{
+              type: 'pie',
+              data: 
+                  [['Corporate', 31],
+                  ['MCTF', 0], 
+                  ['UAEAF', 0], 
+                  ['TAF', 5], 
+                  ['ESTS', 0]]
+            }]
+          });
+        });
+      </script>
+    </div>
+  </div>
 </div>
 
