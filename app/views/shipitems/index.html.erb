@@ -5,10 +5,11 @@
   <table class="table table-hover">
     <td>
       <h4><%= shipitem.part%></h4>
-      <%= shipitem.serial %><br>
-      <%= shipitem.description %><br>
-      <%= shipitem.date %><br>
-      Quantity: <%= shipitem.quantity %><br>
+      <strong>Serial:</strong><p><%= shipitem.serial %></p>
+      <strong>Description:</strong><p><%= shipitem.description %></p>
+      <strong>Date:</strong><p><%= shipitem.date %></p>
+      <strong>Quantity:</strong><p><%= shipitem.quantity %></p>
+      <strong>Shipping Number:</strong><p><%= shipitem.shipping_number %></p>
       |<%= link_to 'View', shipitem_path(shipitem), class: "btn-sm btn-primary" %>|
       |<%= link_to 'Edit', edit_shipitem_path(shipitem), class: "btn-sm btn-warning"%>|
       |<%= link_to 'Delete', shipitem_path(shipitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
