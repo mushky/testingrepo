@@ -44,6 +44,13 @@ body {
 
 .LogoHover{
   a:hover {
-    background-color: red;
+    border-top: 3px solid #d0d0d0;
+    border-bottom: 3px solid #d0d0d0;
+    border-left: 3px solid #d0d0d0;
+    border-right: 3px solid #d0d0d0;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
   }
 }
