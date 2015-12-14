@@ -49,6 +49,6 @@ class ShipitemsController < ApplicationController
 
   private
     def shipitem_params
-      params.require(:shipitem).permit(:id, :part, :serial, :date, :description, :quantity, :completed)
+      params.require(:shipitem).permit(:id, :part, :serial, :date, :description, :quantity, :completed, :shipping_number)
     end
 end
