@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208231020) do
+ActiveRecord::Schema.define(version: 20151214193513) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "cpar_number"
@@ -219,8 +219,9 @@ ActiveRecord::Schema.define(version: 20151208231020) do
     t.text     "description"
     t.integer  "quantity"
     t.boolean  "completed"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "shipping_number"
   end
 
   create_table "users", force: :cascade do |t|
