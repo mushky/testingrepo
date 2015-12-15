@@ -49,7 +49,7 @@ class DocumentsController < ApplicationController
 
   private
     def document_params
-      params.require(:document).permit(:filename, :file_contents, :content_type, :description, :file, :date)
+      params.require(:document).permit(:filename, :file_contents, :content_type, :description, :date, :file)
     end
 
 end

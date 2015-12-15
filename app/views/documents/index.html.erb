@@ -7,11 +7,11 @@
       
       <h4>
         <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-        <%= document.filename%>
+        <%= document.description%>
       </h4>
 
       <%= document.content_type %><br>
-      <%= document.description %><br>
+      <%= document.filename %><br>
 
       |<%= link_to 'Download', document_path(document), class: "btn-sm btn-primary" %>|
       |<%= link_to 'Edit', edit_document_path(document), class: "btn-sm btn-warning"%>|

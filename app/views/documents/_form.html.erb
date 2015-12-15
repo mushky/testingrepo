@@ -10,9 +10,17 @@
 					</ul>
 				</div>
 			<% end %>
-		  <div class="field">
-    		<%= f.file_field :file %>
-  		</div>
+			<div class="form-horizontal">
+  		<p>
+  			<%= f.label :description, "File Name" %><br>
+  			<%= f.text_field :description, class: "form-control" %>
+  		</p>
+
+  		<p>
+    		<%= f.file_field :file, class: "form-control" %>
+    	</p>
+
+  	</div>
 
 		<form class="form-signin">
 	  <h3>
@@ -21,5 +29,4 @@
 	  </h3>
 	  <br>
 	<% end %>
-
 </div> <!-- /container -->
