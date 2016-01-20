@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: 
+  unique_identifier: 
+  item_title: 
+  approved_by: 
+  change_request_ref: 
+  date_received: 
+  requestor_name: 
+  requestor_role: 
+  related_issue_ref: 
+  contact_details: 
+  requestor_business_unit: 
+  change_description: 
+  change_justification: 
+  alternative_comments: 
+  supporting_information: MyText
+
+two:
+  project_name: 
+  unique_identifier: 
+  item_title: 
+  approved_by: 
+  change_request_ref: 
+  date_received: 
+  requestor_name: 
+  requestor_role: 
+  related_issue_ref: 
+  contact_details: 
+  requestor_business_unit: 
+  change_description: 
+  change_justification: 
+  alternative_comments: 
+  supporting_information: MyText
