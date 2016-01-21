@@ -1,3 +1,4 @@
+<% t = Time.now %>
 <div class="container">
 	<%= form_for :changerequest, url: changerequests_path do|f| %>
 		<div class="row">
@@ -32,7 +33,7 @@
 
 				<p>
 			    <%= f.label :date_received, "Date Received" %><br>
-			    <%= f.text_field :date_received, class: "form-control" %>
+			    <%= f.text_field :date_received, :value => t.strftime("%m/%d/%Y"), class: "form-control" %>
 			  </p>
 			</div>
 
