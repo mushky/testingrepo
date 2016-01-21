@@ -1,0 +1,99 @@
+<div class="container">
+	<%= form_for :changerequest, url: changerequests_path do|f| %>
+		<div class="row">
+			<div class="col-md-6">
+				<h2>Record Details</h2>
+				<br>
+				<p>
+				  <%= f.label :project_name, "Project Name" %>
+				  <%= f.text_field :project_name, class: "form-control" %>
+				</p>
+				 
+				<p>
+				  <%= f.label :unique_identifier, "Unique Identifier" %>
+				  <%= f.text_field :unique_identifier, class: "form-control" %>
+				</p>
+
+				<p>
+				  <%= f.label :item_title, "Item Title" %>
+				  <%= f.text_field :item_title, class: "form-control" %>
+				</p>
+
+			  <p>
+			    <%= f.label :approved_by, "Approved By" %>
+					<%= f.text_field :approved_by, class: "form-control " %>
+				</p>
+
+			  <h2>Assign a Change Request Reference</h2>
+				<p>
+			    <%= f.label :change_request_ref, "Approved By:" %>
+					<%= f.text_field :change_request_ref, class: "form-control " %>
+				</p>
+
+				<p>
+			    <%= f.label :date_received, "Date Received" %><br>
+			    <%= f.text_field :date_received, class: "form-control" %>
+			  </p>
+			</div>
+
+	  	<div class="col-md-6">
+	  		<h2>Change Request Information</h2>
+	  		<em>To be completed by the person requesting the change</em>
+
+			  <p>
+			    <%= f.label :requestor_name, "Requestor Name" %><br>
+			    <%= f.text_field :requestor_name, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :requestor_role, "Requestor Role" %><br>
+			    <%= f.text_field :requestor_role, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :related_issue_ref, "Related Issue Reference" %><br>
+			    <%= f.text_field :related_issue_ref, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :contact_details, "Contact Details" %><br>
+			    <%= f.text_field :contact_details, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :requestor_business_unit, "Requestor Business Unit" %><br>
+			    <%= f.text_field :requestor_business_unit, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :change_description, "Change Description" %><br>
+			    <%= f.text_area :change_description, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :change_justification, "Change Justification" %><br>
+			    <%= f.text_area :change_justification, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :alternative_comments, "Alternative Comments" %><br>
+			    <%= f.text_area :alternative_comments, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :supporting_information, "Supporting Information" %><br>
+			    <%= f.text_area :supporting_information, class: "form-control" %>
+			  </p>
+
+		  </div>
+		</div><!-- /row -->		
+		<form class="form-signin">
+	  <p>
+	    <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+	  </p>
+	<% end %>
+	<%= link_to "Back", changerequests_path, class: "btn btn-default" %>
+	</div> <!-- /container -->
+
+<br>
+

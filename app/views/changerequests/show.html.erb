@@ -1,0 +1,54 @@
+<div class="container">
+	<h3><%= @changerequest.project_name %></h3>
+	
+	<strong>Unique Identifier</strong>
+	<%= @changerequest.unique_identifier
+ %><br>
+	
+	<strong>Item Title</strong>
+	<%= @changerequest.item_title %><br>
+	
+	<strong>Approved By</strong>
+	<%= @changerequest.approved_by %><br>
+	
+	<strong>Change Request Reference</strong>
+	<%= @changerequest.change_request_ref %><br>
+
+	<strong>Date Received</strong>
+	<%= @changerequest.date_received %><br>
+
+	<strong>Requestor Name</strong>
+	<%= @changerequest.requestor_name %><br>
+
+	<strong>Requestor Role</strong>
+	<%= @changerequest.requestor_role %><br>
+
+	<strong>Related Issue Reference</strong>
+	<%= @changerequest.related_issue_ref %><br>
+
+	<strong>Contact Details</strong>
+	<%= @changerequest.contact_details %><br>
+
+	<strong>Requestor Business Unit</strong>
+	<%= @changerequest.requestor_business_unit %><br>
+
+	<strong>Change Description</strong>
+	<%= @changerequest.change_description %><br>
+
+	<strong>Change Justification</strong>
+	<%= @changerequest.change_justification %><br>
+
+	<strong>Alternative Comments</strong>
+	<%= @changerequest.alternative_comments %><br>
+
+	<strong>Supporting Information</strong>
+	<%= @changerequest.supporting_information %><br>
+
+	<%= link_to "Back", changerequests_path, class: "btn btn-default" %>
+</div
+
+
+
+
+
+

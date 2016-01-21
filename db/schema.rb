@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214193513) do
+ActiveRecord::Schema.define(version: 20160120222020) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "cpar_number"
@@ -54,6 +54,26 @@ ActiveRecord::Schema.define(version: 20151214193513) do
     t.text     "evaluation_of_effectiveness_of_action_remarks"
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
+  end
+
+  create_table "change_requests", force: :cascade do |t|
+    t.string   "project_name"
+    t.string   "unique_identifier"
+    t.string   "item_title"
+    t.string   "approved_by"
+    t.string   "change_request_ref"
+    t.string   "date_received"
+    t.string   "requestor_name"
+    t.string   "requestor_role"
+    t.string   "related_issue_ref"
+    t.string   "contact_details"
+    t.string   "requestor_business_unit"
+    t.text     "change_description"
+    t.text     "change_justification"
+    t.text     "alternative_comments"
+    t.text     "supporting_information"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "cpars", force: :cascade do |t|
@@ -130,7 +150,10 @@ ActiveRecord::Schema.define(version: 20151214193513) do
     t.string   "content_type"
     t.binary   "file_contents"
     t.string   "old_id"
+    t.integer  "document_id"
   end
+
+  add_index "cpars", ["document_id"], name: "index_cpars_on_document_id"
 
   create_table "documents", force: :cascade do |t|
     t.string   "filename"

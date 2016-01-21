@@ -1,0 +1,21 @@
+<div class="container">
+<h1>Change Request Records <%= link_to "Create Change Request Record", new_changerequest_path, class: "btn btn-primary" %>
+</h1>
+  <% @changerequests.each do |changerequest| %>
+  <table class="table table-hover">
+    <td>
+      
+      <h4>
+        <%= changerequest.project_name%>
+      </h4>
+
+      <%= changerequest.unique_identifier %><br>
+      <%= changerequest.item_title %><br>
+      <%= changerequest.approved_by %><br>
+
+      |<%= link_to 'View', changerequest_path(changerequest), class: "btn-sm btn-primary" %>|
+      |<%= link_to 'Edit', edit_changerequest_path(changerequest), class: "btn-sm btn-warning"%>|
+      |<%= link_to 'Delete', changerequest_path(changerequest), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    </td>
+  <% end %>
+  </table>
