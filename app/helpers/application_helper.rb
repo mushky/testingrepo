@@ -1,2 +1,3 @@
 module ApplicationHelper
+	emails = []
 end
