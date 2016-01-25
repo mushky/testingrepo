@@ -1,47 +1,47 @@
 <div class="container">
 	<h1><%= @changerequest.project_name %></h1>
-	
-	<strong>Unique Identifier</strong>
+	<strong>Change Request Reference:</strong>
+	<%= "CR00" + @changerequest.id.to_s %><br>
+	<strong>Unique Identifier:</strong>
 	<%= @changerequest.unique_identifier
  %><br>
 	
-	<strong>Item Title</strong>
+	<strong>Item Title:</strong>
 	<%= @changerequest.item_title %><br>
 	
-	<strong>Approved By</strong>
+	<strong>Approved By:</strong>
 	<%= @changerequest.approved_by %><br>
 	
-	<strong>Change Request Reference</strong>
-	<%= "CR00" + @changerequest.id.to_s %><br>
 
-	<strong>Date Received</strong>
+
+	<strong>Date Received:</strong>
 	<%= @changerequest.date_received %><br>
 
-	<strong>Requestor Name</strong>
+	<strong>Requestor Name:</strong>
 	<%= @changerequest.requestor_name %><br>
 
-	<strong>Requestor Role</strong>
+	<strong>Requestor Role:</strong>
 	<%= @changerequest.requestor_role %><br>
 
-	<strong>Related Issue Reference</strong>
+	<strong>Related Issue Reference:</strong>
 	<%= @changerequest.related_issue_ref %><br>
 
-	<strong>Contact Details</strong>
+	<strong>Contact Details:</strong>
 	<%= @changerequest.contact_details %><br>
 
-	<strong>Requestor Business Unit</strong>
+	<strong>Requestor Business Unit:</strong>
 	<%= @changerequest.requestor_business_unit %><br>
 
-	<strong>Change Description</strong>
+	<strong>Change Description:</strong>
 	<%= @changerequest.change_description %><br>
 
-	<strong>Change Justification</strong>
+	<strong>Change Justification:</strong>
 	<%= @changerequest.change_justification %><br>
 
-	<strong>Alternative Comments</strong>
+	<strong>Alternative Comments:</strong>
 	<%= @changerequest.alternative_comments %><br>
 
-	<strong>Supporting Information</strong>
+	<strong>Supporting Information:</strong>
 	<%= @changerequest.supporting_information %><br>
 
 	<%= link_to "Back", changerequests_path, class: "btn btn-default" %>
