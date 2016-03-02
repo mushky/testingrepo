@@ -13,7 +13,7 @@ class Cpar < ActiveRecord::Base
   	# where("form like ?", "%#{query}%")
   	# where("program like ?", "%#{query}%")
   	Cpar.where("old_id LIKE :search OR program LIKE :search OR form LIKE :search OR id LIKE :search", search: "%#{query}")
-  end
+ 	end
   
 	private
 	  def sanitize_filename(filename)
