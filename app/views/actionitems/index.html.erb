@@ -12,25 +12,11 @@
   <table class="table table-hover">
     <td>   
       
-      <h3>Details</h3>
-      Subject: <%= actionitem.subject %><br>
-      Event Discussed<%= actionitem.event_discussed %><br>
-      Assigned to: <%= actionitem.assigned_to %><br>
-      <%= actionitem.project %><br>
-      <%= actionitem.status %><br>
-      <%= actionitem.priority %><br>
-      <%= actionitem.area %><br>
-      <%= actionitem.comment %>
-
-      <h3>Project Management</h3>
-      <%= actionitem.request_due_date %><br>
-      <%= actionitem.hours_to_completion %><br>
-      <%= actionitem.completion_date %><br>
-      <%= actionitem.percent_complete %>
-
-      <h3>Files</h3>
-      <%= actionitem.filename %><br>
-      <%= actionitem.content_type %><br>
+      <strong>Subject:</strong> <%= actionitem.subject %><br>
+      <strong>Event Discussed:</strong> <%= actionitem.event_discussed %><br>
+      <strong>Assigned to:</strong> <%= actionitem.assigned_to %><br>
+      <strong>Project: </strong><%= actionitem.project %><br>
+      <strong>Status: </strong><%= actionitem.status %><br><br>
 
       |<%= link_to 'View', actionitem_path(actionitem), class: "btn-sm btn-primary" %>|
       |<%= link_to 'Edit', edit_actionitem_path(actionitem), class: "btn-sm btn-warning"%>|
