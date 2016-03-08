@@ -11,6 +11,8 @@ class ActionitemsController < ApplicationController
 
   def show
     @actionitem = Actionitem.find(params[:id])
+    #send_data(@actionitem.file_contents, type: @actionitem.content_type, filename: @document.filename)
+
   end
 
   def create

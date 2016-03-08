@@ -1,2 +1,20 @@
-<h1>Actionitems#show</h1>
-<p>Find me in app/views/actionitems/show.html.erb</p>
+<div class="container">
+  <h3>Details</h3>
+  <strong>Subject:</strong> <%= @actionitem.subject %><br>
+  <strong>Event Discussed:</strong> <%= @actionitem.event_discussed %><br>
+  <strong>Assigned to:</strong> <%= @actionitem.assigned_to %><br>
+  <strong>Project:</strong> <%= @actionitem.project %><br>
+  <strong>Status:</strong> <%= @actionitem.status %><br>
+  <strong>Priority:</strong> <%= @actionitem.priority %><br>
+  <strong>Area:</strong> <%= @actionitem.area %><br>
+  <strong>Comment:</strong> <%= @actionitem.comment %>
+
+  <h3>Project Management</h3>
+  <strong>Requested Due Date:</strong> <%= @actionitem.request_due_date %><br>
+  <strong>Hours to Completition:</strong> <%= @actionitem.hours_to_completion %><br>
+  <strong>Completition Date:</strong> <%= @actionitem.completion_date %><br>
+  <strong>Percentage Completed:</strong> <%= @actionitem.percent_complete %><br><br>    
+</div>
+<!-- <h3>Files</h3>
+<%= @actionitem.filename %><br>
+<%= @actionitem.content_type %><br> -->
