@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120222020) do
+ActiveRecord::Schema.define(version: 20160307222049) do
+
+  create_table "actionitems", force: :cascade do |t|
+    t.string   "subject"
+    t.string   "event_discussed"
+    t.string   "assigned_to"
+    t.string   "project"
+    t.string   "status"
+    t.string   "priority"
+    t.string   "area"
+    t.text     "comment"
+    t.string   "request_due_date"
+    t.integer  "hours_to_completion"
+    t.string   "completion_date"
+    t.integer  "percent_complete"
+    t.string   "filename"
+    t.string   "content_type"
+    t.binary   "file_contents"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "cars", force: :cascade do |t|
     t.integer  "cpar_number"

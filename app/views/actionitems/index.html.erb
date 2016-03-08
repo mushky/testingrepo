@@ -1,2 +1,40 @@
-<h1>Actionitems#index</h1>
-<p>Find me in app/views/actionitems/index.html.erb</p>
+<div class="container">
+  <form class="navbar-form navbar-right" role="search">
+    <div class="form-group", id="form-search">
+      <%= form_tag(actionitems_path, :method => "get", class: "navbar-form navbar-right") do %>
+        <em><%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %></em>
+        <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+      <% end %>
+    </div>
+  </form>
+<h1>Change Request Records <%= link_to "Create Change Request Record", new_actionitem_path,class: "btn btn-primary" %></h1>
+  <% @actionitems.each do |actionitem| %>
+  <table class="table table-hover">
+    <td>   
+      
+      <h3>Details</h3>
+      <%= actionitem.subject %><br>
+      <%= actionitem.event_discussed %><br>
+      <%= actionitem.assigned_to %><br>
+      <%= actionitem.project %><br>
+      <%= actionitem.status %><br>
+      <%= actionitem.priority %><br>
+      <%= actionitem.area %><br>
+      <%= actionitem.comment %><br><br>
+
+      <h3>Project Management</h3>
+      <%= actionitem.request_due_date %><br>
+      <%= actionitem.hours_to_completion %><br>
+      <%= actionitem.completion_date %><br>
+      <%= actionitem.percent_complete %><br><br>    
+
+      <h3>Files</h3>
+      <%= actionitem.filename %><br>
+      <%= actionitem.content_type %><br>
+
+      |<%= link_to 'View', actionitem_path(actionitem), class: "btn-sm btn-primary" %>|
+      |<%= link_to 'Edit', edit_actionitem_path(actionitem), class: "btn-sm btn-warning"%>|
+      |<%= link_to 'Delete', actionitem_path(actionitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    </td>
+  <% end %>
+  </table>
