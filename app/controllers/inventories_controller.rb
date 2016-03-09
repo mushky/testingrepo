@@ -46,9 +46,10 @@ class InventoriesController < ApplicationController
     redirect_to inventories_path
   end
 
-
   private
     def inventory_params
-      params.require(:inventory).permit(:part, :serial, :date, :description, :quantity, :completed)
+      params.require(:inventory).permit(:employee, :laptop_model, :windows, :office_suite, :adobe_pro, :adobe_stn,
+                                        :visual_studio, :visio, :status, :other, :iat_num, :microsoft_project, :nxpowerlite,
+                                        :win_pro)
     end
 end

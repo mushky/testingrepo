@@ -11,52 +11,87 @@
 				</div>
 			<% end %>  	
 
+		<div class="row">
+			<div class="col-md-6">
+			  <p>
+			    <%= f.label :employee %><br>
+			    <%= f.text_field :employee, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :employee %><br>
-	    <%= f.text_field :employee, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :iat_num, "iAT Number" %><br>
+			    <%= f.text_field :iat_num, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :laptop_model %><br>
-	    <%= f.text_field :laptop_model, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :laptop_model, "Laptop Model" %><br>
+			    <%= f.text_field :laptop_model, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :windows %><br>
-	    <%= f.text_field :windows, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :laptop_serial_number, "Laptop Serial Number" %><br>
+			    <%= f.text_field :laptop_serial_number, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :office_suite %><br>
-	    <%= f.text_field :office_suite, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :windows, "Windows Key" %><br>
+			    <%= f.text_field :windows, class: "form-control" %>
+			  </p>
+			</div>
+			<div class="col-md-6">
+			  <p>
+			    <%= f.label :office_suite, "Office Suite Serial Number" %><br>
+			    <%= f.text_field :office_suite, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :adobe_pro %><br>
-	    <%= f.text_field :adobe_pro, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :adobe_pro, "Adobe Acrobat Pro Serial Number" %><br>
+			    <%= f.text_field :adobe_pro, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :visual_studio %><br>
-	    <%= f.text_field :visual_studio, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :adobe_stn, "Adobe Acrobat X STN Serial Number" %><br>
+			    <%= f.text_field :adobe_stn, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :visio %><br>
-	    <%= f.text_field :visio, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :visual_studio, "Visual Studio Key" %><br>
+			    <%= f.text_field :visual_studio, class: "form-control" %>
+			  </p>
 
-	  <p>
-	    <%= f.label :status %><br>
-	    <%= f.text_field :status, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :visio, "Visio Key" %><br>
+			    <%= f.text_field :visio, class: "form-control" %>
+			  </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
 
-	  <p>
-	    <%= f.label :other %><br>
-	    <%= f.text_field :other, class: "form-control" %>
-	  </p>
+			  <p>
+			    <%= f.label :microsoft_project, "Microsoft Project Serial Number" %><br>
+			    <%= f.text_field :microsoft_project, class: "form-control" %>
+			  </p>
+			  <p>
+			    <%= f.label :nxpowerlite, "NXPowerlite Serial Number" %><br>
+			    <%= f.text_field :nxpowerlite, class: "form-control" %>
+			  </p>
+			  <p>
+			    <%= f.label :win_pro, "Win Pro Serial Number" %><br>
+			    <%= f.text_field :win_pro, class: "form-control" %>
+			  </p>
 
+			  <p>
+			    <%= f.label :status %><br>
+			    <%= f.text_field :status, class: "form-control" %>
+			  </p>
+
+			  <p>
+			    <%= f.label :other %><br>
+			    <%= f.text_field :other, class: "form-control" %>
+			  </p>
+			</div>
+		</div>
 
 		<form class="form-signin">
 	  <p>

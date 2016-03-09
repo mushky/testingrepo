@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309170843) do
+ActiveRecord::Schema.define(version: 20160309200319) do
 
   create_table "actionitems", force: :cascade do |t|
     t.string   "subject"
@@ -203,8 +203,8 @@ ActiveRecord::Schema.define(version: 20160309170843) do
     t.text     "description"
     t.integer  "quantity"
     t.boolean  "completed"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "employee"
     t.string   "laptop_model"
     t.string   "windows"
@@ -219,6 +219,7 @@ ActiveRecord::Schema.define(version: 20160309170843) do
     t.string   "microsoft_project"
     t.string   "nxpowerlite"
     t.string   "win_pro"
+    t.string   "laptop_serial_number"
   end
 
   create_table "licenses", force: :cascade do |t|
