@@ -31,18 +31,18 @@
 
 			  <p>
 			    <%= f.label :project %><br>
-			    <%= f.text_field :project, class: "form-control" %>
+					<%= f.select(:project, options_for_select( [['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']] ), {}, { class: "form-control" }) %>
 			  </p>
 			</div>
 			<div class="col-md-6">
 			  <p>
 			    <%= f.label :status %><br>
-			    <%= f.text_field :status, class: "form-control" %>
+					<%= f.select(:status, options_for_select( [['Open', 'Open'],['Closed', 'Closed']]), {} ,{ class: "form-control" }) %>			  
 			  </p>
 
 			  <p>
 			    <%= f.label :priority %><br>
-			    <%= f.text_field :priority, class: "form-control" %>
+			    <%= f.select(:priority, options_for_select( [ ['1. Very Low', 'Very Low'], ['2. Low', 'Low'], ['3. Medium', 'Medium'], ['4. High', 'High',], ['5. Very High', 'Very High']  ], ), {}, { class: "form-control"}) %>
 			  </p>
 
 			  <p>

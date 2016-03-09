@@ -1,0 +1,54 @@
+<div class="col-md-6">
+  <div id="open_close" style="width:auto; height:auto;"></div>
+  <script type="text/javascript">
+  $(function () {
+    Highcharts.setOptions(
+      {colors: 
+        ['#3498db', 
+        '#e74c3c', 
+        '#9b59b6', 
+        '#f1c40f', 
+        '#2ecc71', 
+        '#2c3e50', 
+        '#bdc3c7'],
+      });
+    $('#open_close').highcharts({
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false
+      },
+      title: {
+        text: 'Action Items Status'
+      },
+      tooltip: {
+        pointFormat: '<b>{point.percentage:.1f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          size:'100%%',
+          allowPointSelect: true,
+          cursor: 'pointer',
+          showInLegend: true,
+          dataLabels: {
+            enabled: true,
+            color: '#000000',
+            connectorColor: '#000000',
+            format: '{point.percentage:.1f} %'
+          }
+        }
+      },
+      credits: {
+        enabled: false
+      },
+      series: [{
+        type: 'pie',
+        data: 
+        [['Open', 0],
+        ['Closed', 1]]
+      }]
+    });
+  });
+</script>
+</div>
+</div>
