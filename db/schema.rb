@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307222049) do
+ActiveRecord::Schema.define(version: 20160309170843) do
 
   create_table "actionitems", force: :cascade do |t|
     t.string   "subject"
@@ -203,8 +203,22 @@ ActiveRecord::Schema.define(version: 20160307222049) do
     t.text     "description"
     t.integer  "quantity"
     t.boolean  "completed"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "employee"
+    t.string   "laptop_model"
+    t.string   "windows"
+    t.string   "office_suite"
+    t.string   "adobe_pro"
+    t.string   "adobe_stn"
+    t.string   "visual_studio"
+    t.string   "visio"
+    t.string   "status"
+    t.string   "other"
+    t.string   "iat_num"
+    t.string   "microsoft_project"
+    t.string   "nxpowerlite"
+    t.string   "win_pro"
   end
 
   create_table "licenses", force: :cascade do |t|
