@@ -12,7 +12,7 @@
 			<% end %>  	
 
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			  <p>
 			    <%= f.label :employee %><br>
 			    <%= f.text_field :employee, class: "form-control" %>
@@ -38,7 +38,7 @@
 			    <%= f.text_field :windows, class: "form-control" %>
 			  </p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-4">
 			  <p>
 			    <%= f.label :office_suite, "Office Suite Serial Number" %><br>
 			    <%= f.text_field :office_suite, class: "form-control" %>
@@ -63,34 +63,31 @@
 			    <%= f.label :visio, "Visio Key" %><br>
 			    <%= f.text_field :visio, class: "form-control" %>
 			  </p>
-			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-6">
+		<div class="col-md-4">
+		  <p>
+		    <%= f.label :microsoft_project, "Microsoft Project Serial Number" %><br>
+		    <%= f.text_field :microsoft_project, class: "form-control" %>
+		  </p>
+		  <p>
+		    <%= f.label :nxpowerlite, "NXPowerlite Serial Number" %><br>
+		    <%= f.text_field :nxpowerlite, class: "form-control" %>
+		  </p>
+		  <p>
+		    <%= f.label :win_pro, "Win Pro Serial Number" %><br>
+		    <%= f.text_field :win_pro, class: "form-control" %>
+		  </p>
 
-			  <p>
-			    <%= f.label :microsoft_project, "Microsoft Project Serial Number" %><br>
-			    <%= f.text_field :microsoft_project, class: "form-control" %>
-			  </p>
-			  <p>
-			    <%= f.label :nxpowerlite, "NXPowerlite Serial Number" %><br>
-			    <%= f.text_field :nxpowerlite, class: "form-control" %>
-			  </p>
-			  <p>
-			    <%= f.label :win_pro, "Win Pro Serial Number" %><br>
-			    <%= f.text_field :win_pro, class: "form-control" %>
-			  </p>
+		  <p>
+		    <%= f.label :status %><br>
+		    <%= f.text_field :status, class: "form-control" %>
+		  </p>
 
-			  <p>
-			    <%= f.label :status %><br>
-			    <%= f.text_field :status, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :other %><br>
-			    <%= f.text_field :other, class: "form-control" %>
-			  </p>
-			</div>
+		  <p>
+		    <%= f.label :other %><br>
+		    <%= f.text_field :other, class: "form-control" %>
+		  </p>
+		</div>
 		</div>
 
 		<form class="form-signin">
