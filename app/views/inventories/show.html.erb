@@ -1,49 +1,81 @@
 <div class="container">	
-	<strong>Employee:</strong>
-	<%= @inventory.employee %><br>
+	<table class="table table-bordered">
+		<td class="success">
+			<h6>iat_num:</h6>
+			<%= @inventory.iat_num %>
+		</td>
+		
+		<td>
+			<h6>Employee:</h6>
+			<%= @inventory.employee %>
+		</td>
 
-	<strong>iat_num:</strong>
-	<%= @inventory.iat_num %><br>
+		<td>
+			<h6>Laptop Model:</h6>
+			<%= @inventory.laptop_model %>
+		</td>
+		
+		<td>
+			<h6>Laptop #:</h6>
+			<%= @inventory.laptop_serial_number %>
+		</td>
+		
+		<td>
+			<h6>Windows #:</h6>
+			<%= @inventory.windows %>
+		</td>
+		
+		<td>
+			<h6>Office Suite #:</h6>
+			<%= @inventory.office_suite %>
+		</td>
+		
+		<td>
+			<h6>Adobe Pro #:</h6>
+			<%= @inventory.adobe_pro %>
+		</td>
 
-	<strong>Laptop Model:</strong>
-	<%= @inventory.laptop_model %><br>
+		<td>
+			<h6>Adobe X STN #:</h6>
+			<%= @inventory.adobe_stn %>
+		</td>
 
-	<strong>Laptop Serial Number:</strong>
-	<%= @inventory.laptop_serial_number %><br>
+		<td>
+			<h6>Visual Studio #:</h6>
+			<%= @inventory.visual_studio %>
+		</td>
 
-	<strong>Windows Serial Number:</strong>
-	<%= @inventory.windows %><br>
+		<td>
+			<h6>Visio #:</h6>
+			<%= @inventory.visio %>
+		</td>
 
-	<strong>Office Suite Serial Number:</strong>
-	<%= @inventory.office_suite %><br>
+		<td>
+			<h6>Microsoft Project #:</h6>
+			<%= @inventory.microsoft_project %>
+		</td>
 
-	<strong>Adobe Pro Serial Number:</strong>
-	<%= @inventory.adobe_pro %><br>
+		<td>
+			<h6>NX Powerlite #:</h6>
+			<%= @inventory.nxpowerlite %>
+		</td>
 
-	<strong>Adobe X STN Serial Number:</strong>
-	<%= @inventory.adobe_stn %><br>
+		<td>
+			<h6>Win Pro #:</h6>
+			<%= @inventory.win_pro %>
+		</td>
 
-	<strong>Visual Studio Serial Number:</strong>
-	<%= @inventory.visual_studio %><br>
+		<td>
+			<h6>Status:</h6>
+			<%= @inventory.status %>
+		</td>
 
-	<strong>Visio Serial Number:</strong>
-	<%= @inventory.visio %><br>
-
-	<strong>Microsoft Project Serial Number:</strong>
-	<%= @inventory.microsoft_project %><br>
-
-	<strong>NX Powerlite Serial Number:</strong>
-	<%= @inventory.nxpowerlite %><br>
-
-	<strong>Win Pro Serial Number:</strong>
-	<%= @inventory.win_pro %><br>
-
-	<strong>Status:</strong>
-	<%= @inventory.status %><br>
-
-	<strong>Other:</strong>
-	<%= @inventory.other %><br>
-
+		<td>
+			<h6>Other:</h6>
+			<%= @inventory.other %>
+		</td>
+		</table>
 	<%= link_to "Back", inventories_path, class: "btn btn-default" %>
 
 </div>
+
