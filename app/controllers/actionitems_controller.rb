@@ -54,7 +54,7 @@ class ActionitemsController < ApplicationController
                                         :project, :status, :priority, :area, 
                                         :comment, :request_due_date, :hours_to_completion, 
                                         :completion_date, :percent_complete, 
-                                        :filename, :content_type, :file_contents )
+                                        :filename, :content_type, :file_contents, :notification )
     end
 end
 

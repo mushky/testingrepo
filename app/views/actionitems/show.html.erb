@@ -15,12 +15,15 @@
     <strong>Requested Due Date:</strong> <%= @actionitem.request_due_date %><br>
     <strong>Hours to Completition:</strong> <%= @actionitem.hours_to_completion %><br>
     <strong>Completition Date:</strong> <%= @actionitem.completion_date %><br>
-    <strong>Percentage Completed:</strong> <%= @actionitem.percent_complete %><br><br>   
+    <strong>Percentage Completed:</strong> <%= @actionitem.percent_complete %>
+
+    <h3>Notified Users</h3>
+    <%= @actionitem.notification.split(',') %><br><br>   
 
     |<%= link_to 'Back', actionitems_path, class: "btn-sm btn-primary" %>|
     |<%= link_to 'Update', edit_actionitem_path(@actionitem), class: "btn-sm btn-warning"%>|
     |<%= link_to 'Remove', actionitem_path(@actionitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>| 
-    
+
   </div>
   <div class="col-md-6">
     <div id="percentage_completed" style="width:auto; height:auto;"></div>

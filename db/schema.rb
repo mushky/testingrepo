@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309200319) do
+ActiveRecord::Schema.define(version: 20160310004551) do
 
   create_table "actionitems", force: :cascade do |t|
     t.string   "subject"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160309200319) do
     t.binary   "file_contents"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.string   "notification"
   end
 
   create_table "cars", force: :cascade do |t|
