@@ -1,83 +1,77 @@
-<div class="container">	
-	<table class="table table-bordered">
-		
-		<td class="success">
-			<h6>iAT #:</h6>
-			<%= @inventory.iat_num %>
-		</td>
-		
-		<td>
-			<h6>Employee:</h6>
-			<%= @inventory.employee %>
-		</td>
-
-		<td>
-			<h6>Laptop Model:</h6>
-			<%= @inventory.laptop_model %>
-		</td>
-		
-		<td>
-			<h6>Laptop #:</h6>
-			<%= @inventory.laptop_serial_number %>
-		</td>
-		
-		<td>
-			<h6>Windows #:</h6>
-			<%= @inventory.windows %>
-		</td>
-		
-		<td>
-			<h6>Office Suite #:</h6>
-			<%= @inventory.office_suite %>
-		</td>
-		
-		<td>
-			<h6>Adobe Pro #:</h6>
-			<%= @inventory.adobe_pro %>
-		</td>
-
-		<td>
-			<h6>Adobe X STN #:</h6>
-			<%= @inventory.adobe_stn %>
-		</td>
-
-		<td>
-			<h6>Visual Studio #:</h6>
-			<%= @inventory.visual_studio %>
-		</td>
-
-		<td>
-			<h6>Visio #:</h6>
-			<%= @inventory.visio %>
-		</td>
-
-		<td>
-			<h6>Microsoft Project #:</h6>
-			<%= @inventory.microsoft_project %>
-		</td>
-
-		<td>
-			<h6>NX Powerlite #:</h6>
-			<%= @inventory.nxpowerlite %>
-		</td>
-
-		<td>
-			<h6>Win Pro #:</h6>
-			<%= @inventory.win_pro %>
-		</td>
-
-		<td>
-			<h6>Status:</h6>
-			<%= @inventory.status %>
-		</td>
-
-		<td>
-			<h6>Other:</h6>
-			<%= @inventory.other %>
-		</td>	
-	</table>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <br>
+      <table class="table table-bordered table-striped">
+        <colgroup>
+          <col class="col-md-4">
+          <col class="col-md-7">
+        </colgroup>
+        <tbody>
+          <tr>
+						<td class="success"><h6>iAT #:</h6></td>
+						<td class="success"><%= @inventory.iat_num %></td>
+          </tr>
+          <tr>
+						<td><h6>Employee:</h6></td>
+						<td><%= @inventory.employee %></td>
+          </tr>
+          <tr>
+						<td><h6>Laptop Model:</h6></td>
+						<td><%= @inventory.laptop_model %></td>
+          </tr>
+          <tr>
+          	<td><h6>Laptop #:</h6></td>
+						<td><%= @inventory.laptop_serial_number %></td>
+					</tr>
+					<tr>
+						<td><h6>Windows #:</h6></td>
+						<td><%= @inventory.windows %></td>
+					</tr>
+					<tr>
+						<td>h6>Office Suite #:</h6></td>
+						<td><%= @inventory.office_suite %></td>
+					</tr>	
+					<tr>
+						<td><h6>Adobe Pro #:</h6></td>
+						<td><%= @inventory.adobe_pro %></td>
+					</tr>
+					<tr>
+						<td><h6>Adobe X STN #:</h6></td>
+						<td><%= @inventory.adobe_stn %></td>
+					</tr>
+					<tr>
+						<td><h6>Visual Studio #:</h6></td>
+						<td><%= @inventory.visual_studio %></td>
+					</tr>
+					<tr>
+						<td><h6>Visio #:</h6></td>
+						<td><%= @inventory.visio %></td>
+					</tr>
+					<tr>
+						<td><h6>Microsoft Project #:</h6></td>
+						<td><%= @inventory.microsoft_project %></td>
+					</tr>
+					<tr>
+						<td><h6>NX Powerlite #:</h6></td>
+						<td><%= @inventory.nxpowerlite %></td>
+					</tr>
+					<tr>
+						<td><h6>Win Pro #:</h6></td>
+						<td><%= @inventory.win_pro %></td>
+					</tr>
+					<tr>
+						<td><h6>Status:</h6></td>
+						<td><%= @inventory.status %></td>
+					</tr>
+					<tr>
+						<td><h6>Other:</h6></td>
+						<td><%= @inventory.other %></td>
+					</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 	<%= link_to "Back", inventories_path, class: "btn btn-default" %>
 
 </div>
-

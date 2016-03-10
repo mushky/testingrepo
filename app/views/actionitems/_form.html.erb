@@ -68,7 +68,7 @@
 
 			  <p>
 			    <%= f.label :hours_to_completion %><br>
-			    <%= f.text_field :hours_to_completion, class: "form-control" %>
+			    <%= f.number_field :hours_to_completion, class: "form-control" %>
 			  </p>
 
 			  <p>
@@ -78,7 +78,7 @@
 
 			  <p>
 			    <%= f.label :percent_complete %><br>
-			    <%= f.text_field :percent_complete, class: "form-control" %>
+			    <%= f.number_field :percent_complete, class: "form-control" %>
 			  </p>	 
 			</div>
 			
@@ -107,7 +107,6 @@
 				<em>Seperate emails with a comma; eg JohnDoe@iaccesstech.com, Jane.Doe@iaccesstech.com</em>
 				<br>
 				<p>
-			    <%= f.label :notification %><br>
 			    <%= f.text_field :notification, class: "form-control" %>
 			  </p>	 
 			</div>
