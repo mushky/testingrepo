@@ -1,20 +1,70 @@
 <div class="container">
-  <h3>Details</h3>
-  <strong>Subject:</strong> <%= @actionitem.subject %><br>
-  <strong>Event Discussed:</strong> <%= @actionitem.event_discussed %><br>
-  <strong>Assigned to:</strong> <%= @actionitem.assigned_to %><br>
-  <strong>Project:</strong> <%= @actionitem.project %><br>
-  <strong>Status:</strong> <%= @actionitem.status %><br>
-  <strong>Priority:</strong> <%= @actionitem.priority %><br>
-  <strong>Area:</strong> <%= @actionitem.area %><br>
-  <strong>Comment:</strong> <%= @actionitem.comment %>
+  <div class="col-md-6">
+    <h2><%= @actionitem.subject %></h2>
+    
+    <h3>Details</h3>
+    <strong>Event Discussed:</strong> <%= @actionitem.event_discussed %><br>
+    <strong>Assigned to:</strong> <%= @actionitem.assigned_to %><br>
+    <strong>Project:</strong> <%= @actionitem.project %><br>
+    <strong>Status:</strong> <%= @actionitem.status %><br>
+    <strong>Priority:</strong> <%= @actionitem.priority %><br>
+    <strong>Area:</strong> <%= @actionitem.area %><br>
+    <strong>Comment:</strong> <%= @actionitem.comment %>
 
-  <h3>Project Management</h3>
-  <strong>Requested Due Date:</strong> <%= @actionitem.request_due_date %><br>
-  <strong>Hours to Completition:</strong> <%= @actionitem.hours_to_completion %><br>
-  <strong>Completition Date:</strong> <%= @actionitem.completion_date %><br>
-  <strong>Percentage Completed:</strong> <%= @actionitem.percent_complete %><br><br>    
+    <h3>Project Management</h3>
+    <strong>Requested Due Date:</strong> <%= @actionitem.request_due_date %><br>
+    <strong>Hours to Completition:</strong> <%= @actionitem.hours_to_completion %><br>
+    <strong>Completition Date:</strong> <%= @actionitem.completion_date %><br>
+    <strong>Percentage Completed:</strong> <%= @actionitem.percent_complete %><br><br>   
+
+    |<%= link_to 'Back', actionitems_path, class: "btn-sm btn-primary" %>|
+    |<%= link_to 'Update', edit_actionitem_path(@actionitem), class: "btn-sm btn-warning"%>|
+    |<%= link_to 'Remove', actionitem_path(@actionitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>| 
+    
+  </div>
+  <div class="col-md-6">
+    <div id="percentage_completed" style="width:auto; height:auto;"></div>
+      <script type="text/javascript">
+      $(function () {
+        Highcharts.setOptions(
+          {colors: ['#3498db','#e74c3c'],});
+        $('#percentage_completed').highcharts({
+          chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+          },
+          title: {
+            text: "<%= @actionitem.subject %>"
+          },
+          tooltip: {
+            pointFormat: '<b>{point.percentage:.1f}%</b>'
+          },
+          plotOptions: {
+            pie: {
+              size:'100%%',
+              allowPointSelect: true,
+              cursor: 'pointer',
+              showInLegend: true,
+              dataLabels: {
+                enabled: true,
+                color: '#000000',
+                connectorColor: '#000000',
+                format: '{point.percentage:.1f} %'
+              }
+            }
+          },
+          credits: {
+            enabled: false
+          },
+          series: [{
+            type: 'pie',
+            data: 
+            [['Completed', <%= @actionitem.percent_complete %>],
+            ['Remaining', <%= 100 - @actionitem.percent_complete %>]]
+          }]
+        });
+      });
+    </script>
+  </div>
 </div>
-<!-- <h3>Files</h3>
-<%= @actionitem.filename %><br>
-<%= @actionitem.content_type %><br> -->

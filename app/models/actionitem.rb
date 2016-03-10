@@ -9,6 +9,10 @@ class Actionitem < ActiveRecord::Base
 	  end
 	end
 
+  def self.search(query)
+  	where("subject like ?", "%#{query}%")
+ 	end
+
 	private
 	  def sanitize_filename(filename)
 	    return File.basename(filename)
