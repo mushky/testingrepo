@@ -1,5 +1,6 @@
 <div class="container">	
 	<table class="table table-bordered">
+		
 		<td class="success">
 			<h6>iAT #:</h6>
 			<%= @inventory.iat_num %>
@@ -73,8 +74,9 @@
 		<td>
 			<h6>Other:</h6>
 			<%= @inventory.other %>
-		</td>
-		</table>
+		</td>	
+	</table>
+
 	<%= link_to "Back", inventories_path, class: "btn btn-default" %>
 
 </div>

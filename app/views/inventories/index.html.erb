@@ -5,9 +5,83 @@
   <table class="table table-hover">
     <td>
       
-      <h4>iAT#: <%= inventory.iat_num %></h4>
-      Laptop Model:<%= inventory.laptop_model %><br>
-      Laptop Serial #:<%= inventory.laptop_serial_number %><br><br>
+  <table class="table table-bordered">
+    
+    <td class="success">
+      <h6>iAT #:</h6>
+      <%= inventory.iat_num %>
+    </td>
+    
+    <td>
+      <h6>Employee:</h6>
+      <%= inventory.employee %>
+    </td>
+
+    <td>
+      <h6>Laptop Model:</h6>
+      <%= inventory.laptop_model %>
+    </td>
+    
+    <td>
+      <h6>Laptop #:</h6>
+      <%= inventory.laptop_serial_number %>
+    </td>
+    
+    <td>
+      <h6>Windows #:</h6>
+      <%= inventory.windows %>
+    </td>
+    
+    <td>
+      <h6>Office Suite #:</h6>
+      <%= inventory.office_suite %>
+    </td>
+    
+    <td>
+      <h6>Adobe Pro #:</h6>
+      <%= inventory.adobe_pro %>
+    </td>
+
+    <td>
+      <h6>Adobe X STN #:</h6>
+      <%= inventory.adobe_stn %>
+    </td>
+
+    <td>
+      <h6>Visual Studio #:</h6>
+      <%= inventory.visual_studio %>
+    </td>
+
+    <td>
+      <h6>Visio #:</h6>
+      <%= inventory.visio %>
+    </td>
+
+    <td>
+      <h6>Microsoft Project #:</h6>
+      <%= inventory.microsoft_project %>
+    </td>
+
+    <td>
+      <h6>NX Powerlite #:</h6>
+      <%= inventory.nxpowerlite %>
+    </td>
+
+    <td>
+      <h6>Win Pro #:</h6>
+      <%= inventory.win_pro %>
+    </td>
+
+    <td>
+      <h6>Status:</h6>
+      <%= inventory.status %>
+    </td>
+
+    <td>
+      <h6>Other:</h6>
+      <%= inventory.other %>
+    </td> 
+  </table>
 
       |<%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-primary" %>|
       |<%= link_to 'Edit', edit_inventory_path(inventory), class: "btn-sm btn-warning"%>|
