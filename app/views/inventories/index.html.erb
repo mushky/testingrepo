@@ -77,14 +77,13 @@
     <td>
       <h6>Other:</h6>
       <%= inventory.other %>
-    </td> 
+    </td>
   </table>
 
-      |<%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-primary" %>|
-      |<%= link_to 'Edit', edit_inventory_path(inventory), class: "btn-sm btn-warning"%>|
-      |<%= link_to 'Delete', inventory_path(inventory), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+    <td>
+      <%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-primary" %>
+      <%= link_to 'Edit', edit_inventory_path(inventory), class: "btn-sm btn-warning"%>
+    </td>
+    <h6></h6>
   <% end %>
-  <br>
-
 </div><!-- /container -->
-<br>
