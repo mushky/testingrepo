@@ -1,6 +1,7 @@
 <div class="container">
-<h1>IT Inventory <%= link_to "Add New Inventory Item", new_inventory_path, class: "btn btn-primary" %>
-</h1>
+<h1>IT Inventory</h1>
+<p><%= link_to "New IT Inventory Item", new_inventory_path, class: "btn btn-primary" %></p>
+  
   <% @inventories.each do |inventory| %>
   <table class="table table-bordered table table-hover">
     
@@ -79,11 +80,8 @@
       <%= inventory.other %>
     </td>
   </table>
-
-    <td>
-      <%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-primary" %>
-      <%= link_to 'Edit', edit_inventory_path(inventory), class: "btn-sm btn-warning"%>
-    </td>
-    <h6></h6>
+    <p>
+      <%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-info" %>
+    </p>
   <% end %>
 </div><!-- /container -->
