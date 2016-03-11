@@ -8,7 +8,6 @@
     </div>
   </form>
   <div class="col-md-12">
-    <% @actionitems.each do |actionitem| %>
     <table class="table table-bordered table table-hover">
     <tr>
       <th class="success">iAT #</th>
@@ -17,6 +16,7 @@
       <th>Date Last Modified</th>
       <th>Priority</th>
     </tr>
+    <% @actionitems.each do |actionitem| %>
     <tr>
       <td><h5>iAT-<%= @project_id %><%= actionitem.id %></td>
       <td><%= actionitem.subject %></td>        
@@ -24,11 +24,9 @@
       <td><%= actionitem.updated_at %></td>
       <td><%= actionitem.priority %></td>
     </tr>
-    </table>
-      |<%= link_to 'View', actionitem_path(actionitem), class: "btn-sm btn-primary" %>|
-      |<%= link_to 'Edit', edit_actionitem_path(actionitem), class: "btn-sm btn-warning"%>|
-      |<%= link_to 'Delete', actionitem_path(actionitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
   <% end %>
+  </table>
+
 </div>
 
 </div><!-- /container
