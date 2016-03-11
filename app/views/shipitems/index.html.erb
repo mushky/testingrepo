@@ -7,19 +7,23 @@
     </button>
   </p>
   </h1>
-  <% @shipitems.each do |shipitem| %>
-  <table class="table table-hover">
-    <td>
-      <h4><%= shipitem.part%></h4>
-      <strong>Serial:</strong> <%= shipitem.serial %><br>
-      <strong>Description:</strong> <%= shipitem.description %><br>
-      <strong>Date:</strong> <%= shipitem.date %><br>
-      <strong>Quantity:</strong> <%= shipitem.quantity %><br>
-      <strong>Shipping Number:</strong> <%= shipitem.shipping_number %><br>
-      |<%= link_to 'View', shipitem_path(shipitem), class: "btn-sm btn-primary" %>|
-      |<%= link_to 'Edit', edit_shipitem_path(shipitem), class: "btn-sm btn-warning"%>|
-      |<%= link_to 'Delete', shipitem_path(shipitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
-    </td>
+  <table class="table table-bordered table table-hover">
+      <tr>
+        <th class="danger">Part</th>
+        <th class="danger">Serial Number</th>
+        <th class="danger">Date</th>
+        <th class="danger">Quantity</th>
+        <th class="danger">Shipping Number</th>
+      </tr>
+      <% @shipitems.each do |shipitem| %>
+      <tr>
+        <td><%= shipitem.part %></td>
+        <td><%= shipitem.serial %></td>
+        <td><%= shipitem.date %></td>
+        <td><%= shipitem.quantity %></td>
+        <td><%= shipitem.shipping_number %></td>
+        <td><%= link_to 'View', shipitem_path(shipitem), class: "btn-sm btn-primary" %></td>
+      </tr>     
   <% end %>
   </table>
 <%= will_paginate @shipitem %>

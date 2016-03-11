@@ -6,18 +6,23 @@
       <%= link_to "Add Receive Item", new_receiveitem_path %>
     </button>
   </p>
-  <% @ReceiveItems.each do |receiveitem| %>
-  <table class="table table-hover">
-    <td>
-      <h4><%= receiveitem.part%></h4>
-      <%= receiveitem.serial %><br>
-      <%= receiveitem.description %><br>
-      <%= receiveitem.date %><br>
-      Quantity: <%= receiveitem.quantity %><br>
-      |<%= link_to 'View', receiveitem_path(receiveitem), class: "btn-sm btn-primary" %>|
-      |<%= link_to 'Edit', edit_receiveitem_path(receiveitem), class: "btn-sm btn-warning"%>|
-      |<%= link_to 'Delete', receiveitem_path(receiveitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
-    </td>
+  <table class="table table-bordered table table-hover">
+    <tr>
+      <th class="danger">Part</th>
+      <th class="danger">Serial #</th>
+      <th class="danger">Description</th>
+      <th class="danger">Date</th>
+      <th class="danger">Quantity</th>
+    </tr>
+    <% @ReceiveItems.each do |receiveitem| %>
+    <tr>
+      <td><%= receiveitem.part %></td>
+      <td><%= receiveitem.serial %></td>
+      <td><%= receiveitem.description %></td>
+      <td><%= receiveitem.date %></td>
+      <td><%= receiveitem.quantity %></td>
+      <td><%= link_to 'View', receiveitem_path(receiveitem), class: "btn-sm btn-primary" %>
+    </tr>
   <% end %>
   </table>
 <%= will_paginate @ReceiveItems %>
