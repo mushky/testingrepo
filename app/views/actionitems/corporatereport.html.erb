@@ -22,7 +22,7 @@
       <td><%= actionitem.subject %></td>        
       <td><%= actionitem.assigned_to %></td> 
       <td><%= actionitem.updated_at %></td>
-      <td><h5>Priority</h5></td>
+      <td><%= actionitem.priority %></td>
     </tr>
     </table>
       |<%= link_to 'View', actionitem_path(actionitem), class: "btn-sm btn-primary" %>|
