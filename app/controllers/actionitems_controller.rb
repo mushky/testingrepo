@@ -5,6 +5,11 @@ class ActionitemsController < ApplicationController
     @actionitems = Actionitem.all
   end
 
+  def corporatereport
+    @actionitems = Actionitem.all
+  end
+  helper_method :program_id
+
   def new
     @actionitem = Actionitem.new
   end
@@ -12,7 +17,6 @@ class ActionitemsController < ApplicationController
   def show
     @actionitem = Actionitem.find(params[:id])
     #send_data(@actionitem.file_contents, type: @actionitem.content_type, filename: @document.filename)
-
   end
 
   def create

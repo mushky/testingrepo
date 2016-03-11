@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/actionitems/corporatereport', :controller => 'actionitems', :action => 'corporatereport'
   devise_for :users
   resources :shipitems, :receiveitems, :inspectitems, 
             :licenses, :documents, :requisitions, 
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'welcome/options'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

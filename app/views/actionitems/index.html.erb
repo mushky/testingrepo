@@ -8,6 +8,7 @@
     </div>
   </form>
   <h1>Action Items <%= link_to "Create New Action Item", new_actionitem_path,class: "btn btn-primary" %></h1>
+  <p>Report Summary <%= link_to "View Report Summary", actionitems_corporatereport_path %></p>
   <div class="col-md-6">
     <% @actionitems.each do |actionitem| %>
     <table class="table table-hover">
