@@ -12,7 +12,12 @@
   <h1><%= link_to "CAPA", cpars_path %></h1>
   <div id="pie" style="width:auto; height:auto;"></div>
 
-  <%= link_to "Create New Report", new_cpar_path, class: "btn btn-primary" %><br><br>
+  <p>
+    <button class="btn btn-default" type="button">    
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <%= link_to "Create New CAPA", new_cpar_path %>
+    </button>
+  </p>
  
   <% @cpars.each do |cpar| %>
   <table class="table table-hover">

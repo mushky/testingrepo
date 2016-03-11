@@ -1,6 +1,12 @@
 <div class="container">
-<h1>Shipping Items <%= link_to "Add New Shipping Item", new_shipitem_path, class: "btn btn-primary" %>
-</h1>
+  <h1>Shipping Items</h1>
+  <p>
+    <button class="btn btn-default" type="button">    
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <%= link_to "Add Shipping Item", new_shipitem_path %>
+    </button>
+  </p>
+  </h1>
   <% @shipitems.each do |shipitem| %>
   <table class="table table-hover">
     <td>

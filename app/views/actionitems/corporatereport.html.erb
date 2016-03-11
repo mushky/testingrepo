@@ -2,32 +2,30 @@
   <form class="navbar-form navbar-right" role="search">
     <div class="form-group", id="form-search">
       <%= form_tag(actionitems_path, :method => "get", class: "navbar-form navbar-right") do %>
-        <em><%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %></em>
-        <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+      <em><%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %></em>
+      <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
       <% end %>
     </div>
   </form>
   <div class="col-md-12">
     <p><%= link_to "Back to Action Items", actionitems_path %></p>
     <table class="table table-bordered table table-hover">
-    <tr>
-      <th class="danger">iAT #</th>
-      <th class="danger">Subject</th>
-      <th class="danger">Assigned To</th>
-      <th class="danger">Date Last Modified</th>
-      <th class="danger">Priority</th>
-    </tr>
-    <% @actionitems.each do |actionitem| %>
-    <tr>
-      <td><h5>iAT-00-<%= actionitem.id %></td>
-      <td><%= actionitem.subject %></td>        
-      <td><%= actionitem.assigned_to %></td> 
-      <td><%= actionitem.updated_at %></td>
-      <td><%= actionitem.priority %></td>
-    </tr>
-  <% end %>
-  </table>
-
-</div>
-
+      <tr>
+        <th class="danger">iAT #</th>
+        <th class="danger">Subject</th>
+        <th class="danger">Assigned To</th>
+        <th class="danger">Date Last Modified</th>
+        <th class="danger">Priority</th>
+      </tr>
+      <% @actionitems.each do |actionitem| %>
+      <tr>
+        <td><h5>iAT-00-<%= actionitem.id %></td>
+        <td><%= actionitem.subject %></td>        
+        <td><%= actionitem.assigned_to %></td> 
+        <td><%= actionitem.updated_at %></td>
+        <td><%= actionitem.priority %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
 </div><!-- /container

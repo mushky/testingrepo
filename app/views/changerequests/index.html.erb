@@ -7,7 +7,14 @@
       <% end %>
     </div>
   </form>
-<h1>Change Request Records <%= link_to "Create Change Request Record", new_changerequest_path,class: "btn btn-primary" %></h1>
+<h1>Change Request Records</h1>
+  <p>
+    <button class="btn btn-default" type="button">    
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <%= link_to "New Change Request Record", new_changerequest_path %>
+    </button>
+  </p>
+
   <% @changerequests.each do |changerequest| %>
   <table class="table table-hover">
     <td>   

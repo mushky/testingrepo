@@ -8,7 +8,12 @@
     </div>
   </form>
   <h1>Action Items</h1>
-  <p><%= link_to "Create New Action Item", new_actionitem_path,class: "btn btn-primary" %></p>
+  <p>
+    <button class="btn btn-default" type="button">    
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <%= link_to "New Action Item", new_actionitem_path %>
+    </button>
+  </p>
   <p><%= link_to "View Report Summary", actionitems_corporatereport_path %></p>
   <div class="row">
     <div class="col-md-6">

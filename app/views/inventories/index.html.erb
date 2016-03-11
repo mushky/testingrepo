@@ -1,7 +1,13 @@
 <div class="container">
 <h1>IT Inventory</h1>
-<p><%= link_to "New IT Inventory Item", new_inventory_path, class: "btn btn-primary" %></p>
   
+  <p>
+    <button class="btn btn-default" type="button">    
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <%= link_to "Add IT Item", new_inventory_path %>
+    </button>
+  </p>
+
   <% @inventories.each do |inventory| %>
   <table class="table table-bordered table table-hover">
     

@@ -66,7 +66,9 @@
             type: 'pie',
             data: 
             [['Completed', <%= @actionitem.percent_complete %>],
-            ['Remaining', <%= 100 - @actionitem.percent_complete %>]]
+            ['Remaining', <% if (@actionitem.percent_complete != nil) %>
+                            <%= 100 - @actionitem.percent_complete %>
+                          <% end %>]]
           }]
         });
       });
