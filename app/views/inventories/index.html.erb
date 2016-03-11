@@ -1,51 +1,52 @@
 <div class="container">
-<h1>IT Inventory</h1>
-  
-  <p>
-    <button class="btn btn-default" type="button">    
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      <%= link_to "Add IT Item", new_inventory_path %>
-    </button>
-  </p>
+  <div class="col-md-12">
 
-  <table class="table table-bordered table table-hover">
-    <tr>
-      <th class="danger">iAT #</th>
-      <th class="danger">Employee</th>
-      <th class="danger">Laptop Model</th>
-      <th class="danger">Laptop #</th>
-      <th class="danger">Windows Serial #</th>
-      <th class="danger">Office Suite #</th>
-      <th class="danger">Adobe Pro #</th>
-      <th class="danger">Adobe X STN #</th>
-      <th class="danger">Visual Studio #</th>
-      <th class="danger">Visio #</th>
-      <th class="danger">Microsoft Project #</th>
-      <th class="danger">NX Powerlite #</th>
-      <th class="danger">Win Pro #</th>
-      <th class="danger">Status</th>
-      <th class="danger">Other</th>
-    </tr>
-    <% @inventories.each do |inventory| %>
-    <tr> 
-      <td class="active"><%= inventory.iat_num %></td>
-      <td><%= inventory.employee %></td>
-      <td><%= inventory.laptop_model %></td>
-      <td><%= inventory.laptop_serial_number %></td>
-      <td><%= inventory.windows %></td>
-      <td><%= inventory.office_suite %></td>
-      <td><%= inventory.adobe_pro %></td>
-      <td><%= inventory.adobe_stn %></td>
-      <td><%= inventory.visual_studio %></td>
-      <td><%= inventory.visio %></td>
-      <td><%= inventory.microsoft_project %></td>
-      <td><%= inventory.nxpowerlite %></td>
-      <td><%= inventory.win_pro %></td>
-      <td><%= inventory.status %></td>
-      <td><%= inventory.other %></td>
-      <td><%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-info" %></td>
-    </tr>
-  <% end %>
+    <h1>IT Inventory</h1>
+    <p>
+      <button class="btn btn-default" type="button">    
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        <%= link_to "Add IT Item", new_inventory_path %>
+      </button>
+    </p>
+
+    <table class="table table-bordered table table-hover">
+      <tr>
+        <th class="danger">iAT #</th>
+        <th class="danger">Employee</th>
+        <th class="danger">Laptop Model</th>
+        <th class="danger">Laptop #</th>
+        <th class="danger">Windows Serial #</th>
+        <th class="danger">Office Suite #</th>
+        <th class="danger">Adobe Pro #</th>
+        <th class="danger">Adobe X STN #</th>
+        <th class="danger">Visual Studio #</th>
+        <th class="danger">Visio #</th>
+        <th class="danger">Microsoft Project #</th>
+        <th class="danger">NX Powerlite #</th>
+        <th class="danger">Win Pro #</th>
+        <th class="danger">Status</th>
+        <th class="danger">Other</th>
+      </tr>
+      <% @inventories.each do |inventory| %>
+        <tr> 
+          <td class="active"><%= inventory.iat_num %></td>
+          <td><%= inventory.employee %></td>
+          <td><%= inventory.laptop_model %></td>
+          <td><%= inventory.laptop_serial_number %></td>
+          <td><%= inventory.windows %></td>
+          <td><%= inventory.office_suite %></td>
+          <td><%= inventory.adobe_pro %></td>
+          <td><%= inventory.adobe_stn %></td>
+          <td><%= inventory.visual_studio %></td>
+          <td><%= inventory.visio %></td>
+          <td><%= inventory.microsoft_project %></td>
+          <td><%= inventory.nxpowerlite %></td>
+          <td><%= inventory.win_pro %></td>
+          <td><%= inventory.status %></td>
+          <td><%= inventory.other %></td>
+          <td><%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-info" %></td>
+        </tr>
+      <% end %>
     </table>
-
+  </div><!-- /col-md-12 -->
 </div><!-- /container -->
