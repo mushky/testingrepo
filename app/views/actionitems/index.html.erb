@@ -8,26 +8,28 @@
     </div>
   </form>
   <h1>Action Items <%= link_to "Create New Action Item", new_actionitem_path,class: "btn btn-primary" %></h1>
-  <p>Report Summary <%= link_to "View Report Summary", actionitems_corporatereport_path %></p>
-  <div class="col-md-6">
-    <% @actionitems.each do |actionitem| %>
-    <table class="table table-hover">
-      <td>   
-        
-        <h3><%= actionitem.subject %></h3>
-        <strong>Event Discussed:</strong> <%= actionitem.event_discussed %><br>
-        <strong>Assigned to:</strong> <%= actionitem.assigned_to %><br>
-        <strong>Project: </strong><%= actionitem.project %><br>
-        <strong>Status: </strong><%= actionitem.status %><br><br>
+  <p><%= link_to "View Report Summary", actionitems_corporatereport_path %></p>
+  <div class="row">
+    <div class="col-md-6">
+      <% @actionitems.each do |actionitem| %>
+      <table class="table table-hover">
+        <td>   
+          
+          <h3><%= actionitem.subject %></h3>
+          <strong>Event Discussed:</strong> <%= actionitem.event_discussed %><br>
+          <strong>Assigned to:</strong> <%= actionitem.assigned_to %><br>
+          <strong>Project: </strong><%= actionitem.project %><br>
+          <strong>Status: </strong><%= actionitem.status %><br><br>
 
-        |<%= link_to 'View', actionitem_path(actionitem), class: "btn-sm btn-primary" %>|
-        |<%= link_to 'Edit', edit_actionitem_path(actionitem), class: "btn-sm btn-warning"%>|
-        |<%= link_to 'Delete', actionitem_path(actionitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
-      </td>
-    <% end %>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <%= render 'shared/actionitems_open' %>
-  </div>
-</div><!-- /container
+          |<%= link_to 'View', actionitem_path(actionitem), class: "btn-sm btn-primary" %>|
+          |<%= link_to 'Edit', edit_actionitem_path(actionitem), class: "btn-sm btn-warning"%>|
+          |<%= link_to 'Delete', actionitem_path(actionitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
+        </td>
+      <% end %>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <%= render 'shared/actionitems_open' %>
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->
