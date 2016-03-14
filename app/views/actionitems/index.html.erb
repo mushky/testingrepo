@@ -9,10 +9,7 @@
   </form>
   <h1>Action Items</h1>
   <p>
-    <button class="btn btn-default" type="button">    
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      <%= link_to "New Action Item", new_actionitem_path %>
-    </button>
+      <%= link_to "New Action Item", new_actionitem_path, class: "btn btn-default" %>
   </p>
   <p><%= link_to "View Report Summary", actionitems_corporatereport_path %></p>
   <div class="row">

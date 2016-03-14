@@ -1,10 +1,7 @@
 <div class="container">
 <h1>Documents</h1>
   <p>
-    <button class="btn btn-default" type="button">    
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      <%= link_to "Upload Document", new_document_path %>
-    </button>
+    <%= link_to "Upload Document", new_document_path, class: "btn btn-default" %>
   </p>
 </h1>
   <% @documents.each do |document| %>

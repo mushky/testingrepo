@@ -1,10 +1,8 @@
 <div class="container">
 <h1>License Items</h1>
-  <button class="btn btn-default" type="button">    
-    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-    <%= link_to "Add License", new_license_path %>
-  </button>
-</h1>
+  <p>    
+    <%= link_to "Add License", new_license_path, class: "btn btn-default" %>
+  </p>
   <% @licenses.each do |license| %>
   <table class="table table-hover">
     <td>

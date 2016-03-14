@@ -13,10 +13,7 @@
   <div id="pie" style="width:auto; height:auto;"></div>
 
   <p>
-    <button class="btn btn-default" type="button">    
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      <%= link_to "Create New CAPA", new_cpar_path %>
-    </button>
+    <%= link_to "Create New CAPA", new_cpar_path, class: "btn btn-default" %>
   </p>
  
   <% @cpars.each do |cpar| %>

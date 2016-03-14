@@ -1,4 +1,6 @@
 class Cpar < ActiveRecord::Base
+	validates :form, presence: true
+
 	def initialize(params = {})
 	  file = params.delete(:file)
 	  super
