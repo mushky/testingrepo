@@ -1,10 +1,7 @@
 <div class="container">
   <h1>Shipping Items</h1>
   <p>
-    <button class="btn btn-default" type="button">    
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      <%= link_to "Add Shipping Item", new_shipitem_path %>
-    </button>
+    <%= link_to "Add Shipping Item", new_shipitem_path %>
   </p>
   </h1>
   <table class="table table-bordered table table-hover">
@@ -23,6 +20,8 @@
         <td><%= shipitem.quantity %></td>
         <td><%= shipitem.shipping_number %></td>
         <td><%= link_to 'View', shipitem_path(shipitem), class: "btn-sm btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_shipitem_path(shipitem), class: "btn-sm btn-warning" %></td>
+        <td><%= link_to 'Delete', shipitem_path(shipitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>     
   <% end %>
   </table>

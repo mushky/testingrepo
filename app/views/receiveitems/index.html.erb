@@ -18,7 +18,9 @@
       <td><%= receiveitem.description %></td>
       <td><%= receiveitem.date %></td>
       <td><%= receiveitem.quantity %></td>
-      <td><%= link_to 'View', receiveitem_path(receiveitem), class: "btn-sm btn-primary" %>
+      <td><%= link_to 'View', receiveitem_path(receiveitem), class: "btn-sm btn-primary" %></td>
+      <td><%= link_to 'Edit', edit_receiveitem_path(receiveitem), class: "btn-sm btn-warning" %></td>
+      <td><%= link_to 'Delete', receiveitem_path(receiveitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></td>
     </tr>
   <% end %>
   </table>
