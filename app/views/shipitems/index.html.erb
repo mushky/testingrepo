@@ -20,8 +20,7 @@
         <td><%= shipitem.quantity %></td>
         <td><%= shipitem.shipping_number %></td>
         <td><%= link_to 'View', shipitem_path(shipitem), class: "btn-sm btn-primary" %></td>
-        <td><%= link_to 'Edit', edit_shipitem_path(shipitem), class: "btn-sm btn-warning" %></td>
-        <td><%= link_to 'Delete', shipitem_path(shipitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></td>
+
       </tr>     
   <% end %>
   </table>
