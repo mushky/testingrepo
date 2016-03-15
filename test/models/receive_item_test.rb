@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class ReceiveItemTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+	test "should not save Receive Item without form" do
+		receiveitem = ReceiveItem.new
+		assert_not ReceiveItem.save
+	end
 end

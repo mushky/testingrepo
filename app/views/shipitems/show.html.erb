@@ -1,15 +1,21 @@
 <div class="container">
 	<h3>Part # <%= @shipitem.part %></h3>
+	
 	<strong>Serial #:</strong>
-	<%= @shipitem.serial %><br>
+	<p><%= @shipitem.serial %></p>
+
 	<strong>Date:</strong>
-	<%= @shipitem.date %><br>
+	<p><%= @shipitem.date %></p>
+	
 	<strong>Description:</strong>
-	<%= @shipitem.description %><br>
+	<p><%= @shipitem.description %></p>
+	
 	<strong>Quantity:</strong>
-	<%= @shipitem.quantity %><br>
+	<p><%= @shipitem.quantity %></p>
+	
 	<strong>Shipping Number:</strong>
-	<%= @shipitem.shipping_number %>
+	<p><%= @shipitem.shipping_number %></p>
+	
 	<br>
 	<%= link_to "Back", shipitems_path, class: "btn-sm btn-info" %>
  	<%= link_to 'Update', edit_shipitem_path(@shipitem), class: "btn-sm btn-warning" %>

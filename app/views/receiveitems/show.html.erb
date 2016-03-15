@@ -1,13 +1,17 @@
 <div class="container">
 	<h3>Part # <%= @ReceiveItem.part %></h3>
+	
 	<strong>Serial #:</strong>
-	<%= @ReceiveItem.serial %><br>
+	<p><%= @ReceiveItem.serial %></p>
+
 	<strong>Date:</strong>
-	<%= @ReceiveItem.date %><br>
+	<p><%= @ReceiveItem.date %></p>
+
 	<strong>Description:</strong>
-	<%= @ReceiveItem.description %><br>
+	<p><%= @ReceiveItem.description %></p>
+
 	<strong>Quantity:</strong>
-	<%= @ReceiveItem.quantity %>
+	<p><%= @ReceiveItem.quantity %></p>
 	<br>
 
 	<%= link_to "Back", receiveitems_path, class: "btn-sm btn-info" %>
