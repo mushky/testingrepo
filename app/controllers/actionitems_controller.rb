@@ -3,7 +3,7 @@ class ActionitemsController < ApplicationController
 
   def index
     if params[:search]
-      @actionitems = Actionitem.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+      @actionitems = Actionitem.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 7)
     else
       @actionitems = Actionitem.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 7)
     end
