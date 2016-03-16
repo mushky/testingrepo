@@ -2,7 +2,11 @@ class ActionitemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-    @actionitems = Actionitem.all
+    if params[:search]
+      @actionitems = Actionitem.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+    else
+      @actionitems = Actionitem.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 7)
+    end
   end
 
   def corporatereport
