@@ -2,37 +2,34 @@
   <form class="navbar-form navbar-right" role="search">
     <div class="form-group", id="form-search">
       <%= form_tag(actionitems_path, :method => "get", class: "navbar-form navbar-right") do %>
-        <em><%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %></em>
-        <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+      <em><%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %></em>
+      <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
       <% end %>
     </div>
   </form>
-  <h1>Action Items</h1>
-  <p>
-      <%= link_to "New Action Item", new_actionitem_path, class: "btn btn-default" %>
-  </p>
-  <p><%= link_to "View Report Summary", actionitems_corporatereport_path %></p>
-  <div class="row">
-    <div class="col-md-6">
+  <div class="col-md-12">
+    <table class="table table-bordered table table-hover">
+      <tr>
+        <th class="danger">iAT #</th>
+        <th class="danger">Subject</th>
+        <th class="danger">Assigned To</th>
+        <th class="danger">Date Last Modified</th>
+        <th class="danger">Priority</th>
+      </tr>
       <% @actionitems.each do |actionitem| %>
-      <table class="table table-hover">
-        <td>   
-          
-          <h4><%= actionitem.subject %></h4>
-          <strong>Event Discussed:</strong> <%= actionitem.event_discussed %><br>
-          <strong>Assigned to:</strong> <%= actionitem.assigned_to %><br>
-          <strong>Project: </strong><%= actionitem.project %><br>
-          <strong>Status: </strong><%= actionitem.status %><br><br>
-
-          |<%= link_to 'View', actionitem_path(actionitem), class: "btn-sm btn-primary" %>|
-          |<%= link_to 'Edit', edit_actionitem_path(actionitem), class: "btn-sm btn-warning"%>|
-          |<%= link_to 'Delete', actionitem_path(actionitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
-        </td>
+      <tr>
+        <td><h5>iAT-00-<%= actionitem.id %></td>
+        <td><%= actionitem.subject %></td>        
+        <td><%= actionitem.assigned_to %></td> 
+        <td><%= actionitem.updated_at %></td>
+        <td><%= actionitem.priority %></td>
+        <td><%= link_to "View", actionitem_path(actionitem), class: "btn-sm btn-primary"  %></td>
+      </tr>
       <% end %>
-      </table>
-    </div>
-    <div class="col-md-6">
-      <%= render 'shared/actionitems_open' %>
-    </div>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <%= render 'shared/actionitems_open' %>
+  </div>
   </div><!-- /row -->
 </div><!-- /container -->

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get '/actionitems/corporatereport', :controller => 'actionitems', :action => 'corporatereport'
   devise_for :users
   resources :shipitems, :receiveitems, :inspectitems, 
             :licenses, :documents, :requisitions, 
