@@ -10,7 +10,7 @@ class Actionitem < ActiveRecord::Base
 	end
 
   def self.search(query)
-  	where("subject like ?", "%#{query}%")
+  	Actionitem.where("subject LIKE :search OR status LIKE :search OR id LIKE :search OR assigned_to LIKE :search", search: "%#{query}")
  	end
 
 	def project_id

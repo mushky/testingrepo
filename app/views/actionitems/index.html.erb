@@ -9,15 +9,6 @@
   </form>
   <div class="col-md-12">
     <p><%= link_to "Add Action Item", new_actionitem_path, class: "btn btn-default" %></p>
-
-    <ul class="nav nav-tabs">
-      <li role="presentation" class="active">
-
-
-      </li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
-    </ul>
     <table class="table table-bordered table table-hover">
       <tr>
         <th class="danger">iAT #</th>
@@ -25,6 +16,7 @@
         <th class="danger">Assigned To</th>
         <th class="danger">Date Last Modified</th>
         <th class="danger">Priority</th>
+        <th class="danger">Status</th>
       </tr>
       <% @actionitems.each do |actionitem| %>
       <tr>
@@ -33,12 +25,11 @@
         <td><%= actionitem.assigned_to %></td> 
         <td><%= actionitem.updated_at %></td>
         <td><%= actionitem.priority %></td>
+        <td><%= actionitem.status %></td>
         <td><%= link_to "View", actionitem_path(actionitem), class: "btn-sm btn-primary"  %></td>
       </tr>
       <% end %>
     </table>
-  <%= will_paginate @actionitem %>
-
   </div>
   <div class="col-md-6">
     <%= render 'shared/actionitems_open' %>
