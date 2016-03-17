@@ -2,8 +2,10 @@
 	<h3>iAT-<%= @program_id %>-<%= @form_name %><%= @cpar.program_enum %><%= @cpar.id%></h3> 
 	<!-- iAT + program_id + form_name program_enum + cpar_id -->
 		<h4><%= @cpar.form %> Report</h4>
-<!-- 		<div class="row">
-			<div class="col-md-3">	 -->
+			<!-- 
+			<div class="row">
+			<div class="col-md-3">	
+			 -->
 				<h3>Program</h3>	
 				<strong>Title:</strong><p><%= @cpar.title %></p>
 				<strong>Old Id:</strong><p><%= @cpar.old_id %></p>
@@ -63,5 +65,7 @@
 				<strong>Remarks:</strong><p><%= @cpar.evaluation_of_effectiveness_of_action_remarks %></p><br>
 
 		<%= link_to "Back", cpars_path, class: "btn btn-default" %>
-		<%= link_to "Edit", edit_cpar_path, class: "btn btn-default" %><br><br>
+		<%= link_to "Edit", edit_cpar_path, class: "btn btn-default" %>
+    <%= link_to 'Delete', cpar_path(cpar), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+		<br><br>
 </div><!-- /container -->

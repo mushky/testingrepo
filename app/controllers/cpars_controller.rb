@@ -3,9 +3,9 @@ class CparsController < ApplicationController
 
   def index
 		if params[:search]
-      @cpars = Cpar.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+      @cpars = Cpar.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
     else
-      @cpars = Cpar.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 7)
+      @cpars = Cpar.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 15)
     end
   end
   

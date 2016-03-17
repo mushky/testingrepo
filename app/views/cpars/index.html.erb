@@ -1,110 +1,86 @@
 <div class="container">
   <div class="row">
-  <form class="navbar-form navbar-right" role="search">
-    <div class="form-group", id="form-search">
-      <%= form_tag(cpars_path, :method => "get", class: "navbar-form navbar-right") do %>
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group", id="form-search">
+        <%= form_tag(cpars_path, :method => "get", class: "navbar-form navbar-right") do %>
         <em><%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %></em>
         <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
-      <% end %>
-    </div>
-  </form>
-  <div class="col-md-3">
-  <h1><%= link_to "CAPA", cpars_path %></h1>
-  <div id="pie" style="width:auto; height:auto;"></div>
+        <% end %>
+      </div>
+    </form>
+    <div class="col-md-12">
+      <h1><%= link_to "CAPA", cpars_path %></h1>
+      <div id="pie" style="width:auto; height:auto;"></div>
 
-  <p>
-    <%= link_to "Create New CAPA", new_cpar_path, class: "btn btn-default" %>
-  </p>
- 
-  <% @cpars.each do |cpar| %>
-  <table class="table table-hover">
-    <td>
-      <% if cpar.form == "Preventive Action" %>
+      <p>
+        <%= link_to "Create New CAPA", new_cpar_path, class: "btn btn-default" %>
+      </p>
+      <table class="table table-bordered table table-hover">
+        <tr>
+          <th class="danger">iAT-ID</th>
+          <th class="danger">Form</th>
+          <th class="danger">Program</th>
+          <th class="danger">Category Phase</th>
+          <th class="danger">CPAR Source</th>
+          <th class="danger">Old iAT-ID</th>
+        </tr>
+
+        <% @cpars.each do |cpar| %>
+        <% if cpar.form == "Preventive Action" %>
         <% @form_name = "PA" %>
 
         <% elsif cpar.form == 'Corrective Action' %>
-          <% @form_name = "CA" %>
-      
+        <% @form_name = "CA" %>
+        
         <% elsif cpar.form == 'Non-Conforming Material' %>
-          <% @form_name = "NC" %>
+        <% @form_name = "NC" %>
 
         <% elsif cpar.form == "Supplier Corrective Action" %>
-          <% @form_name = "SC" %>
+        <% @form_name = "SC" %>
 
         <% elsif cpar.form == "Continual Improvement" %>
-          <% @form_name = "CI" %>
-      <% end %>
+        <% @form_name = "CI" %>
+        <% end %>
 
-      <% if cpar.program == "Corporate" %>
+        <% if cpar.program == "Corporate" %>
         <% @program_id = "00" %>
         
         <% elsif cpar.program == "IRAD" %>
-          <% @program_id = "01" %>
+        <% @program_id = "01" %>
 
         <% elsif cpar.program == "MCTF" %>
-          <% @program_id = "02" %>
+        <% @program_id = "02" %>
 
         <% elsif cpar.program == "UAEAF" %>
-          <% @program_id = "03" %>
+        <% @program_id = "03" %>
 
         <% elsif cpar.program == "TAF" %>
-          <% @program_id = "04" %>
+        <% @program_id = "04" %>
 
         <% elsif cpar.program == "DAW" %>
-          <% @program_id = "05" %>
+        <% @program_id = "05" %>
 
         <% elsif cpar.program == "ESTS" %>
-          <% @program_id = "07" %>
-      <% end %>
+        <% @program_id = "07" %>
+        <% end %>
+        <tr>
+          <td>iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id %></td>
+          <td><%= cpar.form %></td>        
+          <td><%= cpar.program %></td> 
+          <td><%= cpar.category_phase %></td>
+          <td><%= cpar.cpar_source %></td>
+          <td><%= cpar.old_id %></td>
+          <td><%= link_to 'View', cpar_path(cpar), class: "btn-sm btn-primary" %></td>
+        </tr>
+        <% end %>
+      </table>
 
-      <h4>
-        iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id %>
-        <!-- iAT + program_id + form_name program_enum + cpar_id -->
-        
-        <%# if cpar.form == "Preventive Action" %>
-          <%# cpar.par_counter %>
-
-        <%# elsif cpar.form == 'Corrective Action' %>
-          <%# cpar.car_counter %>
-      
-        <%# elsif cpar.form == 'Non-Conforming Material' %>
-          <%# cpar.ncmr_counter %>
-
-        <%# elsif cpar.form == "Supplier Corrective Action" %>
-          <%# cpar.scar_counter %>
-
-        <%# elsif cpar.form == "Continual Improvement" %>
-          <%# cpar.ci_counter %>
-        <%# end %> 
-        <!-- iAT + program_id + form_name program_enum + cpar_id -->
-      </h4>
-      <%= cpar.form %><br>
-      <%= cpar.program %><br>
-      <%= cpar.category_phase %><br>
-			<%= cpar.cpar_source %><br>
-      <%= cpar.old_id %><br>
-
-      |<%= link_to 'View', cpar_path(cpar), class: "btn-sm btn-primary" %>|
-      |<%= link_to 'Edit', edit_cpar_path(cpar), class: "btn-sm btn-warning"%>|
-      |<%= link_to 'Delete', cpar_path(cpar), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
-    </td>
-  <% end %>
-  </table>
-  </div><!-- /Row 1 -->
-  <strong>CPAR Total:</strong> <%= Cpar.count %><br><br>
-  <strong>PAR:</strong>  <%= Cpar.where(form: "Preventive Action").count %><br>
-  <strong>CAR:</strong>  <%= Cpar.where(form: "Corrective Action").count %><br>
-  <strong>NCMR:</strong> <%= Cpar.where(form: "Non-Conforming Material").count %><br>
-  <strong>SCAR:</strong> <%= Cpar.where(form: "Supplier Corrective Action").count %><br>
-  <strong>CI:</strong>   <%= Cpar.where(form: "Continual Improvement").count %><br>
-
-  <%= render '/shared/cpar_highcharts' %>
+      <%= will_paginate @cpar %>
 
 
-  <%= will_paginate @cpar %>
+    </div><!-- /container -->
+    <%= render '/shared/cpar_highcharts' %>
 
+    <%= render '/shared/car_charts' %>
 
-</div><!-- /container -->
-  <%= render '/shared/car_charts' %>
-
-  <%= render '/shared/par_charts' %>
+    <%= render '/shared/par_charts' %>
