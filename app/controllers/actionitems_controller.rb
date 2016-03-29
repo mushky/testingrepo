@@ -26,7 +26,7 @@ class ActionitemsController < ApplicationController
   def create
     @actionitem = Actionitem.new(actionitem_params)  
       if @actionitem.save
-        ActionitemMailer.actionitem_email(actionitem).deliver
+        ActionitemMailer.actionitem_email(@actionitem).deliver
 
         redirect_to actionitems_path
       else
@@ -41,6 +41,7 @@ class ActionitemsController < ApplicationController
   def update
     @actionitem = Actionitem.find(params[:id])
     if @actionitem.update(actionitem_params)
+      ActionitemMailer.actionitem_email(@actionitem).deliver
       redirect_to @actionitem
     else
       render 'edit'
