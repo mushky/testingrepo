@@ -6,7 +6,9 @@
       {colors: 
 
         ['#e74c3c', 
-        '#3498db',],
+        '#3498db',,
+        '#a66bbe',
+        '#27ae60'],
       });
     $('#open_close').highcharts({
       chart: {
@@ -40,11 +42,14 @@
       series: [{
         type: 'pie',
         data: 
-        [['Open', 0],
-        ['Closed', 1]]
+        [['Open', <%= Actionitem.where(status: "Open").count %>],
+        ['Closed', <%= Actionitem.where(status: "Closed").count %>],
+        ['Deferred', <%= Actionitem.where(status: "Deferred").count %>],
+        ['Rejected', <%= Actionitem.where(status: "Rejected").count %>]]
       }]
     });
   });
 </script>
+          
 </div>
 </div>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @actionitem.notification %></h1>
+    <p>
+      You have received an action item.
+    </p>
+    <p>
+    	<a href="10.0.0.135:3000/actionitems/<%= @actionitem.id %>">Link to Item<a/>
+    </p>
+  </body>
+</html>

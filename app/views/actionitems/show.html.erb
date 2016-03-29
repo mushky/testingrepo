@@ -1,32 +1,80 @@
 <div class="container">
-  <div class="col-md-6">
-    <h2><%= @actionitem.subject %></h2>
-    <p><%= @actionitem.iat_num %></p>
+  <div class="col-md-12">
+  <table class="table table-bordered table-striped">
+    <tbody>
+      <colgroup>
+        <col class="col-md-3">
+        <col class="col-md-7">
+      </colgroup>
+      <tr>
+        <td class="success"><strong>Subject</strong></td>
+        <td class="success"><%= @actionitem.subject %></td>
+      </tr>
+      <tr>
+        <td>Number:</td>
+        <td>iAT-00-<%= @actionitem.id %></td>
+      </tr>
+    <!-- <h3>Details</h3> -->
+    <tr>
+      <td>Event Discussed:</td>
+      <td><%= @actionitem.event_discussed %></td>
+    </tr>
+    <tr>
+      <td>Assigned To:</td>
+      <td><%= @actionitem.assigned_to %></td>
+    </tr>
+    <tr>
+      <td>Project:</td>
+      <td><%= @actionitem.project %></td>
+    </tr>
+    <tr>
+      <td>Status:</td>
+      <td><%= @actionitem.status %></td>
+    </tr>
+    <tr>
+      <td>Priority:</td>
+      <td><%= @actionitem.priority %></td>
+    </tr>
+    <tr>
+      <td>Area:</td>
+      <td><%= @actionitem.area %></td>
+    </tr>
+    <tr>
+      <td>Comment:</td>
+      <td><%= @actionitem.comment %></td>
+    </tr>
+    <!-- <h3>Project Management</h3> -->
 
-    <h3>Details</h3>
-    <strong>Event Discussed:</strong> <%= @actionitem.event_discussed %><br>
-    <strong>Assigned to:</strong> <%= @actionitem.assigned_to %><br>
-    <strong>Project:</strong> <%= @actionitem.project %><br>
-    <strong>Status:</strong> <%= @actionitem.status %><br>
-    <strong>Priority:</strong> <%= @actionitem.priority %><br>
-    <strong>Area:</strong> <%= @actionitem.area %><br>
-    <strong>Comment:</strong> <%= @actionitem.comment %>
+    <tr>
+      <td>Requested Due Date:</td>
+      <td><%= @actionitem.request_due_date %></td>
+    </tr>
+    <tr>
+      <td>Hours to Completition:</td>
+      <td><%= @actionitem.hours_to_completion %></td>
+    </tr>
+    <tr>
+      <td>Completition Date:</td>
+      <td><%= @actionitem.completion_date %></td>
+    </tr>
+    <tr>
+      <td>Percentage Completed:</td>
+      <td><%= @actionitem.percent_complete %></td>
+    </tr>
 
-    <h3>Project Management</h3>
-    <strong>Requested Due Date:</strong> <%= @actionitem.request_due_date %><br>
-    <strong>Hours to Completition:</strong> <%= @actionitem.hours_to_completion %><br>
-    <strong>Completition Date:</strong> <%= @actionitem.completion_date %><br>
-    <strong>Percentage Completed:</strong> <%= @actionitem.percent_complete %>
+    <!-- <h3>Notified Users</h3> -->
+    <tr>
+      <td>Notified Users</td>
+      <td><%= @actionitem.notification.split(',') %></td>
+    </tr>
+  </table>
 
-    <h3>Notified Users</h3>
-    <%= @actionitem.notification.split(',') %><br><br>   
-
-    |<%= link_to 'Back', actionitems_path, class: "btn-sm btn-primary" %>|
-    |<%= link_to 'Update', edit_actionitem_path(@actionitem), class: "btn-sm btn-warning"%>|
+    <%= link_to 'Back', actionitems_path, class: "btn-sm btn-primary" %>
+    <%= link_to 'Update', edit_actionitem_path(@actionitem), class: "btn-sm btn-warning"%>
 
   </div>
   
-  <div class="col-md-6">
+  <div class="col-md-12">
     <div id="percentage_completed" style="width:auto; height:auto;"></div>
       <script type="text/javascript">
       $(function () {
