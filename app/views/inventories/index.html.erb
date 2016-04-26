@@ -1,5 +1,5 @@
 <div class="container">  
-  <div class="col-sm-12">
+  <div class="col-md-12">
     <h1>IT Inventory</h1>
     <p>
       <%= link_to "Add IT Item", new_inventory_path, class: "btn btn-default" %>
@@ -10,7 +10,6 @@
         <th class="danger">iAT #</th>
         <th class="danger">Employee</th>
         <th class="danger">Laptop Model</th>
-        <th class="danger">Laptop #</th>
         <th class="danger">Windows Serial #</th>
         <th class="danger">Office Suite #</th>
         <th class="danger">Visual Studio #</th>
@@ -21,7 +20,6 @@
           <td class="active"><%= inventory.iat_num %></td>
           <td><%= inventory.employee %></td>
           <td><%= inventory.laptop_model %></td>
-          <td><%= inventory.laptop_serial_number %></td>
           <td><%= inventory.windows %></td>
           <td><%= inventory.office_suite %></td>
           <td><%= inventory.visual_studio %></td>
