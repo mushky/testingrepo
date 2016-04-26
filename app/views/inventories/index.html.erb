@@ -13,14 +13,8 @@
         <th class="danger">Windows Serial #</th>
         <th class="danger">Office Suite #</th>
         <th class="danger">Adobe Pro #</th>
-        <th class="danger">Adobe X STN #</th>
         <th class="danger">Visual Studio #</th>
-        <th class="danger">Visio #</th>
-        <th class="danger">Microsoft Project #</th>
-        <th class="danger">NX Powerlite #</th>
-        <th class="danger">Win Pro #</th>
         <th class="danger">Status</th>
-        <th class="danger">Other</th>
       </tr>
       <% @inventories.each do |inventory| %>
         <tr> 
@@ -31,14 +25,8 @@
           <td><%= inventory.windows %></td>
           <td><%= inventory.office_suite %></td>
           <td><%= inventory.adobe_pro %></td>
-          <td><%= inventory.adobe_stn %></td>
           <td><%= inventory.visual_studio %></td>
-          <td><%= inventory.visio %></td>
-          <td><%= inventory.microsoft_project %></td>
-          <td><%= inventory.nxpowerlite %></td>
-          <td><%= inventory.win_pro %></td>
           <td><%= inventory.status %></td>
-          <td><%= inventory.other %></td>
           <td><%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-info" %></td>
         </tr>
       <% end %>
