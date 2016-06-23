@@ -5,6 +5,12 @@
       <%= link_to "Add IT Item", new_inventory_path, class: "btn btn-default" %>
     </p>
 
+    <p><strong>Laptops in Use:</strong> <%= Inventory.where(in_use: "Yes").count %></p>
+    <p><strong>Laptops Not in Use:</strong> <%= Inventory.where(in_use: "No").count %></p>
+    <p><strong>Laptops Alive: </strong> <%= Inventory.where(status: "Alive").count %></p>
+    <p><strong>Laptops Dead:</strong> <%= Inventory.where(status: "Dead").count %></p>
+
+
     <table class="table table-bordered table table-hover">
       <tr>
         <th class="danger">iAT #</th>
