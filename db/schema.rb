@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310233007) do
+ActiveRecord::Schema.define(version: 20160623184529) do
 
   create_table "actionitems", force: :cascade do |t|
     t.string   "subject"
@@ -222,6 +222,7 @@ ActiveRecord::Schema.define(version: 20160310233007) do
     t.string   "nxpowerlite"
     t.string   "win_pro"
     t.string   "laptop_serial_number"
+    t.string   "in_use"
   end
 
   create_table "licenses", force: :cascade do |t|

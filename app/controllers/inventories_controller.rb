@@ -50,6 +50,6 @@ class InventoriesController < ApplicationController
     def inventory_params
       params.require(:inventory).permit(:employee, :laptop_model, :laptop_serial_number, :windows, :office_suite, :adobe_pro, :adobe_stn,
                                         :visual_studio, :visio, :status, :other, :iat_num, :microsoft_project, :nxpowerlite,
-                                        :win_pro)
+                                        :win_pro, :in_use)
     end
 end

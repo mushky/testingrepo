@@ -14,7 +14,8 @@
         <th class="danger">Office Suite #</th>
         <th class="danger">Visual Studio #</th>
         <th class="danger">Status</th>
-      </tr>
+        <th class="danger">In Use?</th>
+      </tr> 
       <% @inventories.each do |inventory| %>
         <tr> 
           <td class="active"><%= inventory.iat_num %></td>
@@ -24,6 +25,8 @@
           <td><%= inventory.office_suite %></td>
           <td><%= inventory.visual_studio %></td>
           <td><%= inventory.status %></td>
+          <td><%= inventory.in_use %></td>
+
           <td><%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-info" %></td>
         </tr>
       <% end %>

@@ -80,8 +80,13 @@
 
 		  <p>
 		    <%= f.label :status %><br>
-		    <%= f.text_field :status, class: "form-control" %>
-		  </p>
+				<%= f.select(:status, options_for_select([["Dead", "Dead"],["Alive", "Alive"]]),{ class: "btn btn-default dropdown-toggle" }) %>			  
+			</p>
+
+		  <p>
+		    <%= f.label :in_use %><br>
+				<%= f.select(:in_use, options_for_select([["No", "No"],["Yes", "Yes"]]), { class: "btn btn-default dropdown-toggle" }) %>		 
+			</p>
 
 		  <p>
 		    <%= f.label :other %><br>
