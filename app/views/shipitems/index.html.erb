@@ -1,4 +1,12 @@
 <div class="container">
+  <form class="navbar-form navbar-right" role="search">
+    <div class="form-group", id="form-search">
+      <%= form_tag(shipitems_path, :method => "get", class: "navbar-form navbar-right") do %>
+      <em><%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %></em>
+      <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+      <% end %>
+    </div>
+  </form>
   <h1>Shipping Items</h1>
   <p>
     <%= link_to "Add Shipping Item", new_shipitem_path, class: "btn btn-default" %>

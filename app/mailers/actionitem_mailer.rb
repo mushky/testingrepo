@@ -1,5 +1,5 @@
 class ActionitemMailer < ApplicationMailer
-  default from: "actionitems@gateway.com"
+  default from: "actionitems@iaccesstech.com"
 
   def actionitem_email(actionitem)
     @actionitem = actionitem

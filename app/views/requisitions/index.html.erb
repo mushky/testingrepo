@@ -3,33 +3,26 @@
 	<p>
     <%= link_to "Add Requisition Purchase", new_requisition_path, class: "btn btn-default" %>
   </p>
+  <table class="table table-bordered table table-hover">
+    <tr>
+      <th class="danger">PR Number</th>
+      <th class="danger">Requestor</th>
+      <th class="danger">Program</th>
+      <th class="danger">Date</th>
+      <th class="danger">Quantity</th>
+    </tr>
 	<% @requisitions.each do |requisition| %>
-		<table class="table table-hover">
-	    <td>
-	      <h4>Requestor <%= requisition.requestor%></h4>
-	      <strong>Part</strong> #:<%= requisition.pr_number %><br>
-	      <strong>Purchase Date:</strong> <%= requisition.pr_date %><br>
-	      <strong>Company:</strong> <%= requisition.company %><br>
-	      <strong>Address:</strong> <%= requisition.address %><br>
-	      <strong>Phone #:</strong> <%= requisition.phone %><br>
-	      <strong>Company Contact:</strong> <%= requisition.contact %><br>
-	      <strong>Comments:</strong> <%= requisition.comments %><br>
-	      <strong>For Export?</strong>: <%= requisition.for_export.to_i %><br>
-	      <strong>Where?:</strong> <%= requisition.to_where %><br>
-	      <strong>Description of use:</strong><%= requisition.description_of_use %><br>
-	      <strong>Quantity:</strong> <%= requisition.quantity %><br>
-	      <strong>UOM</strong> <%= requisition.uom %><br>
-	      <strong>Part #:</strong> <%= requisition.part_number %><br>
-	      <strong>Description:</strong> <%= requisition.description %><br>
-	      <strong>Unit Cost:</strong> <%= requisition.unit_cost %><br>
-	      <strong>Total Cost:</strong> <%= requisition.total %><br>
-	      <strong>Requested Date:</strong> <%= requisition.req_date %><br>
-	      <strong>Account #:</strong> <%= requisition.acct_number %><br>
-	      <strong>Usage:</strong> <%= requisition.usage %><br><br>
-	      |<%= link_to 'View', requisition_path(requisition), class: "btn-sm btn-primary" %>|
-	      |<%= link_to 'Edit', edit_requisition_path(requisition), class: "btn-sm btn-warning"%>|
-	      |<%= link_to 'Delete', requisition_path(requisition), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>|
-	    </td>
-	  </table>
-	<% end %>
+    <tr>
+    	<td><%= requisition.pr_number %></td>
+      <td><%= requisition.requestor %></td>
+      <td><%= requisition.program %></td>
+      <td><%= requisition.created_at %></td>
+      <td><%= requisition.quantity %></td>
+
+
+    </tr>
+      <td><%= link_to 'View Purchase Request', requisition_path(requisition), class: "btn-sm btn-primary" %></td>
+  <% end %>
+  </table>
+
 </div>

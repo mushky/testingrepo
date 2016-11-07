@@ -71,6 +71,7 @@ class RequisitionsController < ApplicationController
                                           :acct_number,
                                           :usage,
                                           :approval,
-                                          :approval_date)
+                                          :approval_date,
+                                          :program)
     end  
 end

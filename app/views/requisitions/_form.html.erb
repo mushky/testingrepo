@@ -3,114 +3,39 @@
 		<div class="row">
 			<div class="col-md-6">
 				<p>
+					<%= f.label :program, "Program:" %>
+					<%= f.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+				</p>
+
+				<p>
+					<%= f.label :pr_number, "PR Number (obtain from Max)" %>
+					<%= f.text_field :pr_number, class: "form-control" %>
+				</p>	
+
+				<p>
 				  <%= f.label :requestor %>
-				  <%= f.text_field :requestor, class: "form-control" %>
-				</p>
-				 
-				<p>
-				  <%= f.label :pr_number %>
-				  <%= f.text_field :pr_number, class: "form-control" %>
+				  <%= f.email_field :requestor, class: "form-control" %>
 				</p>
 
 				<p>
-				  <%= f.label :pr_date %>
-				  <%= f.date_field :pr_date, class: "form-control" %>
+					<%= f.label :description %>
+					<%= f.text_area :description, class: "form-control" %>
 				</p>
 
-			<h3>Program</h3>
 				<p>
-			    <%= f.label :for_export, "For Export?" %>
-					<%= f.select(:for_export, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+					<%= f.label :company, "Vendor" %>
+					<%= f.text_field :company, class: "form-control" %>
 				</p>
 
-			  <p>
-			    <%= f.label :to_where, "(If For Export), to Where?" %><br>
-			    <%= f.text_field :to_where, class: "form-control" %>
-			  </p>
-			</div>
+				<p>
+					<%= f.label :part_number %>
+					<%= f.text_field :part_number, class: "form-control" %>
+				</p>
 
-	  	<div class="col-md-6">
-			  <p>
-			    <%= f.label :company %><br>
-			    <%= f.text_field :company, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :address %><br>
-			    <%= f.text_area :address, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :phone %><br>
-			    <%= f.text_area :phone, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :contact %><br>
-			    <%= f.text_field :contact, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :comments %><br>
-			    <%= f.text_area :comments, class: "form-control" %>
-			  </p>
-		
-
-			</div>
-		</div>
-
-		<hr>
-
-	  <h3>Item Details</h3>
-	  <div class="row">
-	  	<div class="col-md-6">
-
-			  <p>
-			    <%= f.label :quantity %><br>
-			    <%= f.number_field :quantity, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :uom %><br>
-			    <%= f.text_field :uom, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :part_number %><br>
-			    <%= f.text_field :part_number, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :description %><br>
-			    <%= f.text_field :description, class: "form-control" %>
-			  </p>
-			</div>
-
-			<div class="col-md-6">
-			  <p>
-			    <%= f.label :unit_cost %><br>
-			    <%= f.text_field :unit_cost, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :total %><br>
-			    <%= f.text_field :total, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :req_date %><br>
-			    <%= f.date_field :req_date, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :account_number %><br>
-			    <%= f.text_field :acct_number, class: "form-control" %>
-			  </p>
-
-			  <p>
-			    <%= f.label :usage %><br>
-			    <%= f.text_field :usage, class: "form-control" %>
-			  </p>
+				<p>
+					<%= f.label :quantity %>
+					<%= f.number_field :quantity, class: "form-control" %>
+				</p>
 			</div><!-- /col-6-md -->
 		</div><!-- /row -->
 
