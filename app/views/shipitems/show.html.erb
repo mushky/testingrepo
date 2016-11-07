@@ -133,8 +133,9 @@
 	    <input type="checkbox" value="" checked="checked">
 	  	Record receipt.
 	  </label>
-	</div><br>	
-<br>
+	</div>
+	<br>	
+	<br>
 	<%= link_to "Back", shipitems_path, class: "btn-sm btn-info" %>
  	<%= link_to 'Update', edit_shipitem_path(@shipitem), class: "btn-sm btn-warning" %>
   <%= link_to 'Remove', shipitem_path(@shipitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>

@@ -12,6 +12,109 @@
 
 	<strong>Quantity:</strong>
 	<p><%= @ReceiveItem.quantity %></p>
+	
+	<h3>Received Items Checklist</h3>
+	<div class="checkbox">
+			<label>
+			  <input type="checkbox" value="" checked="checked">
+			   	Packing Slip matches contents of container.
+			</label>
+		</div>
+
+	<div class="checkbox">
+		<label>
+		  <input type="checkbox" value="" checked="checked">
+		  Verify PO Number / Packaging Slip Match.
+		</label>
+	</div>
+
+	<div class="checkbox">
+		<label>
+		  <input type="checkbox" value="" checked="checked">
+		  Verify PR Part Numbers and Quantities match between PO and packing slip.
+		</label>
+	</div>
+
+
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked">
+	    Sign and date packing slip to note receipt.
+	  </label>
+	</div>
+
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked">
+	    Notify Purchasing for receipt of property and status (complete, back order, or missing material, etc)
+	  </label>
+	</div>
+
+  <h4>Verify the following:</h4>
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="" checked="checked">
+		    No visible damage to the shipping vessel
+		  </label>
+		</div>
+
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="" checked="checked">
+		    No FOD (broken parts, loose parts, etc) is visual in the shipping vessel
+		  </label>
+		</div>
+
+	  <div class="checkbox">
+		  <label>
+		    <input type="checkbox" value="" checked="checked">
+		    No visible fluid penetration to the shipping vessel
+		  </label>
+		</div>
+	</ul>
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked"> 
+	    Verify Certificate of Conformance (CoC) is provided. (applicable parts only)
+	  </label>
+	</div>
+
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked">
+	    Verify items against their engineering drawing receipt instructions. If non-conforming, alert QA to initiate NCM action
+	  </label>
+	</div>
+
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked">
+	    Create and affix an asset tag<br>
+	    <em> Note: Aircraft kit and/or transitory parts (returned to vendor, returned from customer) shall not be tagged.</em>
+	  </label>
+	</div>
+
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked">
+	  Add/Update Inventory Records
+	  </label>
+	</div>
+
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked">
+	  Attach Receipt records (DD-250, COC, DD Form 1149, ATP Results, etc.) to inventory system
+	  </label>
+	</div>
+
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked="checked">
+	  Notify End State User for receipt of property and status
+	  </label>
+	</div>
+
 	<br>
 
 	<%= link_to "Back", receiveitems_path, class: "btn-sm btn-info" %>
