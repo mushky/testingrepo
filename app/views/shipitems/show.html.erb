@@ -1,142 +1,236 @@
 <div class="container">
-	<h3>Part # <%= @shipitem.part %></h3>
-	
-	<strong>Serial #:</strong>
-	<p><%= @shipitem.serial %></p>
+	<table class="table table-bordered table-striped">
+	  <colgroup>
+	    <col class="col-md-2">
+	    <col class="col-md-7">
+	  </colgroup>
+	  <tbody>
+	    <tr>
+				<td class="success"><h4>Ship Item Part:</h4></td>
+				<td class="success"><%= @shipitem.part %></td>
+	    </tr>
+	    <tr>
+				<td><h6>Serial #:</h6></td>
+				<td><%= @shipitem.serial %></td>
+	    </tr>
 
-	<strong>Date:</strong>
-	<p><%= @shipitem.date %></p>
-	
-	<strong>Description:</strong>
-	<p><%= @shipitem.description %></p>
-	
-	<strong>Quantity:</strong>
-	<p><%= @shipitem.quantity %></p>
-	
-	<strong>Shipping Number:</strong>
-	<p><%= @shipitem.shipping_number %></p>
-	
-	<h3>Shipping Item Check List</h3>	
+			<tr>
+				<td><h6>Date:</h6></td>
+				<td><%= @shipitem.date %></td>
+      </tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Receive authorized request for shipping
-	  </label>
-	</div>
+			<tr>
+				<td><h6>Description:</h6></td>
+				<td><%= @shipitem.description %></td>
+      </tr>	 
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    For international shipments, verify that all items may be exported; obtain authorized license number and export category codes.
-	  </label>
-	</div>
+			<tr>
+				<td><h6>Quantity:</h6></td>
+				<td><%= @shipitem.quantity %></td>
+      </tr>
 
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" value="" checked="checked">
-		  Interim (Overhead): Record in Overhead property list.
-		</label>
-	</div>
+			<tr>
+				<td><h6>Shipping Number:</h6></td>
+				<td><%= @shipitem.shipping_number %></td>
+      </tr>		          
+    </tbody>
+  </table>
 
-	<div class="checkbox">
-	  <label>
-		  <input type="checkbox" value="" checked="checked">
-		  Interim (MCTF): Record in MCTF property list.
-		</label>
-	</div>
+	<table class="table table-bordered table-striped">
+		<tbody>
+		<h3>Shipping Item Check List</h3>	
 
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" value="" checked="checked">
-		  Interim (UAEAF): Record in UAEAF Property Data, and update coding in UAE Receipts tracker.
-		</label>
-	</div>
+		<tr>
+			<div class="checkbox">
+				<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Receive authorized request for shipping
+		  	</label>
+		  	</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" value="" checked="checked">
-		  Planned: Record movement transaction in Inventory database.
-		</label>
-	</div>
-	
+		<tr>
+			<div class="checkbox">
+				<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	For international shipments, verify that all items may be exported; obtain authorized license number and export category codes.
+		  	</label>
+		  	</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Planned: Record movement transaction in Inventory database.
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+				<td>
+				<label>
+			  	<input type="checkbox" value="" checked="checked">
+			  	Interim (Overhead): Record in Overhead property list.
+				</label>
+				</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Include shipping manifest with shipment.
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+		  	<td>
+		  	<label>
+			  	<input type="checkbox" value="" checked="checked">
+			  	Interim (MCTF): Record in MCTF property list.
+				</label>
+				</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Arrange for package(s) to be picked up by shipper or forwarder.
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+				<td>
+				<label>
+			  	<input type="checkbox" value="" checked="checked">
+			  	Interim (UAEAF): Record in UAEAF Property Data, and update coding in UAE Receipts tracker.
+				</label>
+				</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Obtain tracking number(s).
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+				<td>
+				<label>
+			  	<input type="checkbox" value="" checked="checked">
+			  	Planned: Record movement transaction in Inventory database.
+				</label>
+				</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Notify recipient of shipment data, manifest and tracking number(s).
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+		  	<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Planned: Record movement transaction in Inventory database.
+		  	</label>
+				</td>
+			</div>
+		</tr>
 
-	<h3>Tracking during Shipping</h3>
+		<tr>
+			<div class="checkbox">
+		  	<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Include shipping manifest with shipment.
+		  	</label>
+				</td>
+			</div>
+	  </tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  	(For critical or high-value shipments) track shipment progress as requested by management.
-	  </label>
-	</div>
+	  <tr>
+			<div class="checkbox">
+				<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Arrange for package(s) to be picked up by shipper or forwarder.
+		  	</label>
+				</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  	Alert management of any problems or undue delays.
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+		 	  <td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Obtain tracking number(s).
+		  	</label>
+				</td>
+			</div>
+		</tr>
 
-	<h3>Update Inventory Records After Transfer is Complete</h3>
+		<tr>
+			<div class="checkbox">
+		  	<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Notify recipient of shipment data, manifest and tracking number(s).
+		  	</label>
+			</td>
+		</div>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  	Receive written notification of receipt of items.
-	  </label>
-	</div>
+		<tr>
+			<td>
+				<h3>Tracking during Shipping</h3>
+			</td>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  	Alert management and Procurement of any damage in shipment. 
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+		  	<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		  		(For critical or high-value shipments) track shipment progress as requested by management.
+		  	</label>
+			</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  	Record receipt.
-	  </label>
-	</div>
-	<br>	
-	<br>
+		<tr>			
+			<div class="checkbox">
+		  	<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		  		Alert management of any problems or undue delays.
+		  	</label>
+		  	</td>
+			</div>
+		</tr>
+
+		<tr>
+			<td>
+				<h3>Update Inventory Records After Transfer is Complete</h3>
+			</td>
+		</tr>
+
+		<tr>
+			<div class="checkbox">
+		  	<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		  		Receive written notification of receipt of items.
+		  	</label>
+			  </td>
+			</div>
+		</tr>
+
+		<tr>
+			<div class="checkbox">
+  			<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		  		Alert management and Procurement of any damage in shipment. 
+		  	</label>
+		  	</td>
+			</div>
+		</tr>
+
+		<tr>
+			<div class="checkbox">
+				<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		  		Record receipt.
+		  	</label>
+				</td>
+			</div>
+		</tr>
+
+    </tbody>
+  </table>
+
+
 	<%= link_to "Back", shipitems_path, class: "btn-sm btn-info" %>
  	<%= link_to 'Update', edit_shipitem_path(@shipitem), class: "btn-sm btn-warning" %>
-  <%= link_to 'Remove', shipitem_path(@shipitem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
 </div>

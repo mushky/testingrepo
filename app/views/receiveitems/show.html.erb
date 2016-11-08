@@ -1,125 +1,206 @@
 <div class="container">
-	<h3>Part # <%= @ReceiveItem.part %></h3>
-	
-	<strong>Serial #:</strong>
-	<p><%= @ReceiveItem.serial %></p>
+	<table class="table table-bordered table-striped">
+	  <colgroup>
+	    <col class="col-md-2">
+	    <col class="col-md-7">
+	  </colgroup>
+	  <tbody>
+	    <tr>
+				<td class="success"><h4>RECEIVED ITEM:</h4></td>
+				<td class="success"><%= @ReceiveItem.part %></td>
+	    </tr>
+	    <tr>
+				<td><h6>Serial #:</h6></td>
+				<td><%= @ReceiveItem.serial %></td>
+	    </tr>
 
-	<strong>Date:</strong>
-	<p><%= @ReceiveItem.date %></p>
+			<tr>
+				<td><h6>Date:</h6></td>
+				<td><%= @ReceiveItem.date %></td>
+      </tr>
 
-	<strong>Description:</strong>
-	<p><%= @ReceiveItem.description %></p>
+			<tr>
+				<td><h6>Description:</h6></td>
+				<td><%= @ReceiveItem.description %></td>
+      </tr>	 
 
-	<strong>Quantity:</strong>
-	<p><%= @ReceiveItem.quantity %></p>
-	
-	<h3>Received Items Checklist</h3>
-	<div class="checkbox">
-			<label>
-			  <input type="checkbox" value="" checked="checked">
-			   	Packing Slip matches contents of container.
-			</label>
-		</div>
+			<tr>
+				<td><h6>Quantity:</h6></td>
+				<td><%= @ReceiveItem.quantity %></td>
+      </tr>	          
+    </tbody>
+  </table>
 
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" value="" checked="checked">
-		  Verify PO Number / Packaging Slip Match.
-		</label>
-	</div>
+	<table class="table table-bordered table-striped">
+		<tbody>
+			<tr>
+				<td>
+		  		<h3>Receive Item Checklist</h3>
+				</td>
+			</tr>
+			<tr>
+				<div class="checkbox">
+					<td>
+					<label>
+						<input type="checkbox" value="" checked="checked">
+				   	Packing Slip matches contents of container.
+					</label>
+					</td>
+				</div>
+			</tr>
+			
+			<tr>
+				<div class="checkbox">
+					<td>
+					<label>
+			  		<input type="checkbox" value="" checked="checked">
+			  		Verify PO Number / Packaging Slip Match.
+					</label>
+					</td>
+				</div>
+			</tr>
 
-	<div class="checkbox">
-		<label>
-		  <input type="checkbox" value="" checked="checked">
-		  Verify PR Part Numbers and Quantities match between PO and packing slip.
-		</label>
-	</div>
+			<tr>
+				<div class="checkbox">
+					<td>
+					<label>
+			  		<input type="checkbox" value="" checked="checked">
+			  		Verify PR Part Numbers and Quantities match between PO and packing slip.
+					</label>
+					</td>
+				</div>
+			</tr>
 
+		<tr>
+			<div class="checkbox">
+				<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Sign and date packing slip to note receipt.
+		  	</label>
+		  	</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Sign and date packing slip to note receipt.
-	  </label>
-	</div>
+		<tr>
+			<div class="checkbox">
+				<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Notify Purchasing for receipt of property and status (complete, back order, or missing material, etc)
+			  </label>
+				</td>
+			</div>
+		</tr>
 
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Notify Purchasing for receipt of property and status (complete, back order, or missing material, etc)
-	  </label>
-	</div>
+		<tr>
+			<td>
+	  		<h4>VERIFY THE FOLLOWING:</h4>
+	 	 </td>
+		</tr>
+	  <tr>
+		  <div class="checkbox">
+		  	<td>
+			  <label>
+			    <input type="checkbox" value="" checked="checked">
+			    No visible damage to the shipping vessel
+			  </label>
+				</td>
+			</div>
+		</tr>
 
-  <h4>Verify the following:</h4>
+		<tr>
+		  <div class="checkbox">
+		  	<td>
+			  <label>
+			    <input type="checkbox" value="" checked="checked">
+			    No FOD (broken parts, loose parts, etc) is visual in the shipping vessel
+			  </label>
+				</td>
+			</div>
+		</tr>
+
+		<tr>
+		  <div class="checkbox">
+		  	<td>
+			  <label>
+			    <input type="checkbox" value="" checked="checked">
+			    No visible fluid penetration to the shipping vessel
+			  </label>
+				</td>
+			</div>
+		</tr>
+
+		<tr>
 	  <div class="checkbox">
+		  <td>
+		  <label>
+		    <input type="checkbox" value="" checked="checked"> 
+		    Verify Certificate of Conformance (CoC) is provided. (applicable parts only)
+		  </label>
+			</td>
+		</div>
+		</tr>
+
+		<tr>
+	  	<div class="checkbox">
+		  	<label>
+		  		<td>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Verify items against their engineering drawing receipt instructions. If non-conforming, alert QA to initiate NCM action
+			  </label>
+				</td>
+			</div>
+		</tr>
+
+		<tr>
+	  	<div class="checkbox">
+	  	<td>
+		 	 <label>
+		    	<input type="checkbox" value="" checked="checked">
+		    	Create and affix an asset tag<br>
+		    	<em> Note: Aircraft kit and/or transitory parts (returned to vendor, returned from customer) shall not be tagged.</em>
+		  	</label>
+		  </td>
+			</div>
+		</tr>
+
+		<tr>
+	  <div class="checkbox">
+	  	<td>
 		  <label>
 		    <input type="checkbox" value="" checked="checked">
-		    No visible damage to the shipping vessel
+		  	Add/Update Inventory Records
 		  </label>
-		</div>
+			</td>
+			</div>
+		</tr>
 
-	  <div class="checkbox">
-		  <label>
-		    <input type="checkbox" value="" checked="checked">
-		    No FOD (broken parts, loose parts, etc) is visual in the shipping vessel
-		  </label>
-		</div>
+		<tr>
+	  	<div class="checkbox">
+		  	<td>
+		  	<label>
+		    	<input type="checkbox" value="" checked="checked">
+		  		Attach Receipt records (DD-250, COC, DD Form 1149, ATP Results, etc.) to inventory system
+			  </label>
+				</td>
+			</div>
+		</tr>
 
-	  <div class="checkbox">
-		  <label>
-		    <input type="checkbox" value="" checked="checked">
-		    No visible fluid penetration to the shipping vessel
-		  </label>
-		</div>
-	</ul>
-  <div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked"> 
-	    Verify Certificate of Conformance (CoC) is provided. (applicable parts only)
-	  </label>
-	</div>
+		<tr>
+	  	<div class="checkbox">
+		  	<label>
+		    <td>
+		    	<input type="checkbox" value="" checked="checked">
+		  		Notify End State User for receipt of property and status
+		  	</label>
+				</td>			
+			</div>
 
-  <div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Verify items against their engineering drawing receipt instructions. If non-conforming, alert QA to initiate NCM action
-	  </label>
-	</div>
-
-  <div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	    Create and affix an asset tag<br>
-	    <em> Note: Aircraft kit and/or transitory parts (returned to vendor, returned from customer) shall not be tagged.</em>
-	  </label>
-	</div>
-
-  <div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  Add/Update Inventory Records
-	  </label>
-	</div>
-
-  <div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  Attach Receipt records (DD-250, COC, DD Form 1149, ATP Results, etc.) to inventory system
-	  </label>
-	</div>
-
-  <div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="" checked="checked">
-	  Notify End State User for receipt of property and status
-	  </label>
-	</div>
-
-	<br>
+  	</tbody>
+  </table>
 
 	<%= link_to "Back", receiveitems_path, class: "btn-sm btn-info" %>
   <%= link_to 'Update', edit_receiveitem_path(@ReceiveItem), class: "btn-sm btn-warning" %>
-  <%= link_to 'Remove', receiveitem_path(@ReceiveItem), class: "btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
-
 
 </div>
