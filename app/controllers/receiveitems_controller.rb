@@ -2,9 +2,13 @@ class ReceiveitemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] 
 
   def index
-  	@ReceiveItems = ReceiveItem.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+    if params[:search]
+      @ReceiveItems = ReceiveItem.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
+    else
+      @ReceiveItems = ReceiveItem.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 15)
+    end
   end
-	
+
   def new
     @ReceiveItem = ReceiveItem.new
   end

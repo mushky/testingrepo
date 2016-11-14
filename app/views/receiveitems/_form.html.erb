@@ -1,5 +1,7 @@
 <div class="container">
 	<%= form_for :receiveitem, html: {class: "form-horizontal"}, url: receiveitems_path do |f| %>
+	<%#= form_for @ReceiveItem, html: {class: "form-horizontal"}, url: receiveitems_path do |f|%>
+		
 		<% if @ReceiveItem.errors.any? %>
 				<div id="error_explanation">
 					<h2><%= pluralize(@ReceiveItem.errors.count, "error") %> Prohibited this post from being saved:</h2>
@@ -9,7 +11,8 @@
 					<% end %>
 					</ul>
 				</div>
-			<% end %>  	
+			<% end %>
+
 		<p>
 	    <%= f.label :part %><br>
 	    <%= f.text_field :part, class: "form-control  input-medium" %>

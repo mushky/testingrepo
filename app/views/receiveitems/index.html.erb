@@ -1,8 +1,21 @@
 <div class="container">
   <h1>Received Items</h1>
+
+  <form class="navbar-form navbar-right" role="search">
+    <div class="form-group", id="form-search">
+      <%= form_tag(receiveitems_path, :method => "get", class: "navbar-form navbar-right") do %>
+        <em>
+          <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %>
+        </em>
+        <%= submit_tag "Search", :name => nil, class: "btn-sm btn-primary" %>
+      <% end %>
+    </div>
+  </form>
+
   <p>
-      <%= link_to "Add Receive Item", new_receiveitem_path, class: "btn btn-default" %>
+    <%= link_to "Add Receive Item", new_receiveitem_path, class: "btn btn-default" %>
   </p>
+
   <table class="table table-bordered table table-hover">
     <tr>
       <th class="danger">Part</th>
