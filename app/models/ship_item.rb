@@ -3,6 +3,6 @@ class ShipItem < ActiveRecord::Base
 	validates :completed, :acceptance => true
 
   def self.search(query)
-  	where("parts like ?", "%#{query}%")
+  	where("part like ?", "%#{query}%")
   end
 end
