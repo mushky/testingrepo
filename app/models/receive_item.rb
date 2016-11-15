@@ -3,7 +3,6 @@ class ReceiveItem < ActiveRecord::Base
 	validates :completed, :acceptance => true
 
 	def self.search(query)
-  	#where("serial like ?", "%#{query}%")
   	ReceiveItem.where("description LIKE :search OR part LIKE :search OR serial LIKE :search OR date LIKE :search OR id LIKE :search", search: "%#{query}")
   end
 

@@ -18,6 +18,7 @@
 
   <table class="table table-bordered table table-hover">
     <tr>
+      <th class="danger">ID</th>
       <th class="danger">Part</th>
       <th class="danger">Serial #</th>
       <th class="danger">Description</th>
@@ -26,6 +27,7 @@
     </tr>
     <% @ReceiveItems.each do |receiveitem| %>
     <tr>
+      <td>iAT-RCV-<%= receiveitem.id %></td>
       <td><%= receiveitem.part %></td>
       <td><%= receiveitem.serial %></td>
       <td><%= receiveitem.description %></td>
