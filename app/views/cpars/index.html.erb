@@ -28,7 +28,7 @@
           <th class="danger">CPAR Source</th>
           <th class="danger">Old iAT-ID</th>
           <th class="danger">Date</th>
-          <th class="danger">Open/Close</th>
+          <th class="danger">Closed By</th>
         </tr>
 
         <% @cpars.each do |cpar| %>
@@ -70,7 +70,9 @@
         <% @program_id = "07" %>
         <% end %>
         <tr>
-          <td>iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id %></td>
+          <td>
+            iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id %>
+          </td>
           <td><%= cpar.form %></td>        
           <td><%= cpar.program %></td> 
           <td><%= cpar.category_phase %></td>
