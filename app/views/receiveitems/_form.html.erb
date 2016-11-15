@@ -1,17 +1,17 @@
 <div class="container">
-	<%= form_for :receiveitem, html: {class: "form-horizontal"}, url: receiveitems_path do |f| %>
-	<%#= form_for @ReceiveItem, html: {class: "form-horizontal"}, url: receiveitems_path do |f|%>
-		
-		<% if @ReceiveItem.errors.any? %>
-				<div id="error_explanation">
-					<h2><%= pluralize(@ReceiveItem.errors.count, "error") %> Prohibited this post from being saved:</h2>
-					<ul>
-					<% @ReceiveItem.errors.full_messages.each do |msg| %>
-						<li><%= msg %></li>
-					<% end %>
-					</ul>
-				</div>
-			<% end %>
+	<%#= form_for :receiveitem, html: {class: "form-horizontal"}, url: receiveitems_path do |f| %>
+	<%= form_for @receive, html: { class: "form-horizontal"}, url: receiveitems_path do |f|%>
+
+		<% if @receive.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@receive.errors.count, "error") %> Prohibited this post from being saved:</h2>
+				<ul>
+					<% @receive.errors.full_messages.each do |msg| %>
+					  <li><%= msg %></li>
+				  <% end %>
+				</ul>
+			</div>
+		<% end %>
 
 		<p>
 	    <%= f.label :part %><br>

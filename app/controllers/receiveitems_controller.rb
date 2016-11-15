@@ -3,19 +3,19 @@ class ReceiveitemsController < ApplicationController
 
   def index
     if params[:search]
-      @ReceiveItems = ReceiveItem.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
+      @receives = ReceiveItem.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
     else
-      @ReceiveItems = ReceiveItem.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 15)
+      @receives = ReceiveItem.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 15)
     end
   end
 
   def new
-    @ReceiveItem = ReceiveItem.new
+    @receive = ReceiveItem.new
   end
 
   def create
-    @ReceiveItem = ReceiveItem.new(receive_params)
-    if @ReceiveItem.save
+    @receive = ReceiveItem.new(receive_params)
+    if @receive.save
       redirect_to receiveitems_path
     else
       render 'new'
@@ -23,29 +23,29 @@ class ReceiveitemsController < ApplicationController
   end
 
   def show
-  	@ReceiveItem = ReceiveItem.find(params[:id])
+  	@receive = ReceiveItem.find(params[:id])
   end
 
   def edit
-    @ReceiveItem = ReceiveItem.find(params[:id])
+    @receive = ReceiveItem.find(params[:id])
   end
 
   def update
-    @ReceiveItem = ReceiveItem.find(params[:id])
-    if @ReceiveItem.update(receive_params)
-      redirect_to @ReceiveItem
+    @receive = ReceiveItem.find(params[:id])
+    if @receive.update(receive_params)
+      redirect_to @receive
     else
       render 'edit'
     end
   end
 
   def delete
-    @ReceiveItem = ReceiveItem.find(params[:id])
+    @receive = ReceiveItem.find(params[:id])
   end
 
   def destroy
-    @ReceiveItem = ReceiveItem.find(params[:id])
-    @ReceiveItem.destroy
+    @receive = ReceiveItem.find(params[:id])
+    @receive.destroy
 
     redirect_to receiveitems_path
   end

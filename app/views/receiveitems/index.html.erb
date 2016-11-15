@@ -25,7 +25,7 @@
       <th class="danger">Date</th>
       <th class="danger">Quantity</th>
     </tr>
-    <% @ReceiveItems.each do |receiveitem| %>
+    <% @receives.each do |receiveitem| %>
     <tr>
       <td>iAT-RCV-<%= receiveitem.id %></td>
       <td><%= receiveitem.part %></td>
@@ -38,4 +38,4 @@
     </tr>
   <% end %>
   </table>
-<%= will_paginate @ReceiveItems %>
+<%= will_paginate @receives %>

@@ -12,7 +12,6 @@
 				<p>
 					<%= f.select(:form, options_for_select( [['Choose Form', 'Choose Form'],['Preventive Action', 'Preventive Action'], ['Corrective Action', 'Corrective Action'],['Non-Conforming Material', 'Non-Conforming Material'], ['Supplier Corrective Action', 'Supplier Corrective Action'], ['Continual Improvement', 'Continual Improvement'],]), {} ,{ class: "btn btn-default dropdown-toggle", :onchange=>"showDiv(this)" }) %>
 				</p>
-
 			<% end %>
 
 			<div id="par">
@@ -143,11 +142,13 @@
 			  </p>
 			  <hr>
 
+			  <!--
 			  <h3>Root Cause Analysis</h3>
 			  <p>
-			    <%= par.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-					<%= par.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			    <%#= par.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
+					<%#= par.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
+				-->
 
 			  <p>
 			    <%= par.label :underlying_root_cause, "Underlying Root Cause" %>
@@ -353,11 +354,13 @@
 			  </p>
 			  <hr>
 
+			  <!--
 			  <h3>Root Cause Analysis</h3>
 			  <p>
-			    <%= car.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-					<%= car.select(:root_cause_analysis_required, options_for_select([["YES", "YES"],["NO", "NO"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			    <%#= car.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
+					<%#= car.select(:root_cause_analysis_required, options_for_select([["YES", "YES"],["NO", "NO"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
+				-->
 
 			  <p>
 			    <%= car.label :underlying_root_cause, "Underlying Root Cause" %>
@@ -964,10 +967,12 @@
 
 			  <hr>
 
+			  <!-- 
 			  <p>
-			    <%= scar.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
-					<%= scar.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
+			    <%#= scar.label :root_cause_analysis_required, "Root Cause Analysis Required" %>
+					<%#= scar.select(:root_cause_analysis_required, options_for_select([["NO", "NO"],["YES", "YES"]]),{ class: "btn btn-default dropdown-toggle" }) %>
 			  </p>
+				-->
 
 
 			  <h3>Underlying Root Cause</h3>

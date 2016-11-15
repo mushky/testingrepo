@@ -28,6 +28,7 @@
           <th class="danger">CPAR Source</th>
           <th class="danger">Old iAT-ID</th>
           <th class="danger">Date</th>
+          <th class="danger">Open/Close</th>
         </tr>
 
         <% @cpars.each do |cpar| %>
@@ -76,6 +77,7 @@
           <td><%= cpar.cpar_source %></td>
           <td><%= cpar.old_id %></td>
           <td><%= cpar.created_at.to_formatted_s(:long) %></td>
+          <td><%= cpar.closed_out_by %></td>
           <td><%= link_to 'View', cpar_path(cpar), class: "btn-sm btn-primary" %></td>
         </tr>
         <% end %>

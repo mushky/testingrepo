@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'welcome/options'
+	#get "receiveitems/:id/edit" => "receiveitems#edit", :as => :receiveitem
+	#patch "receiveitems/:id" => "receiveitems#update"
 
 end

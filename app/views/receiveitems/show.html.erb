@@ -7,35 +7,35 @@
 	  <tbody>
 	    <tr>
 				<td class="success">RECEIVED ITEM:</td>
-				<td class="success"><%= @ReceiveItem.part %></td>
+				<td class="success"><%= @receive.part %></td>
 	    </tr>
 	    <tr>
 	    	<td><p>ID:</p></td>
-        <td>iAT-RCV-<%= @ReceiveItem.id %></td>
+        <td>iAT-RCV-<%= @receive.id %></td>
 	    </tr>
 	    <tr>
 				<td><p>Serial #:</p></td>
-				<td><%= @ReceiveItem.serial %></td>
+				<td><%= @receive.serial %></td>
 	    </tr>
 
 			<tr>
 				<td><p>Date:</p></td>
-				<td><%= @ReceiveItem.date %></td>
+				<td><%= @receive.date %></td>
       </tr>
 
 			<tr>
 				<td><p>Description:</p></td>
-				<td><%= @ReceiveItem.description %></td>
+				<td><%= @receive.description %></td>
       </tr>	 
 
 			<tr>
 				<td><p>Quantity:</p></td>
-				<td><%= @ReceiveItem.quantity %></td>
+				<td><%= @receive.quantity %></td>
       </tr>
 			
 			<tr>
 				<td><p>Artifacts Location on Share Drive:</p></td>
-				<td><%= @ReceiveItem.artifact %></td>
+				<td><%= @receive.artifact %></td>
       </tr>		          
     </tbody>
   </table>
@@ -210,6 +210,6 @@
   </table>
 
 	<%= link_to "Back", receiveitems_path, class: "btn-sm btn-info" %>
-  <%= link_to 'Update', edit_receiveitem_path(@ReceiveItem), class: "btn-sm btn-warning" %>
+  <%= link_to 'Update', edit_receiveitem_path(@receive), class: "btn-sm btn-warning" %>
 
 </div>
