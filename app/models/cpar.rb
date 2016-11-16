@@ -13,9 +13,12 @@ class Cpar < ActiveRecord::Base
   	# where("form like ?", "%#{query}%")
   	# where("program like ?", "%#{query}%")
   	Cpar.where("old_id LIKE :search OR program LIKE :search OR form LIKE :search OR id LIKE :search", search: "%#{query}")
- 		
  	end
-  
+
+ 	def self.open
+ 		Cpar.where("closed_out_by is NOT NULL")
+ 	end
+
 	private
 	  def sanitize_filename(filename)
 	    return File.basename(filename)
