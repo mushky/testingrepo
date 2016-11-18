@@ -22,6 +22,7 @@
       <table class="table table-bordered table table-hover">
         <tr>
           <th class="danger">iAT-ID</th>
+          <th class="danger">Title</th>
           <th class="danger">Form</th>
           <th class="danger">Program</th>
           <th class="danger">Category Phase</th>
@@ -73,6 +74,7 @@
           <td>
             iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id %>
           </td>
+          <td><%= cpar.title %></td>
           <td><%= cpar.form %></td>        
           <td><%= cpar.program %></td> 
           <td><%= cpar.category_phase %></td>
