@@ -53,7 +53,7 @@ class ReceiveitemsController < ApplicationController
 
   private
     def receive_params
-      params.require(:receiveitem).permit(:part, :serial, :date, :description, :quantity, :completed, :artifact)
+      params.require(:receive_item).permit(:part, :serial, :date, :description, :quantity, :completed, :artifact)
     end
 end
 
