@@ -1,0 +1,64 @@
+<div id="car_charts_2015_2016" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+<div class="car_charts_2015_2016">
+  <h1>Additional CAR Data</h1>
+    <div class="row">   
+      <div class="col-md-4">
+        <div id="myChart" style="width:auto; height:auto;"></div>
+        <script type="text/javascript">
+        $(function () {
+          Highcharts.chart('car_charts_2015_2016', {
+              chart: {
+                  type: 'bar'
+              },
+              title: {
+                  text: 'Corrective Action Quarterly Charts 2016'
+              },
+              xAxis: {
+                  categories: ['Q1 2016', 'Q2 2016', 'Q3 2016', 'Q4 2016', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
+                  title: {
+                      text: null
+                  }
+              },
+              yAxis: {
+                  min: 0,
+                  title: {
+                      align: 'high'
+                  },
+                  labels: {
+                      overflow: 'justify'
+                  }
+              },
+              plotOptions: {
+                  bar: {
+                      dataLabels: {
+                          enabled: true
+                      }
+                  }
+              },
+              legend: {
+                  layout: 'vertical',
+                  align: 'right',
+                  verticalAlign: 'top',
+                  x: -40,
+                  y: 80,
+                  floating: true,
+                  borderWidth: 1,
+                  backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                  shadow: true
+              },
+              credits: {
+                  enabled: false
+              },
+              series: [{
+                  name: 'Open',
+                  data: [15, 0, 0, 0, 0,0,0,0]
+              }, {
+                  name: 'Closed',
+                  data: [0, 0, 0, 0, 0,0,0,85]
+              }]
+          });
+      });
+    </script>
+  </div>
+</div>

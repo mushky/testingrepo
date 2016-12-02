@@ -10,8 +10,6 @@ class Cpar < ActiveRecord::Base
 	end
 
   def self.search(query)
-  	# where("form like ?", "%#{query}%")
-  	# where("program like ?", "%#{query}%")
   	Cpar.where("old_id LIKE :search
   							OR iat_number LIKE :search 
   					    OR program LIKE :search 
