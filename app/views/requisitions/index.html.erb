@@ -9,6 +9,7 @@
       <th class="danger">Requestor</th>
       <th class="danger">Program</th>
       <th class="danger">Date</th>
+      <th class="danger">Approver</th>
       <th class="danger">Quantity</th>
     </tr>
 	<% @requisitions.each do |requisition| %>
@@ -17,9 +18,8 @@
       <td><%= requisition.requestor %></td>
       <td><%= requisition.program %></td>
       <td><%= requisition.created_at %></td>
+      <td><%= requisition.approval %></td>      
       <td><%= requisition.quantity %></td>
-
-
     </tr>
       <td><%= link_to 'View Purchase Request', requisition_path(requisition), class: "btn-sm btn-primary" %></td>
   <% end %>

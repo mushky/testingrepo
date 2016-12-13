@@ -1,55 +1,39 @@
 <div class="container">
-	<h3>Requestor # <%= @requisition.requestor %></h3>
-	<strong>Purchase #:</strong>
-	<%= @requisition.pr_number %><br>
-	
-	<strong>Company:</strong>
-	<%= @requisition.company %><br>
+  <table class="table table-bordered table table-hover">
+    <tr>
+    	<th class="danger">Requestor</th>
+      <th class="danger">PR Number</th>
+      <th class="danger">Requestor</th>
+      <th class="danger">Program</th>
+      <th class="danger">Date</th>
+      <th class="danger">Approver</th>
+      <th class="danger">Quantity</th>
+    </tr>	
+	<td><%= @requisition.requestor %></td>
+  <td><%= @requisition.pr_number %></td>
+  <td><%= @requisition.pr_number %></td>
+  <td><%= @requisition.program %></td>
+  <td><%= @requisition.created_at %></td>
+  <td><%= @requisition.approval %></td>      
+  <td><%= @requisition.quantity %></td>	
+  </table>
 
-	<strong>Address:</strong>
-	<%= @requisition.address %><br>
+  <h3>Pending Approvals</h3>
+  <table class="table table-bordered table table-hover">
+  <tr>  
+    <th class="danger">Max Tudorov</th>
+    <th class="danger">Chuck Pritchett</th>
+    <th class="danger">Hasan Ramlaoui</th>
+  </tr>
 
-	<strong>Phone:</strong>
-	<%= @requisition.phone %><br>
+  <td><button class="btn btn-success">APPROVED</button></td>
+  <td><button class="btn btn-success">APPROVED</button></td>
+  <td><button class="btn btn-warning">Pending Approval</button></td>
 
-	<strong>Contact:</strong>
-	<%= @requisition.contact %><br>
-
-	<strong>Comments:</strong>
-	<%= @requisition.comments %><br>
-
-	<strong>Quantity:</strong>
-	<%= @requisition.quantity %><br>
-
-	<strong>UOM:</strong>
-	<%= @requisition.uom %><br>
-
-	<strong>Part #:</strong>
-	<%= @requisition.part_number %><br>
-
-	<strong>Description:</strong>
-	<%= @requisition.description %><br>
-
-	<strong>Unit Cost:</strong>
-	<%= @requisition.unit_cost %><br>
-
-	<strong>Total:</strong>
-	<%= @requisition.total %><br>
-
-	<strong>Requested Date:</strong>
-	<%= @requisition.req_date %><br>
-
-	<strong>Account Number:</strong>
-	<%= @requisition.acct_number %><br>
-
-	<strong>Usage</strong>
-	<%= @requisition.usage %>
-	<br>
-
+  </table>
 	<%= link_to "Back", requisitions_path, class: "btn btn-default" %>
-
+	<%= link_to "Edit", edit_requisition_path(@requisition), class: "btn btn-default" %> 
 </div>
 
-                       
-              
-                            
+           
+        
