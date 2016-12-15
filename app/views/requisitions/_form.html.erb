@@ -10,6 +10,11 @@
 				<p>
 					<%= f.label :pr_number, "PR Number (obtain from Max)" %>
 					<%= f.text_field :pr_number, class: "form-control" %>
+				</p>
+
+				<p>
+					<%= f.label :acct_number, "Account Number" %>
+					<%= f.text_field :acct_number, class: "form-control" %>
 				</p>	
 
 				<p>
@@ -23,8 +28,8 @@
 				</p>
 
 				<p>
-					<%= f.label :company, "Vendor" %>
-					<%= f.text_field :company, class: "form-control" %>
+					<%= f.label :company, "Company - Address - Phone" %>
+					<%= f.text_area :company, class: "form-control" %>
 				</p>
 
 				<p>
@@ -33,9 +38,28 @@
 				</p>
 
 				<p>
+					<%= f.label :unit_cost, "Unit Price" %>
+					<%= f.number_field :unit_cost, class: "form-control" %>
+				</p>
+
+				<p>
 					<%= f.label :quantity %>
 					<%= f.number_field :quantity, class: "form-control" %>
 				</p>
+
+				<p>
+					<%= f.label :req_date, "Product Need Date" %>
+					<%= f.date_field :req_date, class: "form-control" %>
+				</p>
+
+				<p>
+					<%= f.label :for_export, "For Export?" %>
+					<%= f.select(:for_export, options_for_select([['NO', 'NO'], ['YES', 'YES']]),{ class: "btn btn-default dropdown-toggle" }) %>
+					<%= f.label :to_where, "To Where?" %>
+					<%= f.text_field :to_where, class: "form-control" %>
+				</p>
+
+
 
 				<p>
 					<%= f.label :approval %>
