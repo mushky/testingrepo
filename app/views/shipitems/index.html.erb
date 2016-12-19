@@ -25,14 +25,12 @@
         <th class="danger">Shipping Number</th>
       </tr>
       <% @shipitems.each do |shipitem| %>
-      <tr>
+      <tr tr data-link="<%= shipitem_path(shipitem) %>">
         <td><%= shipitem.part %></td>
         <td><%= shipitem.serial %></td>
         <td><%= shipitem.date %></td>
         <td><%= shipitem.quantity %></td>
         <td><%= shipitem.shipping_number %></td>
-        <td><%= link_to 'View', shipitem_path(shipitem), class: "btn-sm btn-primary" %></td>
-
       </tr>     
   <% end %>
   </table>

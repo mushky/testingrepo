@@ -70,7 +70,7 @@
         <% elsif cpar.program == "ESTS" %>
         <% @program_id = "07" %>
         <% end %>
-        <tr>
+        <tr tr data-link="<%= cpar_path(cpar) %>">
           <td>
             iAT-<%= @program_id %>-<%= @form_name %><%= cpar.program_enum %><%= cpar.id %>
           </td>
@@ -82,7 +82,6 @@
           <td><%= cpar.old_id %></td>
           <td><%= cpar.created_at.to_formatted_s(:long) %></td>
           <td><%= cpar.closed_out_by %></td>
-          <td><%= link_to 'View', cpar_path(cpar), class: "btn-sm btn-primary" %></td>
         </tr>
         <% end %>
       </table>

@@ -26,15 +26,13 @@
       <th class="danger">Quantity</th>
     </tr>
     <% @receives.each do |receiveitem| %>
-    <tr>
+    <tr tr data-link="<%= receiveitem_path(receiveitem) %>">
       <td>iAT-RCV-<%= receiveitem.id %></td>
       <td><%= receiveitem.part %></td>
       <td><%= receiveitem.serial %></td>
       <td><%= receiveitem.description %></td>
       <td><%= receiveitem.date %></td>
       <td><%= receiveitem.quantity %></td>
-      <td><%= link_to 'View', receiveitem_path(receiveitem), class: "btn-sm btn-primary" %></td>
-
     </tr>
   <% end %>
   </table>
