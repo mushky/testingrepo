@@ -35,7 +35,7 @@
         <th class="danger">In Use?</th>
       </tr> 
       <% @inventories.each do |inventory| %>
-        <tr tr data-link="<%= inventories_path(inventory) %>"> 
+        <tr tr data-link="<%= inventory_path(inventory) %>"> 
           <td class="active"><%= inventory.iat_num %></td>
           <td><%= inventory.employee %></td>
           <td><%= inventory.laptop_model %></td>
@@ -44,6 +44,8 @@
           <td><%= inventory.visual_studio %></td>
           <td><%= inventory.status %></td>
           <td><%= inventory.in_use %></td>
+
+          <td><%= link_to 'View', inventory_path(inventory), class: "btn-sm btn-info" %></td>
         </tr>
       <% end %>
     </table>
