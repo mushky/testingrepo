@@ -29,7 +29,7 @@
 
 				<p>
 					<%= par.label :program, "Program:" %>
-					<%= par.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+					<%= par.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD'],['ADS-B','ADS-B']], :selected => par.object.program),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>
@@ -75,7 +75,7 @@
 
 				<p>
 				  <%= par.label :date, "Date" %>
-				  <%= par.date_field :date, class: "form-control" %>
+				  <%= par.date_field :date, :selected => par.object.date, class: "form-control" %>
 				</p>
 
 			  <p>
@@ -251,7 +251,7 @@
 
 				<p>
 					<%= car.label :program, "Program:" %>
-					<%= car.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+					<%= car.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD'],['ADS-B','ADS-B']]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>
@@ -465,7 +465,7 @@
 
 				<p>
 				  <%= ncmr.label :program, "Program:" %>
-				  <%= ncmr.select(:program, options_for_select([['UAEAF', 'UAEAF'], ['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'],  ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+				  <%= ncmr.select(:program, options_for_select([['UAEAF', 'UAEAF'], ['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'],  ['DAW', 'DAW'], ['IRAD', 'IRAD'],['ADS-B','ADS-B']]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>
@@ -734,7 +734,7 @@
 
 				<p>
 				  <%= scar.label :program, "Program:" %>
-				  <%= scar.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+				  <%= scar.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD'],['ADS-B','ADS-B']]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>
@@ -1067,7 +1067,7 @@
 
 				<p>
 				  <%= ci.label :program, "Program:" %>
-				  <%= ci.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD']]),{ class: "btn btn-default dropdown-toggle" }) %>
+				  <%= ci.select(:program, options_for_select([['Corporate', 'Corporate'], ['MCTF', 'MCTF'],['TAF', 'TAF'], ['ESTS', 'ESTS'], ['UAEAF', 'UAEAF'], ['DAW', 'DAW'], ['IRAD', 'IRAD'],['ADS-B','ADS-B']]),{ class: "btn btn-default dropdown-toggle" }) %>
 				</p>
 
 				<p>

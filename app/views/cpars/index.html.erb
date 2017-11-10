@@ -69,6 +69,10 @@
 
         <% elsif cpar.program == "ESTS" %>
         <% @program_id = "07" %>
+
+        <% elsif cpar.program == "ADS-B" %>
+        <% @program_id = "12" %>
+
         <% end %>
         <tr tr data-link="<%= cpar_path(cpar) %>">
           <td>
